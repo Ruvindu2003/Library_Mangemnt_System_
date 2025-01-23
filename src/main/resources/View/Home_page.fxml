@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Forms.Hom_page_Form">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/19198444.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="165.0" layoutY="14.0" prefHeight="50.0" prefWidth="330.0" text="Library Mangement System">
+         <font>
+            <Font name="System Bold Italic" size="23.0" />
+         </font>
+      </Label>
+      <Button layoutX="490.0" layoutY="365.0" mnemonicParsing="false" onAction="#Lets_Go_Action" prefHeight="26.0" prefWidth="95.0" style="-fx-background-color: Red;" text="Lets Go" textFill="#1e1e1e" />
+   </children>
+</AnchorPane>
