@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="Forms.DashBoard_Form"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Forms.DashBoard_Form">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="455.0" layoutX="200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/32883.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="-1.0" layoutY="3.0" prefHeight="58.0" prefWidth="200.0" text="Dash Board">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <Button layoutX="14.0" layoutY="187.0" mnemonicParsing="false" onAction="#btn_member_Action" prefHeight="26.0" prefWidth="155.0" style="-fx-background-color: yellow;" text="Member" />
+      <Button layoutX="13.0" layoutY="113.0" mnemonicParsing="false" onAction="#btn_Addbooks_Action" prefHeight="26.0" prefWidth="155.0" style="-fx-background-color: #FEC84D;" text="Add Books" />
+   </children>
 </AnchorPane>

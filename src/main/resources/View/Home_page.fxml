@@ -19,6 +19,6 @@
             <Font name="System Bold Italic" size="23.0" />
          </font>
       </Label>
-      <Button layoutX="490.0" layoutY="365.0" mnemonicParsing="false" onAction="#Lets_Go_Action" prefHeight="26.0" prefWidth="95.0" style="-fx-background-color: Red;" text="Lets Go" textFill="#1e1e1e" />
+      <Button layoutX="490.0" layoutY="365.0" mnemonicParsing="false" onAction="#Lets_Go_Action" prefHeight="26.0" prefWidth="95.0" style="-fx-background-color: #7EC8E3;" text="Lets Go" textFill="#1e1e1e" />
    </children>
 </AnchorPane>
