@@ -3,13 +3,11 @@ package Controller;
 import Forms.DBConnection;
 import Modlle.Members;
 import Services.MemeberService;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.scene.control.Alert;
 
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.List;
+
 
 public class MemberController implements MemeberService {
     private  static  MemberController instance;
@@ -26,7 +24,6 @@ public class MemberController implements MemeberService {
     @Override
     public ArrayList<Members> getAll() {
         ArrayList<Members> members = new ArrayList<>();
-
         try {
             Statement statement=connection.createStatement();
             ResultSet resultSet=statement.executeQuery("Select * from members");
@@ -39,8 +36,6 @@ public class MemberController implements MemeberService {
                                 resultSet.getString(3),
                                 resultSet.getString(4),
                                 resultSet.getString(5)
-
-
 
                         )
                 );
@@ -58,30 +53,33 @@ public class MemberController implements MemeberService {
         Members searchMemberObject = null;
 
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement(
-                    "SELECT * FROM members WHERE member_id = ?"
-            );
+            PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM members WHERE member_id = ?");
             preparedStatement.setString(1, members);
 
             ResultSet resultSet = preparedStatement.executeQuery();
-            if (!resultSet.next()) {
-                new Alert(Alert.AlertType.INFORMATION,"Susees Full").show();
-                return null;
+            if (resultSet.next()) {
+
+
+              return new Members(
+                        resultSet.getString(1),
+                        resultSet.getString(2),
+                        resultSet.getString(3),
+                        resultSet.getString(4),
+                        resultSet.getString(5)
+                );
+               // return searchMemberObject;
+
+               // return null;
             }else {
                 new Alert(Alert.AlertType.INFORMATION,"Not Sucsses Full").show();
+                return null;
             }
-            searchMemberObject = new Members(
-                    resultSet.getString(1),
-                    resultSet.getString(2),
-                    resultSet.getString(3),
-                    resultSet.getString(4),
-                    resultSet.getString(5)
-            );
+
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
 
-        return searchMemberObject;
+
 
     }
 

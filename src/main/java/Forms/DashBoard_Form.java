@@ -22,4 +22,18 @@ public class DashBoard_Form {
         stage.setTitle("Add Form");
         stage.show();
     }
+
+    public void btn_Staff_Action(ActionEvent actionEvent) throws IOException {
+        Stage stage=new Stage();
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/View/Staff_Form.fxml"))));
+        stage.show();
+
+    }
+
+    public void Borrowed_Bokkss_Action(ActionEvent actionEvent) throws IOException {
+        Stage stage=new Stage();
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/View/Take_Books.fxml"))));
+        stage.setTitle("Borrowed Books");
+        stage.show();
+    }
 }

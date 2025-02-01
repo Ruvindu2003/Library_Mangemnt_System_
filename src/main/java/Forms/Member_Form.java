@@ -118,7 +118,7 @@ public class Member_Form implements Initializable {
 
     public  void LodTable(){
         ArrayList<Members> all = MemberController.getInstance().getAll();
-        System.out.println();
+        System.out.println(all);
         ObservableList<Members> objects = FXCollections.observableArrayList();
         all.forEach(members -> objects.add(members));
         table_Memeber.setItems(objects);

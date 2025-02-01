@@ -15,7 +15,7 @@
    <children>
       <ImageView fitHeight="400.0" fitWidth="610.0" layoutX="-4.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@man-library-with-tablet.jpg" />
+            <Image url="@../images/man-library-with-tablet.jpg" />
          </image>
       </ImageView>
       <Label layoutX="104.0" layoutY="7.0" prefHeight="47.0" prefWidth="425.0" text="Books Mangement">

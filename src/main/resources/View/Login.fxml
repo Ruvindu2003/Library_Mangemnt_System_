@@ -22,7 +22,7 @@
       </Label>
       <TextField fx:id="txt_username" layoutX="306.0" layoutY="128.0" prefHeight="26.0" prefWidth="256.0" promptText="User Name" />
       <TextField fx:id="txt_password" layoutX="305.0" layoutY="211.0" prefHeight="26.0" prefWidth="256.0" promptText="Password" />
-      <Button layoutX="365.0" layoutY="272.0" mnemonicParsing="false" onAction="#btn_Login_Action" prefHeight="26.0" prefWidth="106.0" style="-fx-background-color: #5F0#EFD3B53D;" text="Login" />
-      <Button layoutX="487.0" layoutY="351.0" mnemonicParsing="false" onAction="#Rejister_on_Action" prefHeight="26.0" prefWidth="95.0" style="-fx-background-color: #D67BA8;" text="Rejister" />
+      <Button layoutX="362.0" layoutY="270.0" mnemonicParsing="false" onAction="#btn_Login_Action" prefHeight="26.0" prefWidth="106.0" style="-fx-background-color: FFCDB2;" text="Login" />
+      <Button layoutX="487.0" layoutY="351.0" mnemonicParsing="false" onAction="#Rejister_on_Action" prefHeight="26.0" prefWidth="95.0" style="-fx-background-color: #D67BA8;" text="Register" />
    </children>
 </AnchorPane>

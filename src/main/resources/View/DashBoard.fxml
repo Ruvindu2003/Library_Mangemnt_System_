@@ -21,5 +21,7 @@
       </Label>
       <Button layoutX="14.0" layoutY="187.0" mnemonicParsing="false" onAction="#btn_member_Action" prefHeight="26.0" prefWidth="155.0" style="-fx-background-color: yellow;" text="Member" />
       <Button layoutX="13.0" layoutY="113.0" mnemonicParsing="false" onAction="#btn_Addbooks_Action" prefHeight="26.0" prefWidth="155.0" style="-fx-background-color: #FEC84D;" text="Add Books" />
+      <Button layoutX="13.0" layoutY="255.0" mnemonicParsing="false" onAction="#btn_Staff_Action" prefHeight="26.0" prefWidth="155.0" style="-fx-background-color: Red;" text="Staff " />
+      <Button layoutX="21.0" layoutY="314.0" mnemonicParsing="false" onAction="#Borrowed_Bokkss_Action" prefHeight="26.0" prefWidth="155.0" style="-fx-background-color: E5D0AC;" text="Borrowed Books" />
    </children>
 </AnchorPane>
