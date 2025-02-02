@@ -1,6 +1,7 @@
 package Forms;
 
 import Controller.Book_Controller;
+import Controller.BrrowedController;
 import Controller.MemberController;
 import Controller.StaffController;
 import Modlle.Book;
@@ -51,22 +52,23 @@ public class Take_Bokks_Form implements Initializable {
     public TextField txt_returndate;
     public TextField txt_broowed;
     public TextField txt_yes_or_No;
-    Book_Controller bookController=new Book_Controller();
-    MemberController memberController=new MemberController();
-    StaffController staffController=new StaffController();
+    Book_Controller bookController = new Book_Controller();
+    MemberController memberController = new MemberController();
+    StaffController staffController = new StaffController();
 
+    BrrowedController brrowedController=new BrrowedController();
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
         colum_borrowid.setCellValueFactory(new PropertyValueFactory<>("brrowedbokksid"));
         colum_Bookid.setCellValueFactory(new PropertyValueFactory<>("bookID"));
         colum_memberid.setCellValueFactory(new PropertyValueFactory<>("memberid"));
         colum_Staffid.setCellValueFactory(new PropertyValueFactory<>("staffid"));
         colum_brrowdate.setCellValueFactory(new PropertyValueFactory<>("brooedate"));
-        colume_return_date.setCellValueFactory(new PropertyValueFactory<>("returndate") );
         colum_isbrowwed.setCellValueFactory(new PropertyValueFactory<>("isBrowwed"));
+
+
 
         setCombo_Bookid();
         setCombo_Memberid();
@@ -75,25 +77,22 @@ public class Take_Bokks_Form implements Initializable {
         LodDate();
 
 
+    }
+
+
+    public void setCombo_Bookid() {
+        ObservableList<String> setBookid = FXCollections.observableArrayList();
+        for (Book book : bookController.getInstancce().getAll()) {
+            setBookid.add(book.getBookid());
+        }
+        combo_Bookid.setItems(setBookid);
 
     }
 
 
-
-  public void setCombo_Bookid(){
-      ObservableList<String>setBookid= FXCollections.observableArrayList();
-      for (Book book : bookController.getInstancce().getAll()){
-          setBookid.add(book.getBookid());
-      }
-      combo_Bookid.setItems(setBookid);
-
-  }
-
-
-
     public void Combo_Book_Action(ActionEvent actionEvent) {
         String selectedID = (String) combo_Bookid.getSelectionModel().getSelectedItem();
-        //System.out.println(selectedID);
+        System.out.println(selectedID);
         Book book = bookController.getInstancce().SearcBooks(selectedID);
         setCombo_Bookid();
         txt_Title.setText(book.getTiitle());
@@ -105,10 +104,10 @@ public class Take_Bokks_Form implements Initializable {
 
     public void combo_Memeberid_Action(ActionEvent actionEvent) {
 
-        String selectID=(String) combo_Memberid.getSelectionModel().getSelectedItem();
+        String selectID = (String) combo_Memberid.getSelectionModel().getSelectedItem();
         System.out.println(selectID);
         //setCombo_Memberid();
-        Members members=memberController.searchMember(selectID);
+        Members members = memberController.searchMember(selectID);
         System.out.println(members.getName());
         txt_full_name.setText(members.getName());
         txt_PhoneNumber.setText(members.getPhoneNumber());
@@ -116,9 +115,9 @@ public class Take_Bokks_Form implements Initializable {
         txt_Membership.setText(members.getMembershipdates());
     }
 
-    public  void setCombo_Memberid( ){
-        ObservableList<String>setMemeberid=FXCollections.observableArrayList();
-        for (Members members :memberController.getInstance().getAll()) {
+    public void setCombo_Memberid() {
+        ObservableList<String> setMemeberid = FXCollections.observableArrayList();
+        for (Members members : memberController.getInstance().getAll()) {
             setMemeberid.add(members.getMemberid());
             combo_Memberid.setItems(setMemeberid);
 
@@ -126,20 +125,19 @@ public class Take_Bokks_Form implements Initializable {
     }
 
 
-    public void setCombo_Staffid(){
-        ObservableList<String>setStaffid=FXCollections.observableArrayList();
-        for (Staff staff :staffController.getInstance().getAll()){
+    public void setCombo_Staffid() {
+        ObservableList<String> setStaffid = FXCollections.observableArrayList();
+        for (Staff staff : staffController.getInstance().getAll()) {
             setStaffid.add(staff.getStaffid());
             combo_Staffid.setItems(setStaffid);
         }
     }
 
 
-
     public void combo_staffid_Action(ActionEvent actionEvent) throws SQLException {
-        String selecID=(String) combo_Staffid.getSelectionModel().getSelectedItem();
+        String selecID = (String) combo_Staffid.getSelectionModel().getSelectedItem();
 //        setCombo_Staffid();
-        Staff staff=staffController.SearchStaff(selecID);
+        Staff staff = staffController.SearchStaff(selecID);
 
         String email = staff.getEmail();
         txt_email.setText(email);
@@ -147,7 +145,7 @@ public class Take_Bokks_Form implements Initializable {
         txt_pohneNumber.setText(staff.getPhoneNumber());
     }
 
-    private void LodDate(){
+    private void LodDate() {
         Date date = new Date();
         SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd");
         BreakIterator lblDate;
@@ -156,31 +154,36 @@ public class Take_Bokks_Form implements Initializable {
 
     }
 
-    ObservableList<Brrowedbooks>brrowedbooksObservableList=FXCollections.observableArrayList();
+    ObservableList<Brrowedbooks> brrowedbooksObservableList = FXCollections.observableArrayList();
 
     public void take_Books_Action(ActionEvent actionEvent) {
 
+        brrowedController.addBooks(new Brrowedbooks(
+                txt_broowed.getText(),
+                (String) combo_Bookid.getValue(),
+                (String) combo_Memberid.getValue(),
+                (String) combo_Staffid.getValue(),
+                lbl_date.getText(),
+                txt_yes_or_No.getText()
+        ));
+        System.out.println("Book successfully added to the database!");
 
 
-        brrowedbooksObservableList.add(
-                new Brrowedbooks(
-                        txt_broowed.getText(),
-                        (String) combo_Bookid.getValue(),
-                        (String) combo_Memberid.getValue(),
-                        (String) combo_Staffid.getValue(),
-                        lbl_date.getText(),
-                        txt_returndate.getText(),
-                        txt_yes_or_No.getText()
+        brrowed_table.setItems(brrowedbooksObservableList);
 
 
-
-
-
-                )
-        );
-           brrowed_table.setItems(brrowedbooksObservableList);
     }
-}
+
+    public  void  LodTable(){
+        List<Brrowedbooks>brrowedbooks=brrowedController.getInstance().getAll();
+        System.out.println(brrowedbooks);
+        ObservableList<Brrowedbooks> objects = FXCollections.observableArrayList();
+        brrowedbooks.forEach(brrowedbooks1 -> objects.add(brrowedbooks1));
+        brrowed_table.setItems(objects);
+    }
+
+    }
+
 
 
 

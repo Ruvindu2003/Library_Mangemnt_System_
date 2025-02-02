@@ -2,8 +2,13 @@ package Services;
 
 import Modlle.Brrowedbooks;
 
-public interface BroowedBooks_Controller {
+import java.util.List;
+
+public interface BroowedBooks_Service {
     boolean addBooks (Brrowedbooks brrowedbooks);
+    List<Brrowedbooks> getAll();
+
+
 
 
 }

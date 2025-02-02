@@ -16,7 +16,6 @@ public class Brrowedbooks {
     private String memberid;
     private String staffid;
     private String brooedate;
-    private String  returndate;
     private  String isBrowwed;
 
 
