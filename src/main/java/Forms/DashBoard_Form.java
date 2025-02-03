@@ -36,4 +36,11 @@ public class DashBoard_Form {
         stage.setTitle("Borrowed Books");
         stage.show();
     }
+
+    public void btn_Return_book_Action(ActionEvent actionEvent) throws IOException {
+        Stage stage=new Stage();
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/View/ReturnBooks.fxml"))));
+        stage.setTitle("Return Books");
+        stage.show();
+    }
 }

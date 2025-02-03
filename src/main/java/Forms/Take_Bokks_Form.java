@@ -52,6 +52,7 @@ public class Take_Bokks_Form implements Initializable {
     public TextField txt_returndate;
     public TextField txt_broowed;
     public TextField txt_yes_or_No;
+    public TextField txt_brrrowedid;
     Book_Controller bookController = new Book_Controller();
     MemberController memberController = new MemberController();
     StaffController staffController = new StaffController();
@@ -61,13 +62,6 @@ public class Take_Bokks_Form implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        colum_borrowid.setCellValueFactory(new PropertyValueFactory<>("brrowedbokksid"));
-        colum_Bookid.setCellValueFactory(new PropertyValueFactory<>("bookID"));
-        colum_memberid.setCellValueFactory(new PropertyValueFactory<>("memberid"));
-        colum_Staffid.setCellValueFactory(new PropertyValueFactory<>("staffid"));
-        colum_brrowdate.setCellValueFactory(new PropertyValueFactory<>("brooedate"));
-        colum_isbrowwed.setCellValueFactory(new PropertyValueFactory<>("isBrowwed"));
-
 
 
         setCombo_Bookid();
@@ -143,6 +137,7 @@ public class Take_Bokks_Form implements Initializable {
         txt_email.setText(email);
         txt_name.setText(staff.getName());
         txt_pohneNumber.setText(staff.getPhoneNumber());
+
     }
 
     private void LodDate() {
@@ -159,10 +154,11 @@ public class Take_Bokks_Form implements Initializable {
     public void take_Books_Action(ActionEvent actionEvent) {
 
         brrowedController.addBooks(new Brrowedbooks(
-                txt_broowed.getText(),
+                txt_brrrowedid.getText(),
                 (String) combo_Bookid.getValue(),
                 (String) combo_Memberid.getValue(),
                 (String) combo_Staffid.getValue(),
+
                 lbl_date.getText(),
                 txt_yes_or_No.getText()
         ));
@@ -170,6 +166,16 @@ public class Take_Bokks_Form implements Initializable {
 
 
         brrowed_table.setItems(brrowedbooksObservableList);
+
+        colum_borrowid.setCellValueFactory(new PropertyValueFactory<>("brrowedbokksid"));
+        colum_Bookid.setCellValueFactory(new PropertyValueFactory<>("bookID"));
+        colum_memberid.setCellValueFactory(new PropertyValueFactory<>("memberid"));
+        colum_Staffid.setCellValueFactory(new PropertyValueFactory<>("staffid"));
+        colum_brrowdate.setCellValueFactory(new PropertyValueFactory<>("brooedate"));
+        colum_isbrowwed.setCellValueFactory(new PropertyValueFactory<>("isBrowwed"));
+        LodTable();
+
+
 
 
     }

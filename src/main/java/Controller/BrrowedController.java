@@ -25,8 +25,7 @@ public class BrrowedController implements BroowedBooks_Service {
     public boolean addBooks(Brrowedbooks brrowedbooks) {
         Connection connection= DBConnection.getInstance().getConnection();
         try {
-            PreparedStatement preparedStatement=connection.prepareStatement("INSERT INTO borrowed_books (borrowed_id, book_id, member_id, staff_id, borrow_date, return_date, returned) VALUES (?, ?, ?, ?, ?, ?, ?)");
-
+            PreparedStatement preparedStatement=connection.prepareStatement("INSERT INTO borrowedbooks(borrow_id, BookID, member_id, staff_id, borrow_date, is_borrowed) VALUES (?, ?, ?, ?, ?, ?)");
             preparedStatement.setString(1,brrowedbooks.getBrrowedbokksid());
             preparedStatement.setString(2,brrowedbooks.getBookID());
             preparedStatement.setString(3,brrowedbooks.getMemberid());

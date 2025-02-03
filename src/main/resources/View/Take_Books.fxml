@@ -39,12 +39,12 @@
       <TextField fx:id="txt_pohneNumber" layoutX="500.0" layoutY="201.0" promptText="Phone  Number" style="-fx-background-color: D0DDD0;" />
       <TableView fx:id="brrowed_table" layoutX="-1.0" layoutY="380.0" prefHeight="200.0" prefWidth="813.0">
         <columns>
-          <TableColumn fx:id="colum_borrowid" prefWidth="135.999966442585" text="borrow_id" />
-          <TableColumn fx:id="colum_Bookid" prefWidth="125.60002136230469" text="BookID" />
-            <TableColumn fx:id="colum_memberid" prefWidth="128.79998779296875" text="member_id" />
-            <TableColumn fx:id="colum_Staffid" prefWidth="122.4000244140625" text="staff_id" />
-            <TableColumn fx:id="colum_brrowdate" prefWidth="120.00006103515625" text="borrow_date" />
-            <TableColumn fx:id="colum_isbrowwed" prefWidth="180.7999267578125" text="is_borrowed" />
+          <TableColumn fx:id="colum_Bookid" prefWidth="125.60002136230469" text="Memberid" />
+            <TableColumn fx:id="colum_memberid" prefWidth="128.79998779296875" text="Staffid" />
+            <TableColumn fx:id="colum_Staffid" prefWidth="122.4000244140625" text="Broowed_date" />
+            <TableColumn fx:id="colum_brrowdate" prefWidth="120.00006103515625" text="is Broowed" />
+            <TableColumn fx:id="colum_isbrowwed" prefWidth="180.7999267578125" text="broowed id" />
+            <TableColumn fx:id="colum_borrowid" prefWidth="135.999966442585" text="Book Id" />
         </columns>
       </TableView>
       <Label layoutX="24.0" layoutY="282.0" prefHeight="27.0" prefWidth="52.0" text="Date :">
@@ -58,7 +58,7 @@
          </font>
       </Label>
       <Button layoutX="373.0" layoutY="337.0" mnemonicParsing="false" onAction="#take_Books_Action" prefHeight="26.0" prefWidth="118.0" text="Take Bokks" />
-      <TextField fx:id="txt_broowed" layoutX="193.0" layoutY="277.0" prefHeight="26.0" prefWidth="160.0" promptText="broowde_id" />
+      <TextField fx:id="txt_brrrowedid" layoutX="193.0" layoutY="277.0" prefHeight="26.0" prefWidth="160.0" promptText="broowde_id" />
       <TextField fx:id="txt_yes_or_No" layoutX="381.0" layoutY="277.0" promptText="yes or No" />
    </children>
 </AnchorPane>
