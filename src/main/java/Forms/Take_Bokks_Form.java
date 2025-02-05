@@ -53,6 +53,13 @@ public class Take_Bokks_Form implements Initializable {
     public TextField txt_broowed;
     public TextField txt_yes_or_No;
     public TextField txt_brrrowedid;
+    public TableColumn colum_borrowedid;
+    public TableColumn colum_bookid;
+    public TableColumn colum_memeberid;
+    public TableColumn colum_staffid;
+    public TableColumn colum_brrow_date;
+    public TableColumn colum_is_broowed;
+
     Book_Controller bookController = new Book_Controller();
     MemberController memberController = new MemberController();
     StaffController staffController = new StaffController();
@@ -167,12 +174,12 @@ public class Take_Bokks_Form implements Initializable {
 
         brrowed_table.setItems(brrowedbooksObservableList);
 
-        colum_borrowid.setCellValueFactory(new PropertyValueFactory<>("brrowedbokksid"));
-        colum_Bookid.setCellValueFactory(new PropertyValueFactory<>("bookID"));
-        colum_memberid.setCellValueFactory(new PropertyValueFactory<>("memberid"));
-        colum_Staffid.setCellValueFactory(new PropertyValueFactory<>("staffid"));
-        colum_brrowdate.setCellValueFactory(new PropertyValueFactory<>("brooedate"));
-        colum_isbrowwed.setCellValueFactory(new PropertyValueFactory<>("isBrowwed"));
+        colum_borrowedid.setCellValueFactory(new PropertyValueFactory<>("brrowedbokksid"));
+        colum_bookid.setCellValueFactory(new PropertyValueFactory<>("bookID"));
+        colum_memeberid.setCellValueFactory(new PropertyValueFactory<>("memberid"));
+        colum_staffid.setCellValueFactory(new PropertyValueFactory<>("staffid"));
+        colum_brrow_date.setCellValueFactory(new PropertyValueFactory<>("brooedate"));
+        colum_is_broowed.setCellValueFactory(new PropertyValueFactory<>("isBrowwed"));
         LodTable();
 
 
@@ -186,6 +193,8 @@ public class Take_Bokks_Form implements Initializable {
         ObservableList<Brrowedbooks> objects = FXCollections.observableArrayList();
         brrowedbooks.forEach(brrowedbooks1 -> objects.add(brrowedbooks1));
         brrowed_table.setItems(objects);
+
+
     }
 
     }
