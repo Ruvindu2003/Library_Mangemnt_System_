@@ -1,7 +1,7 @@
 package Controller;
 
-import Forms.DBConnection;
-import Modlle.Return_Book;
+import db.DBConnection;
+import model.Return_Book;
 import Services.Return_Books_Service;
 
 import java.sql.Connection;

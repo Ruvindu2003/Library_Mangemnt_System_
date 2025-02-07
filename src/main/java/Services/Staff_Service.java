@@ -1,7 +1,6 @@
 package Services;
 
-import Modlle.Book;
-import Modlle.Staff;
+import model.Staff;
 
 import java.sql.SQLException;
 import java.util.List;

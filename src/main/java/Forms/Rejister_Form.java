@@ -1,6 +1,7 @@
 package Forms;
 
-import Modlle.Login;
+import model.Login;
+import db.DBConnection;
 import javafx.event.ActionEvent;
 import javafx.scene.control.TextField;
 

@@ -1,13 +1,17 @@
 package Forms;
 
 import Controller.MemberController;
-import Modlle.Members;
+import model.Members;
+import db.DBConnection;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import servicess.ServiceFactory;
+import servicess.custom.Memeber_Service;
+import utill.ServiceType;
 
 import java.net.URL;
 import java.sql.Connection;
@@ -33,6 +37,8 @@ public class Member_Form implements Initializable {
 
     MemberController memberController=new MemberController();
 
+    Memeber_Service getInstance= ServiceFactory.getInstance().getServiceType(ServiceType.AddMemeber);
+
     private void LodDate(){
         Date date = new Date();
         SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd");
@@ -50,7 +56,7 @@ public class Member_Form implements Initializable {
     }
 
     public void btn_Search_Action(ActionEvent actionEvent) {
-        Members members=memberController.searchMember(txt_memberid.getText());
+        Members members=getInstance.searchMember(txt_memberid.getText());
         if (members!=null){
 
 
@@ -62,8 +68,8 @@ public class Member_Form implements Initializable {
     }
 
     public void btn_Add_Action(ActionEvent actionEvent) {
-        Connection connection=DBConnection.getInstance().getConnection();
-        memberController.AddMemeber(new Members(
+
+        getInstance.AddMemeber(new Members(
                 txt_memberid.getText(),
                 txt_membername.getText(),
                 txt_phoneNumber.getText(),
@@ -86,7 +92,7 @@ public class Member_Form implements Initializable {
     }
 
     public void btn_update_Action(ActionEvent actionEvent) {
-        boolean b=MemberController.getInstance().updateMemeber(new Members(
+        boolean b=getInstance.updateMemeber(new Members(
                 txt_memberid.getText(),
                 txt_membername.getText(),
                 txt_phoneNumber.getText(),
@@ -117,7 +123,7 @@ public class Member_Form implements Initializable {
     }
 
     public  void LodTable(){
-        ArrayList<Members> all = MemberController.getInstance().getAll();
+        ArrayList<Members> all = (ArrayList<Members>)getInstance.getAll();
         System.out.println(all);
         ObservableList<Members> objects = FXCollections.observableArrayList();
         all.forEach(members -> objects.add(members));

@@ -1,18 +1,14 @@
-package Services;
+package servicess.custom;
 
 import model.Members;
+import servicess.Super_Service;
 
 import java.util.List;
 
-public interface MemeberService {
+public interface Memeber_Service extends Super_Service {
     List<Members> getAll();
-
     Members searchMember(String members);
-
     boolean updateMemeber(Members members);
-
     boolean deleteMemeber(Members member_id);
-
-    void  AddMemeber(Members members);
-
+    boolean  AddMemeber(Members members);
 }

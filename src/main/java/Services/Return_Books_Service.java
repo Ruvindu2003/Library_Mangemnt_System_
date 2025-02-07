@@ -1,7 +1,6 @@
 package Services;
 
-import Modlle.Brrowedbooks;
-import Modlle.Return_Book;
+import model.Return_Book;
 
 public interface Return_Books_Service {
 

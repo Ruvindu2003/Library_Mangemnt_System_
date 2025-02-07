@@ -2,9 +2,8 @@ package Forms;
 
 import Controller.BrrowedController;
 import Controller.ReturnBooks_Controoler;
-import Modlle.Brrowedbooks;
-import Modlle.Return_Book;
-import Modlle.Staff;
+import model.Brrowedbooks;
+import model.Return_Book;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;

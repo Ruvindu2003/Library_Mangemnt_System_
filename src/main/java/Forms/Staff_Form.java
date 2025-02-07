@@ -3,8 +3,8 @@ package Forms;
 
 
 import Controller.StaffController;
-import Modlle.Book;
-import Modlle.Staff;
+import model.Staff;
+import db.DBConnection;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -14,6 +14,9 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import servicess.ServiceFactory;
+import servicess.custom.Staff_Service;
+import utill.ServiceType;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -22,6 +25,8 @@ import java.util.List;
 
 public class Staff_Form {
     StaffController staffController=new StaffController();
+
+    Staff_Service getInstance= ServiceFactory.getInstance().getServiceType(ServiceType.AddStaff);
 
         @FXML
         private TableColumn<?, ?> colum_PhoneNumber;
@@ -66,7 +71,7 @@ public class Staff_Form {
 
         @FXML
         void btn_Search_Action(ActionEvent event) throws SQLException {
-            Staff staff = staffController.SearchStaff(txt_Staffid.getText());
+            Staff staff = getInstance.SearchStaff(txt_Staffid.getText());
 
             if (staff!= null) {
             }
@@ -91,7 +96,7 @@ public class Staff_Form {
 
         @FXML
         void btn_delete_Action(ActionEvent event) {
-            Connection connection=DBConnection.getInstance().getConnection();
+            Connection connection= DBConnection.getInstance().getConnection();
             try {
                 PreparedStatement preparedStatement=connection.prepareStatement("Delete from staff  where staff_id =?");
 
@@ -111,7 +116,7 @@ public class Staff_Form {
         }
 
         public void loadtable(){
-            List<Staff> staff=staffController.getInstance().getAll();
+            List<Staff> staff=getInstance.getAll();
             System.out.println(staff);
             ObservableList<Staff> observableList= FXCollections.observableArrayList();
             staff.forEach(stafff -> observableList.add(stafff));

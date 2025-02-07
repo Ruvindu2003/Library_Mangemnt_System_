@@ -1,7 +1,7 @@
 package Forms;
 
 import Controller.Login_Controller;
-import Modlle.Login;
+import model.Login;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;

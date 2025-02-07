@@ -1,6 +1,6 @@
 package Services;
 
-import Modlle.Login;
+import model.Login;
 
 import java.sql.SQLException;
 

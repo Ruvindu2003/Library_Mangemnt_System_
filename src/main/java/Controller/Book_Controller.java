@@ -1,7 +1,7 @@
 package Controller;
 
-import Forms.DBConnection;
-import Modlle.Book;
+import db.DBConnection;
+import model.Book;
 import Services.Book_Service;
 import javafx.scene.control.Alert;
 
@@ -56,8 +56,7 @@ public class Book_Controller implements Book_Service {
 
             ResultSet resultSet = preparedStatement.executeQuery();
 
-            if (!resultSet.next()) {  // If no book is found, return null
-                return null;
+            if (!resultSet.next()) {
             }
 
             // Corrected: Fetch data after ensuring a result exists

@@ -3,7 +3,8 @@ package Forms;
 
 
 import Controller.Book_Controller;
-import Modlle.Book;
+import model.Book;
+import db.DBConnection;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -13,6 +14,9 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import servicess.ServiceFactory;
+import servicess.custom.Book_service;
+import utill.ServiceType;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -55,9 +59,10 @@ public class Add_Bokks_Form {
     @FXML
     private TextField txt_lanvage;
 
+    Book_service bookInstance = ServiceFactory.getInstance().getServiceType(ServiceType.AddBooks);
     @FXML
     void btn_Add_Action(ActionEvent event) {
-        bookController.Addbook(new Book(
+        bookInstance.Addbook(new Book(
                 txt_Bookid.getText(),
                 Txt_tiitle.getText(),
                 txt_Author.getText(),
@@ -68,8 +73,8 @@ public class Add_Bokks_Form {
     }
 
     @FXML
-    void btn_Delete_Action(ActionEvent event) {
-        Connection connection=DBConnection.getInstance().getConnection();
+    void btn_Delete_Action(ActionEvent event) throws SQLException {
+        Connection connection= DBConnection.getInstance().getConnection();
         try {
             PreparedStatement preparedStatement=connection.prepareStatement("Delete from Books  where BookID =?");
 
@@ -90,15 +95,16 @@ public class Add_Bokks_Form {
 
     @FXML
     void btn_Search_Action(ActionEvent event) {
-        Connection connection=DBConnection.getInstance().getConnection();
-        Book book = bookController.SearcBooks(txt_Bookid.getText());
+
+        Book book = bookInstance.SearcBooks(txt_Bookid.getText());
 
         if (book != null) {
-        }
             Txt_tiitle.setText(String.valueOf(book.getTiitle()));
             txt_Author.setText(String.valueOf(book.getAuthor()));
             txt_Isbn.setText(String.valueOf(book.getIsbn()));
             txt_lanvage.setText(String.valueOf(book.getLanvage()));
+
+        }
 
 
     }
@@ -116,7 +122,7 @@ public class Add_Bokks_Form {
 
     @FXML
     void btn_update_Action(ActionEvent event) {
-       boolean b=bookController.UpdateBooks(new Book(
+       boolean b=bookInstance.UpdateBooks(new Book(
                txt_Bookid.getText(),
                Txt_tiitle.getText(),
                txt_Author.getText(),
@@ -130,7 +136,7 @@ public class Add_Bokks_Form {
     }
     public void Lodtable(){
 
-        List<Book> books=bookController.getInstancce().getAll();
+        List<Book> books=bookInstance.getAll();
         System.out.println(books);
         ObservableList<Book> objects = FXCollections.observableArrayList();
         books.forEach(book -> objects.add(book));

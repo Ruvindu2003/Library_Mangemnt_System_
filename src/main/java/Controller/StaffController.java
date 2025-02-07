@@ -1,8 +1,7 @@
 package Controller;
 
-import Forms.DBConnection;
-import Modlle.Book;
-import Modlle.Staff;
+import db.DBConnection;
+import model.Staff;
 import Services.Staff_Service;
 import javafx.scene.control.Alert;
 

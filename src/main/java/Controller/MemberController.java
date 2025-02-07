@@ -1,7 +1,7 @@
 package Controller;
 
-import Forms.DBConnection;
-import Modlle.Members;
+import db.DBConnection;
+import model.Members;
 import Services.MemeberService;
 import javafx.scene.control.Alert;
 

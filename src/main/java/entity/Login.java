@@ -1,4 +1,4 @@
-package Modlle;
+package entity;
 
 import lombok.*;
 

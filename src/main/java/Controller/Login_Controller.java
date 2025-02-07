@@ -1,7 +1,7 @@
 package Controller;
 
-import Forms.DBConnection;
-import Modlle.Login;
+import db.DBConnection;
+import model.Login;
 import Services.Loginservices;
 
 import java.sql.Connection;

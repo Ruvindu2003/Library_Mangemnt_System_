@@ -1,9 +1,9 @@
 package Controller;
 
-import Forms.DBConnection;
-import Modlle.Brrowedbooks;
+import db.DBConnection;
+import model.Brrowedbooks;
 
-import Modlle.Members;
+import model.Members;
 import Services.BroowedBooks_Service;
 import javafx.scene.control.Alert;
 
