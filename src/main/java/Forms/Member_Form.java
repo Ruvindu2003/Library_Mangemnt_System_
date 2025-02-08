@@ -1,6 +1,9 @@
 package Forms;
 
 import Controller.MemberController;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 import model.Members;
 import db.DBConnection;
 import javafx.collections.FXCollections;
@@ -13,6 +16,7 @@ import servicess.ServiceFactory;
 import servicess.custom.Memeber_Service;
 import utill.ServiceType;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -130,5 +134,17 @@ public class Member_Form implements Initializable {
         table_Memeber.setItems(objects);
 
 
+    }
+
+    public void btn_Back_Action(ActionEvent actionEvent){
+        Stage stage=new Stage();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/View/DashBoard.fxml"))));
+            stage.show();
+
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

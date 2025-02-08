@@ -1,5 +1,5 @@
 package utill;
 
 public enum RepositoryType {
-    Book, Member, Staff
+    Book, Member, Staff,Login
 }

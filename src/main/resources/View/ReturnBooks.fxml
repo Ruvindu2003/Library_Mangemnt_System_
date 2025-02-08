@@ -3,11 +3,13 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="471.0" prefWidth="693.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Forms.ReturnBooks_Form">
+<AnchorPane prefHeight="549.0" prefWidth="718.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Forms.ReturnBooks_Form">
    <children>
       <Label layoutX="270.0" layoutY="14.0" prefHeight="51.0" prefWidth="236.0" text="Return Books">
          <font>
@@ -33,6 +35,17 @@
       <TextField fx:id="return_on_time" layoutX="372.0" layoutY="233.0" prefHeight="14.0" prefWidth="160.0" promptText="Return_on_time" />
       <TextField fx:id="txt_Amount" layoutX="547.0" layoutY="233.0" promptText="Amount" />
       <TextField fx:id="txt_returnid" layoutX="205.0" layoutY="233.0" promptText="Return  id" />
-      <Button layoutX="342.0" layoutY="293.0" mnemonicParsing="false" onAction="#btn_Action_Find" prefHeight="26.0" prefWidth="60.0" text="Fine" />
+      <Button layoutX="290.0" layoutY="299.0" mnemonicParsing="false" onAction="#btn_Action_Find" prefHeight="26.0" prefWidth="60.0" text="Fine" />
+      <TableView fx:id="tabel_return" layoutY="349.0" prefHeight="200.0" prefWidth="718.0">
+        <columns>
+          <TableColumn fx:id="colum_returnid" prefWidth="132.79998779296875" text="Returnid" />
+            <TableColumn fx:id="colum_browwedid" prefWidth="90.4000244140625" text="broowed id" />
+            <TableColumn fx:id="colum_bookid" prefWidth="110.39996337890625" text="Bookid" />
+            <TableColumn fx:id="colum_returndate" prefWidth="120.800048828125" text="returndate" />
+            <TableColumn fx:id="colum_fineAmount" prefWidth="88.79998779296875" text="Fine Amount" />
+            <TableColumn fx:id="colum_Return_Status" prefWidth="177.60003662109375" text="Return Status" />
+        </columns>
+      </TableView>
+      <Button layoutX="388.0" layoutY="299.0" mnemonicParsing="false" onAction="#btn_View_Action" prefHeight="26.0" prefWidth="60.0" text="View" />
    </children>
 </AnchorPane>

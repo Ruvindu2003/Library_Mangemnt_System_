@@ -16,6 +16,7 @@ public class Login_Form {
     public TextField txt_username;
     public TextField txt_password;
 
+
     public void Rejister_on_Action(ActionEvent actionEvent) throws IOException {
         Stage stage=new Stage();
         stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/View/Rejister.fxml"))));
@@ -30,8 +31,10 @@ public class Login_Form {
         System.out.println(User);
         new Alert(Alert.AlertType.INFORMATION,"Sucsses Fully").show();
         if (User==null){
-            new Alert(Alert.AlertType.INFORMATION,"Loging  Not Sucsses Fully").show();
+
             return;
+        }else {
+            new Alert(Alert.AlertType.INFORMATION,"Loging Fail").show();
         }
         Stage stage = new Stage();
 

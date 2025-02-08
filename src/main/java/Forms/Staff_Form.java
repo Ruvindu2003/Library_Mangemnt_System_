@@ -3,6 +3,7 @@ package Forms;
 
 
 import Controller.StaffController;
+import model.Members;
 import model.Staff;
 import db.DBConnection;
 import javafx.collections.FXCollections;
@@ -14,6 +15,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import org.w3c.dom.Entity;
 import servicess.ServiceFactory;
 import servicess.custom.Staff_Service;
 import utill.ServiceType;
@@ -57,7 +59,7 @@ public class Staff_Form {
 
         @FXML
         void btn_Add_Action(ActionEvent event) {
-            staffController.Addbook(new Staff(
+            getInstance.addstaff(new Staff(
                    txt_Staffid.getText(),
                     txt_email.getText(),
                     txt_name.getText(),
@@ -71,14 +73,15 @@ public class Staff_Form {
 
         @FXML
         void btn_Search_Action(ActionEvent event) throws SQLException {
-            Staff staff = getInstance.SearchStaff(txt_Staffid.getText());
+          Staff  staff = getInstance.SearchStaff (txt_Staffid.getText());
 
             if (staff!= null) {
+                txt_email.setText(String.valueOf(staff.getEmail()));
+                txt_name.setText(String.valueOf(staff.getName()));
+                txt_phoneNumber.setText(staff.getPhoneNumber());
+
             }
 
-            txt_email.setText(String.valueOf(staff.getEmail()));
-            txt_name.setText(String.valueOf(staff.getName()));
-            txt_phoneNumber.setText(staff.getPhoneNumber());
 
 
         }
@@ -124,7 +127,7 @@ public class Staff_Form {
         }
 
     public void btn_update_Actiom(ActionEvent actionEvent) {
-        boolean b=staffController.UpdateBooks(new Staff(
+        boolean b= getInstance.UpdateBooks(new Staff(
             txt_Staffid.getText(),
                 txt_email.getText(),
                 txt_name.getText(),

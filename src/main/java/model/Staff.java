@@ -1,5 +1,6 @@
 package model;
 
+import entity.Staffentity;
 import lombok.*;
 
 @ToString
@@ -9,7 +10,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class Staff {
+public class Staff extends Staffentity {
     private String staffid;
     private  String email;
     private String name;

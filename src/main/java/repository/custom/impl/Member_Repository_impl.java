@@ -1,7 +1,9 @@
 package repository.custom.impl;
 
 import db.DBConnection;
+import entity.Login_entity;
 import javafx.scene.control.Alert;
+import model.Login;
 import model.Members;
 import model.Book;
 import model.Staff;
@@ -33,20 +35,14 @@ public class Member_Repository_impl implements Member_Repository {
             pst.setString(4,entity.getMembershipdates());
             pst.setString(5,entity.getMemberid());
 
+                     return pst.executeUpdate()>0;
 
-
-            // Executing the update and checking if it succeeded
-            return pst.executeUpdate()>0;
         } catch (SQLException e) {
             new  Alert(Alert.AlertType.CONFIRMATION,"Suchses not").show();
             throw new RuntimeException(e);
 
         }
-
-
-
     }
-
     @Override
     public boolean delete(String id) {
         return false;
@@ -82,15 +78,9 @@ public class Member_Repository_impl implements Member_Repository {
     }
 
     @Override
-    public List<Book> getAll() {
-        return List.of();
-    }
+    public List<Book> getAll() {return List.of();}
 
-    @Override
-    public Book SerachBook(String entity) {
-
-        return null;
-    }
+    @Override public Book SerachBook(String entity) {return null;}
 
     @Override
     public List<Members> getAl() {
@@ -116,11 +106,8 @@ public class Member_Repository_impl implements Member_Repository {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        return members;
-
-
+                 return members;
     }
-
     @Override
     public Members addMemeber(Members entity) {
         try {
@@ -139,19 +126,19 @@ public class Member_Repository_impl implements Member_Repository {
     return entity;
     }
 
-    @Override
-    public entity.Staff addStaff(Members entity) {
+    @Override public Staff addStaff(Staff entity) {
         return null;
     }
-
-    @Override
-    public Staff searchStaff(String entity) {
+    @Override public Staff searchStaff(String entity) {
         return null;
     }
-
-    @Override
-    public List<Staff> getAllStaff() {
+    @Override public List<Staff> getAllStaff() {
         return List.of();
+    }
+
+    @Override
+    public Login_entity getUser(String user_name, String password) {
+        return null;
     }
 
 }

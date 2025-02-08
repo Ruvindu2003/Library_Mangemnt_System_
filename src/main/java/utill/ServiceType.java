@@ -3,5 +3,6 @@ package utill;
 public enum ServiceType {
     AddBooks,
     AddMemeber,
-    AddStaff
+    AddStaff,
+    Login
 }

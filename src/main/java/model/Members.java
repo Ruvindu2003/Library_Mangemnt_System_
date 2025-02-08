@@ -4,6 +4,8 @@ import lombok.*;
 
 @NoArgsConstructor
 @Data
+@Getter
+@Setter
 
 
 @AllArgsConstructor
@@ -15,6 +17,7 @@ public class Members {
         private String phoneNumber;
          private String adrees;
          private String Membershipdates;
+
 
 
 }

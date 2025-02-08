@@ -34,6 +34,7 @@ public class DashBoard_Form {
         Stage stage=new Stage();
         stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/View/Take_Books.fxml"))));
         stage.setTitle("Borrowed Books");
+
         stage.show();
     }
 

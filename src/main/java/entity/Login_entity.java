@@ -9,7 +9,7 @@ import lombok.*;
 @ToString
 @Data
 
-public class Login {
+public class Login_entity {
     private String id;
     private String userName;
     private String  email;

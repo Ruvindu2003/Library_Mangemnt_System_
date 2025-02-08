@@ -2,20 +2,21 @@ package Forms;
 
 import Controller.BrrowedController;
 import Controller.ReturnBooks_Controoler;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import model.Brrowedbooks;
 import model.Return_Book;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import model.Staff;
 
 import java.net.URL;
 import java.text.BreakIterator;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class ReturnBooks_Form implements Initializable {
@@ -32,6 +33,13 @@ public class ReturnBooks_Form implements Initializable {
     public TextField txt_Amount;
     public TextField return_on_time;
     public TextField txt_returnid;
+    public TableView tabel_return;
+    public TableColumn colum_returnid;
+    public TableColumn colum_browwedid;
+    public TableColumn colum_bookid;
+    public TableColumn colum_returndate;
+    public TableColumn colum_fineAmount;
+    public TableColumn colum_Return_Status;
     BrrowedController brrowedController=new BrrowedController();
     ReturnBooks_Controoler returnBooksControoler=new ReturnBooks_Controoler();
 
@@ -130,4 +138,26 @@ public class ReturnBooks_Form implements Initializable {
 
         ));
     }
-}
+
+    public void btn_View_Action(ActionEvent actionEvent) {
+        colum_returnid.setCellValueFactory(new PropertyValueFactory<>("returnid"));
+        colum_browwedid.setCellValueFactory(new PropertyValueFactory<>("borrow_id"));
+        colum_bookid.setCellValueFactory(new PropertyValueFactory<>("bookid"));
+        colum_returndate.setCellValueFactory(new PropertyValueFactory<>("return_date"));
+        colum_fineAmount.setCellValueFactory(new PropertyValueFactory<>("findAmount"));
+        colum_Return_Status.setCellValueFactory(new PropertyValueFactory<>("return_status"));
+        Lodtabel();
+
+
+
+    }
+    public void Lodtabel(){
+            List<Return_Book> returnBooks=returnBooksControoler.getAll();
+            System.out.println(returnBooks);
+            ObservableList<Return_Book> observableList= FXCollections.observableArrayList();
+            returnBooks.forEach(returnBook -> observableList.add(returnBook));
+            tabel_return.setItems(observableList);
+        }
+        }
+
+

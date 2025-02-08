@@ -1,10 +1,13 @@
 package repository.custom.impl;
 
 import db.DBConnection;
-import entity.Staff;
+import entity.Login_entity;
+import entity.Staffentity;
 import javafx.scene.control.Alert;
 import model.Book;
+import model.Login;
 import model.Members;
+import model.Staff;
 import repository.custom.Staff_Repository;
 
 import java.sql.PreparedStatement;
@@ -16,15 +19,13 @@ import java.util.List;
 
 public class Staff_Repository_impl implements Staff_Repository {
     @Override
-    public Book add(Staff entity) {
+    public Book add(Staffentity entity) {
         return null;
     }
-
     @Override
-    public boolean update(Staff entity) {
-
+    public boolean update(Staffentity entity) {
         try {
-            PreparedStatement preparedStatement=DBConnection.getInstance().getConnection().prepareStatement(" UPDATE staff SET email = ?, name = ?, phone_number = ?  WHERE staff_id= ?");
+            PreparedStatement preparedStatement=DBConnection.getInstance().getConnection().prepareStatement("UPDATE staff SET email = ?,name = ?,phone_number=?WHERE staff_id=?");
 
             preparedStatement.setString(1, entity.getStaffid());
             preparedStatement.setString(2, entity.getEmail());
@@ -40,36 +41,12 @@ public class Staff_Repository_impl implements Staff_Repository {
         }
 
     }
-
-    @Override
-    public boolean delete(String id) {
-        return false;
-    }
-
-    @Override
-    public Members Search(String entity) {
-        return null;
-    }
-
-    @Override
-    public List<Book> getAll() {
-        return List.of();
-    }
-
-    @Override
-    public Book SerachBook(String entity) {
-        return null;
-    }
-
-    @Override
-    public List<Members> getAl() {
-        return List.of();
-    }
-
-    @Override
-    public Members addMemeber(Staff entity) {
-        return null;
-    }
+    @Override public boolean delete(String id) {return false;}
+    @Override public Members Search(String entity) {return null;}
+    @Override public List<Book> getAll() {return List.of();}
+    @Override public Book SerachBook(String entity) {return null;}
+    @Override public List<Members> getAl() {return List.of();}
+    @Override public Members addMemeber(Staffentity entity) {return null;}
 
     @Override
     public Staff addStaff(Staff entity) {
@@ -83,17 +60,12 @@ public class Staff_Repository_impl implements Staff_Repository {
 
 
             if (preparedStatement.executeUpdate()>0) new Alert(Alert.AlertType.INFORMATION,"Success Full").show();
-
-
-
-
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
 
         return entity;
     }
-
     @Override
     public model.Staff searchStaff(String entity) {
         model.Staff searcStaff = null;
@@ -114,11 +86,7 @@ public class Staff_Repository_impl implements Staff_Repository {
                     resultSet.getString(3),
                     resultSet.getString(4)
 
-            );
-
-
-
-        } catch (SQLException e) {
+            );} catch (SQLException e) {
             throw new RuntimeException(e);
         }
 
@@ -126,10 +94,6 @@ public class Staff_Repository_impl implements Staff_Repository {
         return searcStaff;
 
     }
-
-
-
-
     @Override
     public List<model.Staff> getAllStaff() {
         ArrayList<model.Staff> staff=new ArrayList<>();
@@ -150,8 +114,11 @@ public class Staff_Repository_impl implements Staff_Repository {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-
         return staff;
+    }
 
+    @Override
+    public Login_entity getUser(String user_name, String password) {
+        return null;
     }
 }

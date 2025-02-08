@@ -9,7 +9,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class Staff {
+public class Staffentity {
     private String staffid;
     private  String email;
     private String name;

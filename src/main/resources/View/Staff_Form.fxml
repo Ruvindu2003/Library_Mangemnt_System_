@@ -10,14 +10,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="425.0" prefWidth="734.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Forms.Staff_Form">
+<AnchorPane prefHeight="430.0" prefWidth="776.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Forms.Staff_Form">
    <children>
       <ImageView fitHeight="442.0" fitWidth="286.0" layoutX="-2.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/pexels-ekaterina-bolovtsova-6077089.jpg" />
          </image>
       </ImageView>
-      <Label layoutX="421.0" prefHeight="100.0" prefWidth="206.0" text="Staff">
+      <Label layoutX="420.0" prefHeight="100.0" prefWidth="206.0" text="Staff">
          <font>
             <Font name="System Bold Italic" size="61.0" />
          </font>
@@ -30,7 +30,7 @@
       <Button layoutX="386.0" layoutY="248.0" mnemonicParsing="false" onAction="#btn_Add_Action" prefHeight="26.0" prefWidth="67.0" style="-fx-background-color: blue;" text="Add" />
       <Button layoutX="646.0" layoutY="247.0" mnemonicParsing="false" onAction="#btn_delete_Action" prefHeight="26.0" prefWidth="67.0" style="-fx-background-color: green;" text="Delete" />
       <Button layoutX="471.0" layoutY="249.0" mnemonicParsing="false" onAction="#btn_View_Action" prefHeight="26.0" prefWidth="67.0" style="-fx-background-color: yellow;" text="View" />
-      <TableView fx:id="table_Staff" layoutX="283.0" layoutY="292.0" prefHeight="136.0" prefWidth="451.0">
+      <TableView fx:id="table_Staff" layoutX="283.0" layoutY="292.0" prefHeight="136.0" prefWidth="501.0">
         <columns>
           <TableColumn fx:id="colum_Staffid" prefWidth="132.0" text="Staff id" />
           <TableColumn fx:id="colum_email" prefWidth="103.20001220703125" text="email" />

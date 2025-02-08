@@ -1,8 +1,10 @@
 package repository.custom.impl;
 
 import db.DBConnection;
+import entity.Login_entity;
 import javafx.scene.control.Alert;
 import model.Book;
+import model.Login;
 import model.Members;
 import model.Staff;
 import repository.custom.Book_Repository;
@@ -38,11 +40,6 @@ public class Book_Repository_impl implements Book_Repository {
 
     return  entity;
 }
-
-
-
-
-
     @Override
     public boolean update(Book entity) {
         try {
@@ -60,21 +57,10 @@ public class Book_Repository_impl implements Book_Repository {
             new Alert(Alert.AlertType.INFORMATION,"Sucsses Full").show();
             throw new RuntimeException(e);
         }
-
-
-
-
     }
-
     @Override
-    public boolean delete(String id) {
-
-
-        return false;
-    }
-
-    @Override
-    public Members Search(String entity) {
+    public boolean delete(String id) {return false;}
+    @Override public Members Search(String entity) {
         return  null;
     }
 
@@ -100,12 +86,8 @@ public class Book_Repository_impl implements Book_Repository {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-
         return books;
-
-
     }
-
     @Override
     public Book SerachBook(String entity) {
         Book searcbookobject = null;
@@ -135,31 +117,18 @@ public class Book_Repository_impl implements Book_Repository {
         return searcbookobject;
     }
 
-    @Override
-    public List<Members> getAl() {
+    @Override public List<Members> getAl() {
+        return List.of();
+    }
+    @Override public Members addMemeber(Book entity) {return null;}
+    @Override public Staff addStaff(Staff entity) {return null;}
+    @Override public Staff searchStaff(String entity) {return null;}
+    @Override public List<Staff> getAllStaff() {
         return List.of();
     }
 
     @Override
-    public Members addMemeber(Book entity) {
-
-
+    public Login_entity getUser(String user_name, String password) {
         return null;
-    }
-
-    @Override
-    public entity.Staff addStaff(Book entity) {
-        return null;
-    }
-
-    @Override
-    public Staff searchStaff(String entity) {
-
-        return null;
-    }
-
-    @Override
-    public List<Staff> getAllStaff() {
-        return List.of();
     }
 }
