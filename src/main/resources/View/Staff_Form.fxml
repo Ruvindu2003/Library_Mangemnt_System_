@@ -5,39 +5,41 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="430.0" prefWidth="776.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Forms.Staff_Form">
+<AnchorPane fx:id="Ancor_Staff" prefHeight="430.0" prefWidth="572.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Forms.Staff_Form">
    <children>
-      <ImageView fitHeight="442.0" fitWidth="286.0" layoutX="-2.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/pexels-ekaterina-bolovtsova-6077089.jpg" />
-         </image>
-      </ImageView>
-      <Label layoutX="420.0" prefHeight="100.0" prefWidth="206.0" text="Staff">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="GHOSTWHITE" height="191.0" layoutX="-1.0" layoutY="94.0" stroke="GHOSTWHITE" strokeType="INSIDE" width="586.0" />
+      <Label layoutX="192.0" layoutY="-5.0" prefHeight="100.0" prefWidth="206.0" text="Staff">
          <font>
             <Font name="System Bold Italic" size="61.0" />
          </font>
       </Label>
-      <TextField fx:id="txt_Staffid" layoutX="304.0" layoutY="108.0" prefHeight="26.0" prefWidth="181.0" promptText="Staff_id" />
-      <TextField fx:id="txt_email" layoutX="525.0" layoutY="109.0" prefHeight="26.0" prefWidth="182.0" promptText="email" />
-      <TextField fx:id="txt_name" layoutX="305.0" layoutY="172.0" prefHeight="26.0" prefWidth="182.0" promptText="name" />
-      <TextField fx:id="txt_phoneNumber" layoutX="525.0" layoutY="173.0" prefHeight="26.0" prefWidth="182.0" promptText="phone Number" />
-      <Button layoutX="304.0" layoutY="247.0" mnemonicParsing="false" onAction="#btn_Search_Action" prefHeight="26.0" prefWidth="67.0" style="-fx-background-color: F2EFE7;" text="Search" />
-      <Button layoutX="386.0" layoutY="248.0" mnemonicParsing="false" onAction="#btn_Add_Action" prefHeight="26.0" prefWidth="67.0" style="-fx-background-color: blue;" text="Add" />
-      <Button layoutX="646.0" layoutY="247.0" mnemonicParsing="false" onAction="#btn_delete_Action" prefHeight="26.0" prefWidth="67.0" style="-fx-background-color: green;" text="Delete" />
-      <Button layoutX="471.0" layoutY="249.0" mnemonicParsing="false" onAction="#btn_View_Action" prefHeight="26.0" prefWidth="67.0" style="-fx-background-color: yellow;" text="View" />
-      <TableView fx:id="table_Staff" layoutX="283.0" layoutY="292.0" prefHeight="136.0" prefWidth="501.0">
+      <TextField fx:id="txt_Staffid" layoutX="59.0" layoutY="109.0" prefHeight="26.0" prefWidth="181.0" promptText="Staff_id" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_email" layoutX="306.0" layoutY="109.0" prefHeight="26.0" prefWidth="163.0" promptText="email" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_name" layoutX="58.0" layoutY="173.0" prefHeight="26.0" prefWidth="182.0" promptText="name" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_phoneNumber" layoutX="309.0" layoutY="173.0" prefHeight="26.0" prefWidth="163.0" promptText="phone Number" style="-fx-border-color: #133e87;" />
+      <Button layoutX="30.0" layoutY="237.0" mnemonicParsing="false" onAction="#btn_Search_Action" prefHeight="26.0" prefWidth="67.0" style="-fx-background-color: #133E87;" text="Search" textFill="WHITE" />
+      <Button layoutX="149.0" layoutY="237.0" mnemonicParsing="false" onAction="#btn_Add_Action" prefHeight="26.0" prefWidth="67.0" style="-fx-background-color: #133E87;" text="Add" textFill="WHITE" />
+      <Button layoutX="478.0" layoutY="237.0" mnemonicParsing="false" onAction="#btn_delete_Action" prefHeight="26.0" prefWidth="67.0" style="-fx-background-color: #133E87;" text="Delete" textFill="WHITE" />
+      <Button layoutX="262.0" layoutY="237.0" mnemonicParsing="false" onAction="#btn_View_Action" prefHeight="26.0" prefWidth="67.0" style="-fx-background-color: #133E87;" text="View" textFill="WHITE" />
+      <TableView fx:id="table_Staff" layoutX="1.0" layoutY="287.0" prefHeight="144.0" prefWidth="586.0">
         <columns>
           <TableColumn fx:id="colum_Staffid" prefWidth="132.0" text="Staff id" />
-          <TableColumn fx:id="colum_email" prefWidth="103.20001220703125" text="email" />
-            <TableColumn fx:id="colum_name" prefWidth="106.39996337890625" text="Name" />
-            <TableColumn fx:id="colum_PhoneNumber" prefWidth="109.60003662109375" text="Phone Number" />
+          <TableColumn fx:id="colum_email" prefWidth="176.79998779296875" text="email" />
+            <TableColumn fx:id="colum_name" prefWidth="95.20001220703125" text="Name" />
+            <TableColumn fx:id="colum_PhoneNumber" prefWidth="175.99996948242188" text="Phone Number" />
         </columns>
       </TableView>
-      <Button layoutX="556.0" layoutY="250.0" mnemonicParsing="false" onAction="#btn_update_Actiom" prefHeight="26.0" prefWidth="60.0" text="Update" />
+      <Button layoutX="371.0" layoutY="237.0" mnemonicParsing="false" onAction="#btn_update_Actiom" prefHeight="26.0" prefWidth="60.0" style="-fx-background-color: #133E87;" text="Update" textFill="WHITE" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#133e87" height="100.0" layoutY="-5.0" stroke="#133e87" strokeType="INSIDE" width="587.0" />
+      <Label layoutX="193.0" layoutY="14.0" prefHeight="70.0" prefWidth="206.0" text="Add Staff" textFill="#fffcfc">
+         <font>
+            <Font name="System Bold Italic" size="38.0" />
+         </font>
+      </Label>
+      <Button layoutX="512.0" layoutY="110.0" mnemonicParsing="false" onAction="#btn_Back_Action" prefHeight="26.0" prefWidth="50.0" style="-fx-background-color: #133E87;" text="Back" textFill="WHITE" />
    </children>
 </AnchorPane>

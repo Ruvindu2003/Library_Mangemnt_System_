@@ -4,6 +4,10 @@ import Controller.Book_Controller;
 import Controller.BrrowedController;
 import Controller.MemberController;
 import Controller.StaffController;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import model.Book;
 import model.Brrowedbooks;
 import model.Members;
@@ -15,6 +19,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.text.BreakIterator;
@@ -58,6 +63,7 @@ public class Take_Bokks_Form implements Initializable {
     public TableColumn colum_staffid;
     public TableColumn colum_brrow_date;
     public TableColumn colum_is_broowed;
+    public AnchorPane Ancor_Browwdebooks;
 
     Book_Controller bookController = new Book_Controller();
     MemberController memberController = new MemberController();
@@ -196,7 +202,13 @@ public class Take_Bokks_Form implements Initializable {
 
     }
 
+    public void btn_Back_Action(ActionEvent actionEvent) throws IOException {
+        Stage stage=(Stage) Ancor_Browwdebooks.getScene().getWindow();
+        stage.close();
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/View/DashBoard.fxml"))));
+
     }
+}
 
 
 

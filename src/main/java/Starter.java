@@ -15,7 +15,6 @@ public class Starter extends Application {
 
         stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/View/Home_page.fxml"))));
         stage.show();
-
         stage.setTitle("Home Page");
 
 

@@ -3,6 +3,7 @@ package Forms;
 import Controller.MemberController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import model.Members;
 import db.DBConnection;
@@ -38,6 +39,7 @@ public class Member_Form implements Initializable {
     public TableColumn colum_Adreess;
     public TableColumn colum_Headmastership;
     public TableView table_Memeber;
+    public AnchorPane ancor_member;
 
     MemberController memberController=new MemberController();
 
@@ -136,15 +138,15 @@ public class Member_Form implements Initializable {
 
     }
 
-    public void btn_Back_Action(ActionEvent actionEvent){
-        Stage stage=new Stage();
-        try {
+    public void btn_Back_Action(ActionEvent actionEvent) throws IOException {
+            Stage stage=(Stage)ancor_member.getScene().getWindow();
+            stage.close();
+             stage=new Stage();
+
             stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/View/DashBoard.fxml"))));
-            stage.show();
 
 
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+
+
     }
 }

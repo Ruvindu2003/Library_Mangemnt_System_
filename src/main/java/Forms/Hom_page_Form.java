@@ -14,7 +14,9 @@ public class Hom_page_Form {
     public AnchorPane frame_home;
 
     public void Lets_Go_Action(ActionEvent actionEvent) throws IOException {
-        Stage stage=new Stage();
+        Stage stage = (Stage) frame_home.getScene().getWindow();
+        stage.close();
+        stage=new Stage();
         stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/View/Login.fxml"))));
         stage.show();
         stage.setTitle("Login Form");

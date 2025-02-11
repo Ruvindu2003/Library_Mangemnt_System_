@@ -7,21 +7,23 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="549.0" prefWidth="718.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Forms.ReturnBooks_Form">
+<AnchorPane fx:id="Ancor_Return_Book" prefHeight="549.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Forms.ReturnBooks_Form">
    <children>
-      <Label layoutX="270.0" layoutY="14.0" prefHeight="51.0" prefWidth="236.0" text="Return Books">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="GHOSTWHITE" height="264.0" layoutY="83.0" stroke="GHOSTWHITE" strokeType="INSIDE" width="728.0" />
+      <Label layoutX="202.0" layoutY="10.0" prefHeight="51.0" prefWidth="236.0" text="Return Books">
          <font>
             <Font name="System Bold Italic" size="35.0" />
          </font>
       </Label>
-      <ComboBox fx:id="combo_browid" layoutX="21.0" layoutY="101.0" onAction="#combo_Browedid_Action" prefWidth="150.0" promptText="Brrowd id" />
-      <TextField fx:id="txt_bookid" layoutX="215.0" layoutY="101.0" promptText="Bookid" />
-      <TextField fx:id="txt_Member_id" layoutX="404.0" layoutY="101.0" promptText="Memberid" />
-      <TextField fx:id="txt_Staff_id" layoutX="568.0" layoutY="101.0" promptText="Staff id" />
-      <TextField fx:id="txt_Broowed_date" layoutX="215.0" layoutY="144.0" promptText="broowed  Date" />
-      <TextField fx:id="is_Browwed" layoutX="404.0" layoutY="144.0" promptText="is Broowed" />
+      <ComboBox fx:id="combo_browid" layoutX="21.0" layoutY="101.0" onAction="#combo_Browedid_Action" prefWidth="150.0" promptText="Brrowd id" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_bookid" layoutX="215.0" layoutY="101.0" promptText="Bookid" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_Member_id" layoutX="388.0" layoutY="101.0" promptText="Memberid" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_Staff_id" layoutX="562.0" layoutY="144.0" promptText="Staff id" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_Broowed_date" layoutX="215.0" layoutY="144.0" promptText="broowed  Date" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="is_Browwed" layoutX="388.0" layoutY="144.0" promptText="is Broowed" style="-fx-border-color: #133e87;" />
       <Label layoutY="236.0" prefHeight="26.0" prefWidth="108.0" text="Return Date:">
          <font>
             <Font name="System Bold Italic" size="16.0" />
@@ -32,20 +34,28 @@
             <Font name="System Bold Italic" size="15.0" />
          </font>
       </Label>
-      <TextField fx:id="return_on_time" layoutX="372.0" layoutY="233.0" prefHeight="14.0" prefWidth="160.0" promptText="Return_on_time" />
-      <TextField fx:id="txt_Amount" layoutX="547.0" layoutY="233.0" promptText="Amount" />
-      <TextField fx:id="txt_returnid" layoutX="205.0" layoutY="233.0" promptText="Return  id" />
-      <Button layoutX="290.0" layoutY="299.0" mnemonicParsing="false" onAction="#btn_Action_Find" prefHeight="26.0" prefWidth="60.0" text="Fine" />
-      <TableView fx:id="tabel_return" layoutY="349.0" prefHeight="200.0" prefWidth="718.0">
+      <TextField fx:id="return_on_time" layoutX="372.0" layoutY="233.0" prefHeight="14.0" prefWidth="160.0" promptText="Return_on_time" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_Amount" layoutX="547.0" layoutY="233.0" promptText="Amount" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_returnid" layoutX="205.0" layoutY="233.0" promptText="Return  id" style="-fx-border-color: #133e87;" />
+      <Button layoutX="290.0" layoutY="299.0" mnemonicParsing="false" onAction="#btn_Action_Find" prefHeight="26.0" prefWidth="60.0" style="-fx-background-color: #133E87;" text="Fine" textFill="#f4eeee" />
+      <TableView fx:id="tabel_return" layoutY="349.0" prefHeight="200.0" prefWidth="726.0">
         <columns>
           <TableColumn fx:id="colum_returnid" prefWidth="132.79998779296875" text="Returnid" />
-            <TableColumn fx:id="colum_browwedid" prefWidth="90.4000244140625" text="broowed id" />
-            <TableColumn fx:id="colum_bookid" prefWidth="110.39996337890625" text="Bookid" />
+            <TableColumn fx:id="colum_browwedid" prefWidth="104.7999267578125" text="broowed id" />
+            <TableColumn fx:id="colum_bookid" prefWidth="96.80006408691406" text="Bookid" />
             <TableColumn fx:id="colum_returndate" prefWidth="120.800048828125" text="returndate" />
-            <TableColumn fx:id="colum_fineAmount" prefWidth="88.79998779296875" text="Fine Amount" />
-            <TableColumn fx:id="colum_Return_Status" prefWidth="177.60003662109375" text="Return Status" />
+            <TableColumn fx:id="colum_fineAmount" prefWidth="133.60003662109375" text="Fine Amount" />
+            <TableColumn fx:id="colum_Return_Status" prefWidth="135.19989013671875" text="Return Status" />
         </columns>
       </TableView>
-      <Button layoutX="388.0" layoutY="299.0" mnemonicParsing="false" onAction="#btn_View_Action" prefHeight="26.0" prefWidth="60.0" text="View" />
+      <Button layoutX="388.0" layoutY="299.0" mnemonicParsing="false" onAction="#btn_View_Action" prefHeight="26.0" prefWidth="60.0" style="-fx-background-color: #133E87;" text="View" textFill="WHITE" />
+      <Button layoutX="480.0" layoutY="300.0" mnemonicParsing="false" onAction="#btn_details_Action" prefHeight="26.0" prefWidth="60.0" style="-fx-background-color: #133E87;" text="Details" textFill="WHITE" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#133e87" height="84.0" layoutY="-1.0" stroke="#133e87" strokeType="INSIDE" width="728.0" />
+      <Label layoutX="228.0" layoutY="8.0" prefHeight="65.0" prefWidth="340.0" text="Return  Books" textFill="#ece8e8">
+         <font>
+            <Font name="System Bold Italic" size="42.0" />
+         </font>
+      </Label>
+      <Button layoutX="651.0" layoutY="88.0" mnemonicParsing="false" onAction="#btn_back_Action" prefHeight="26.0" prefWidth="54.0" style="-fx-background-color: #133E87;" text="Back" textFill="WHITE" />
    </children>
 </AnchorPane>

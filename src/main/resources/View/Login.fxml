@@ -6,23 +6,31 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Forms.Login_Form">
+<AnchorPane fx:id="ancor_Login" prefHeight="400.0" prefWidth="574.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Forms.Login_Form">
    <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="GHOSTWHITE" height="400.0" layoutX="257.0" stroke="GHOSTWHITE" strokeType="INSIDE" width="316.0" />
       <ImageView fitHeight="400.0" fitWidth="274.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/pexels-mikhail-nilov-9158506.jpg" />
          </image>
       </ImageView>
-      <Label layoutX="300.0" prefHeight="99.0" prefWidth="256.0" text="LOG IN">
+      <Label layoutX="300.0" prefHeight="99.0" prefWidth="256.0">
          <font>
             <Font name="System Bold Italic" size="67.0" />
          </font>
       </Label>
-      <TextField fx:id="txt_username" layoutX="306.0" layoutY="128.0" prefHeight="26.0" prefWidth="256.0" promptText="User Name" />
-      <TextField fx:id="txt_password" layoutX="305.0" layoutY="211.0" prefHeight="26.0" prefWidth="256.0" promptText="Password" />
-      <Button layoutX="362.0" layoutY="270.0" mnemonicParsing="false" onAction="#btn_Login_Action" prefHeight="26.0" prefWidth="106.0" style="-fx-background-color: FFCDB2;" text="Login" />
-      <Button layoutX="487.0" layoutY="351.0" mnemonicParsing="false" onAction="#Rejister_on_Action" prefHeight="26.0" prefWidth="95.0" style="-fx-background-color: #D67BA8;" text="Register" />
+      <TextField fx:id="txt_username" layoutX="295.0" layoutY="161.0" prefHeight="26.0" prefWidth="256.0" promptText="User Name" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_password" layoutX="294.0" layoutY="218.0" prefHeight="26.0" prefWidth="256.0" promptText="Password" style="-fx-border-color: #133e87;" />
+      <Button layoutX="362.0" layoutY="269.0" mnemonicParsing="false" onAction="#btn_Login_Action" prefHeight="26.0" prefWidth="106.0" style="-fx-background-color: #133E87;" text="Login" textFill="#fff7f7" />
+      <Button layoutX="468.0" layoutY="359.0" mnemonicParsing="false" onAction="#Rejister_on_Action" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: #133E87;" text="Register" textFill="WHITE" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#133e87" height="90.0" layoutX="269.0" layoutY="-1.0" stroke="#133e87" strokeType="INSIDE" width="306.0" />
+      <Label layoutX="357.0" layoutY="5.0" prefHeight="75.0" prefWidth="146.0" text="Login" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="52.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

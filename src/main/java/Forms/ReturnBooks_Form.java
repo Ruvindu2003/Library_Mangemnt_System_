@@ -2,16 +2,24 @@ package Forms;
 
 import Controller.BrrowedController;
 import Controller.ReturnBooks_Controoler;
-import javafx.scene.control.*;
-import javafx.scene.control.cell.PropertyValueFactory;
-import model.Brrowedbooks;
-import model.Return_Book;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import model.Staff;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+import model.Brrowedbooks;
+import model.Return_Book;
 
+import javax.swing.text.Document;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.net.URL;
 import java.text.BreakIterator;
 import java.text.SimpleDateFormat;
@@ -19,9 +27,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.ResourceBundle;
 
+
 public class ReturnBooks_Form implements Initializable {
-
-
     public ComboBox combo_browid;
     public TextField txt_bookid;
     public TextField txt_Member_id;
@@ -40,8 +47,9 @@ public class ReturnBooks_Form implements Initializable {
     public TableColumn colum_returndate;
     public TableColumn colum_fineAmount;
     public TableColumn colum_Return_Status;
-    BrrowedController brrowedController=new BrrowedController();
-    ReturnBooks_Controoler returnBooksControoler=new ReturnBooks_Controoler();
+    public AnchorPane Ancor_Return_Book;
+    BrrowedController brrowedController = new BrrowedController();
+    ReturnBooks_Controoler returnBooksControoler = new ReturnBooks_Controoler();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -52,8 +60,8 @@ public class ReturnBooks_Form implements Initializable {
     }
 
     public void get_comboigd() {
-        ObservableList<String>get_Mmemberid=FXCollections.observableArrayList();
-        for (Brrowedbooks brrowedbooks :brrowedController.getInstance().getAll()){
+        ObservableList<String> get_Mmemberid = FXCollections.observableArrayList();
+        for (Brrowedbooks brrowedbooks : brrowedController.getInstance().getAll()) {
             get_Mmemberid.add(brrowedbooks.getBrrowedbokksid());
             combo_browid.setItems(get_Mmemberid);
         }
@@ -62,8 +70,8 @@ public class ReturnBooks_Form implements Initializable {
     }
 
     public void combo_Browedid_Action(ActionEvent actionEvent) {
-        String selectid =(String) combo_browid.getSelectionModel().getSelectedItem();
-        Brrowedbooks brrowedbooks=brrowedController.searchMember(selectid);
+        String selectid = (String) combo_browid.getSelectionModel().getSelectedItem();
+        Brrowedbooks brrowedbooks = brrowedController.searchMember(selectid);
 
         txt_bookid.setText(brrowedbooks.getBookID());
         txt_Member_id.setText(brrowedbooks.getMemberid());
@@ -112,7 +120,7 @@ public class ReturnBooks_Form implements Initializable {
                 long daysOverdue = daysDiff - 10;
                 fine = daysOverdue * 10;
 
-               return_on_time.setText("Overdue: " + daysOverdue + " days");
+                return_on_time.setText("Overdue: " + daysOverdue + " days");
                 txt_Amount.setText(String.format("%.2f", fine));
                 return_on_time.setText("Late Return");
             } else {
@@ -131,9 +139,8 @@ public class ReturnBooks_Form implements Initializable {
                 (String) combo_browid.getValue(),
                 txt_bookid.getText(),
                 lable_Date.getText(),
-               Double.valueOf(txt_Amount.getText()),
+                Double.valueOf(txt_Amount.getText()),
                 return_on_time.getText()
-
 
 
         ));
@@ -149,15 +156,29 @@ public class ReturnBooks_Form implements Initializable {
         Lodtabel();
 
 
+    }
+
+    public void Lodtabel() {
+        List<Return_Book> returnBooks = returnBooksControoler.getAll();
+        System.out.println(returnBooks);
+        ObservableList<Return_Book> observableList = FXCollections.observableArrayList();
+        returnBooks.forEach(returnBook -> observableList.add(returnBook));
+        tabel_return.setItems(observableList);
+
 
     }
-    public void Lodtabel(){
-            List<Return_Book> returnBooks=returnBooksControoler.getAll();
-            System.out.println(returnBooks);
-            ObservableList<Return_Book> observableList= FXCollections.observableArrayList();
-            returnBooks.forEach(returnBook -> observableList.add(returnBook));
-            tabel_return.setItems(observableList);
-        }
-        }
+  
 
 
+    public void btn_details_Action(ActionEvent actionEvent) {
+
+
+    }
+
+    public void btn_back_Action(ActionEvent actionEvent) throws IOException {
+        Stage stage=(Stage) Ancor_Return_Book.getScene().getWindow();
+        stage.close();
+        stage=new Stage();
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/View/DashBoard.fxml"))));
+    }
+}

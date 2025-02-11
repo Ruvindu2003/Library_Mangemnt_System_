@@ -9,17 +9,17 @@
 
 <AnchorPane fx:id="frame_home" prefHeight="400.0" prefWidth="599.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Forms.Hom_page_Form">
    <children>
-      <ImageView fitHeight="400.0" fitWidth="600.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="400.0" fitWidth="599.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../images/19198444.jpg" />
+            <Image url="@../images/WhatsApp%20Image%202025-02-11%20at%2015.19.32.jpeg" />
          </image>
       </ImageView>
-      <Label layoutX="165.0" layoutY="14.0" prefHeight="50.0" prefWidth="330.0" text="Library Mangement System">
+      <Button layoutX="487.0" layoutY="366.0" mnemonicParsing="false" onAction="#Lets_Go_Action" prefHeight="26.0" prefWidth="104.0" style="-fx-background-color: #133E87;" text="Lets Go" textFill="#fffbfb" />
+      <Button fx:id="btn_Logout" layoutX="7.0" layoutY="367.0" mnemonicParsing="false" onAction="#btn_Logout_Action" prefHeight="26.0" prefWidth="85.0" style="-fx-background-color: #133E87;" text="Logout" textFill="WHITE" />
+      <Label layoutX="162.0" layoutY="-2.0" prefHeight="42.0" prefWidth="309.0" text="Library Mangement System">
          <font>
             <Font name="System Bold Italic" size="23.0" />
          </font>
       </Label>
-      <Button layoutX="495.0" layoutY="359.0" mnemonicParsing="false" onAction="#Lets_Go_Action" prefHeight="26.0" prefWidth="95.0" style="-fx-background-color: #7EC8E3;" text="Lets Go" textFill="#1e1e1e" />
-      <Button fx:id="btn_Logout" layoutX="26.0" layoutY="360.0" mnemonicParsing="false" onAction="#btn_Logout_Action" prefHeight="26.0" prefWidth="85.0" text="Logout" />
    </children>
 </AnchorPane>

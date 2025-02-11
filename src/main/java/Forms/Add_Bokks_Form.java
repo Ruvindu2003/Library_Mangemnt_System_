@@ -3,6 +3,10 @@ package Forms;
 
 
 import Controller.Book_Controller;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import model.Book;
 import db.DBConnection;
 import javafx.collections.FXCollections;
@@ -18,12 +22,14 @@ import servicess.ServiceFactory;
 import servicess.custom.Book_service;
 import utill.ServiceType;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
 
 public class Add_Bokks_Form {
+    public AnchorPane Ancor_Bookmangement;
     Book_Controller bookController=new Book_Controller();
 
     @FXML
@@ -143,4 +149,23 @@ public class Add_Bokks_Form {
         tabel_Books.setItems(objects);
     }
 
+    public void btn_back_Action(ActionEvent actionEvent) {
+
+        Stage stage=new Stage();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/View/DashBoard.fxml"))));
+            stage.show();
+            stage.setTitle("DashBord");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void btn_Bck_Action(ActionEvent actionEvent) throws IOException {
+        Stage stage=(Stage)Ancor_Bookmangement.getScene().getWindow();
+        stage.close();
+        stage=new Stage();
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/View/DashBoard.fxml"))));
+
+    }
 }

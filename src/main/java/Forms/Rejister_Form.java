@@ -1,5 +1,6 @@
 package Forms;
 
+import javafx.scene.control.Alert;
 import model.Login;
 import db.DBConnection;
 import javafx.event.ActionEvent;
@@ -42,8 +43,10 @@ public class Rejister_Form {
                     psTm.setString(2,txt_Email.getText());
                     psTm.setString(3,txt_Password.getText());
                     psTm.executeUpdate();
+                    new Alert(Alert.AlertType.INFORMATION,"Success Full Register").show();
 
                 }else{
+
                     System.out.println(true);
                 }
             } catch (SQLException e) {
@@ -51,6 +54,7 @@ public class Rejister_Form {
             }
 
         }else {
+            new  Alert(Alert.AlertType.INFORMATION," not Success Full Register").show();
             System.out.println(false);
         }
 

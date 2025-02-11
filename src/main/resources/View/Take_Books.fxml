@@ -6,45 +6,35 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="580.0" prefWidth="813.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Forms.Take_Bokks_Form">
+<AnchorPane fx:id="Ancor_Browwdebooks" prefHeight="554.0" prefWidth="851.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Forms.Take_Bokks_Form">
    <children>
-      <ImageView fitHeight="402.0" fitWidth="425.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/9525662.jpg" />
-         </image>
-      </ImageView>
-      <Label layoutX="325.0" prefHeight="54.0" prefWidth="298.0" text="Borrowed Books">
-         <font>
-            <Font name="System Italic" size="35.0" />
-         </font>
-      </Label>
-      <ComboBox fx:id="combo_Bookid" layoutX="14.0" layoutY="70.0" onAction="#Combo_Book_Action" prefWidth="150.0" promptText="Book ID" />
-      <TextField fx:id="txt_Title" layoutX="175.0" layoutY="69.0" prefHeight="26.0" prefWidth="141.0" promptText="Tittle" style="-fx-background-color: D0DDD0;" />
-      <TextField fx:id="txt_Author" layoutX="334.0" layoutY="69.0" prefHeight="26.0" prefWidth="134.0" promptText="Author" style="-fx-background-color: D0DDD0;" />
-      <TextField fx:id="txt_ISBN" layoutX="482.0" layoutY="69.0" prefHeight="26.0" prefWidth="142.0" promptText="ISBN" style="-fx-background-color: D0DDD0;" />
-      <TextField fx:id="txt_lanvage" layoutX="649.0" layoutY="70.0" promptText="Lnagvage" style="-fx-background-color: D0DDD0;" />
-      <ComboBox fx:id="combo_Memberid" layoutX="14.0" layoutY="137.0" onAction="#combo_Memeberid_Action" prefHeight="26.0" prefWidth="150.0" promptText="Member ID" />
-      <TextField fx:id="txt_full_name" layoutX="175.0" layoutY="139.0" promptText="full Name" style="-fx-background-color: D0DDD0;" />
-      <TextField fx:id="txt_PhoneNumber" layoutX="332.0" layoutY="139.0" prefHeight="26.0" prefWidth="142.0" promptText="Phone Number" style="-fx-background-color: D0DDD0;" />
-      <TextField fx:id="txt_Address" layoutX="492.0" layoutY="138.0" prefHeight="26.0" prefWidth="142.0" promptText="Adress" style="-fx-background-color: D0DDD0;" />
-      <TextField fx:id="txt_Membership" layoutX="664.0" layoutY="137.0" prefHeight="26.0" prefWidth="134.0" promptText="membership_date" style="-fx-background-color: D0DDD0;" />
-      <ComboBox fx:id="combo_Staffid" layoutX="14.0" layoutY="201.0" onAction="#combo_staffid_Action" prefWidth="150.0" promptText="Staff ID" />
-      <TextField fx:id="txt_email" layoutX="176.0" layoutY="201.0" promptText="Email" style="-fx-background-color: D0DDD0;" />
-      <TextField fx:id="txt_name" layoutX="332.0" layoutY="201.0" promptText="Name" style="-fx-background-color: D0DDD0;" />
-      <TextField fx:id="txt_pohneNumber" layoutX="500.0" layoutY="201.0" promptText="Phone  Number" style="-fx-background-color: D0DDD0;" />
-      <TableView fx:id="brrowed_table" layoutX="-1.0" layoutY="380.0" prefHeight="200.0" prefWidth="813.0">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="GHOSTWHITE" height="299.0" layoutY="80.0" stroke="GHOSTWHITE" strokeType="INSIDE" width="856.0" />
+      <ComboBox fx:id="combo_Bookid" layoutX="14.0" layoutY="95.0" onAction="#Combo_Book_Action" prefWidth="150.0" promptText="Book ID" />
+      <TextField fx:id="txt_Title" layoutX="179.0" layoutY="94.0" prefHeight="26.0" prefWidth="141.0" promptText="Tittle" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_Author" layoutX="337.0" layoutY="94.0" prefHeight="26.0" prefWidth="134.0" promptText="Author" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_ISBN" layoutX="492.0" layoutY="94.0" prefHeight="26.0" prefWidth="142.0" promptText="ISBN" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_lanvage" layoutX="648.0" layoutY="94.0" promptText="Lnagvage" style="-fx-border-color: #133e87;" />
+      <ComboBox fx:id="combo_Memberid" layoutX="14.0" layoutY="150.0" onAction="#combo_Memeberid_Action" prefHeight="26.0" prefWidth="150.0" promptText="Member ID" />
+      <TextField fx:id="txt_full_name" layoutX="175.0" layoutY="150.0" promptText="full Name" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_PhoneNumber" layoutX="333.0" layoutY="149.0" prefHeight="26.0" prefWidth="142.0" promptText="Phone Number" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_Address" layoutX="492.0" layoutY="149.0" prefHeight="26.0" prefWidth="142.0" promptText="Adress" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_Membership" layoutX="656.0" layoutY="149.0" prefHeight="26.0" prefWidth="134.0" promptText="membership_date" style="-fx-border-color: #133e87;" />
+      <ComboBox fx:id="combo_Staffid" layoutX="14.0" layoutY="214.0" onAction="#combo_staffid_Action" prefWidth="150.0" promptText="Staff ID" />
+      <TextField fx:id="txt_email" layoutX="175.0" layoutY="214.0" promptText="Email" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_name" layoutX="332.0" layoutY="214.0" promptText="Name" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_pohneNumber" layoutX="499.0" layoutY="214.0" promptText="Phone  Number" style="-fx-border-color: #133e87;" />
+      <TableView fx:id="brrowed_table" layoutX="-1.0" layoutY="380.0" prefHeight="172.0" prefWidth="856.0">
         <columns>
           <TableColumn fx:id="colum_borrowedid" prefWidth="125.60002136230469" text="Borrowed id" />
             <TableColumn fx:id="colum_bookid" prefWidth="128.79998779296875" text="Bookid" />
-            <TableColumn fx:id="colum_memeberid" prefWidth="122.4000244140625" text="member_id" />
-            <TableColumn fx:id="colum_staffid" prefWidth="120.00006103515625" text="staff_id" />
-            <TableColumn fx:id="colum_brrow_date" prefWidth="180.7999267578125" text="borrow_date" />
-            <TableColumn fx:id="colum_is_broowed" prefWidth="135.999966442585" text="is_borrowed" />
+            <TableColumn fx:id="colum_memeberid" prefWidth="122.4000244140625" text="Member ID" />
+            <TableColumn fx:id="colum_staffid" prefWidth="120.00006103515625" text="Staff ID" />
+            <TableColumn fx:id="colum_brrow_date" prefWidth="180.7999267578125" text="Broowed Dates" />
+            <TableColumn fx:id="colum_is_broowed" prefWidth="151.199951171875" text="Is Browed" />
         </columns>
       </TableView>
       <Label layoutX="24.0" layoutY="282.0" prefHeight="27.0" prefWidth="52.0" text="Date :">
@@ -57,8 +47,15 @@
             <Font name="System Bold Italic" size="16.0" />
          </font>
       </Label>
-      <Button layoutX="373.0" layoutY="337.0" mnemonicParsing="false" onAction="#take_Books_Action" prefHeight="26.0" prefWidth="118.0" text="Take Bokks" />
-      <TextField fx:id="txt_brrrowedid" layoutX="193.0" layoutY="277.0" prefHeight="26.0" prefWidth="160.0" promptText="broowde_id" />
-      <TextField fx:id="txt_yes_or_No" layoutX="381.0" layoutY="277.0" promptText="yes or No" />
+      <Button layoutX="616.0" layoutY="322.0" mnemonicParsing="false" onAction="#take_Books_Action" prefHeight="26.0" prefWidth="118.0" style="-fx-background-color: #133E87;" text="Take Books" textFill="WHITE" />
+      <TextField fx:id="txt_brrrowedid" layoutX="191.0" layoutY="282.0" prefHeight="26.0" prefWidth="160.0" promptText="broowde_id" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_yes_or_No" layoutX="400.0" layoutY="282.0" promptText="yes or No" style="-fx-border-color: #133e87;" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#133e87" height="80.0" layoutX="-2.0" stroke="#133e87" strokeType="INSIDE" width="857.0" />
+      <Label layoutX="282.0" layoutY="9.0" prefHeight="62.0" prefWidth="333.0" text="Broowed Books" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="42.0" />
+         </font>
+      </Label>
+      <Button layoutX="790.0" layoutY="188.0" mnemonicParsing="false" onAction="#btn_Back_Action" prefHeight="26.0" prefWidth="52.0" style="-fx-background-color: #133E87;" text="Back" textFill="WHITE" />
    </children>
 </AnchorPane>

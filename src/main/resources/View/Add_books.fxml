@@ -5,41 +5,39 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="607.0" prefWidth="684.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Forms.Add_Bokks_Form">
+<AnchorPane fx:id="Ancor_Bookmangement" prefHeight="489.0" prefWidth="630.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Forms.Add_Bokks_Form">
    <children>
-      <Label layoutX="151.0" layoutY="8.0" prefHeight="47.0" prefWidth="425.0" text="Books Mangement">
+      <Region layoutX="-4.0" layoutY="95.0" prefHeight="230.0" prefWidth="642.0" style="-fx-background-color: #f8f8ff;" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#133e87" height="103.0" layoutX="-1.0" layoutY="-9.0" stroke="BLACK" strokeType="INSIDE" width="642.0" />
+      <Label layoutX="102.0" layoutY="14.0" prefHeight="47.0" prefWidth="425.0" text="Books Mangement" textFill="#fff9f9">
          <font>
             <Font name="System Bold Italic" size="46.0" />
          </font>
       </Label>
-      <TextField fx:id="txt_Bookid" layoutX="23.0" layoutY="104.0" prefHeight="26.0" prefWidth="242.0" promptText="Books ID" />
-      <TextField fx:id="Txt_tiitle" layoutX="19.0" layoutY="166.0" prefHeight="26.0" prefWidth="242.0" promptText="Titttle" />
-      <TextField fx:id="txt_Author" layoutX="20.0" layoutY="277.0" prefHeight="26.0" prefWidth="249.0" promptText="Author" />
-      <TextField fx:id="txt_Isbn" layoutX="23.0" layoutY="221.0" prefHeight="26.0" prefWidth="242.0" promptText="ISBN" />
-      <TextField fx:id="txt_lanvage" layoutX="19.0" layoutY="326.0" prefHeight="26.0" prefWidth="250.0" promptText="Lanvage" />
-      <TableView fx:id="tabel_Books" layoutY="363.0" prefHeight="245.0" prefWidth="684.0">
+      <TextField fx:id="txt_Bookid" layoutX="105.0" layoutY="127.0" prefHeight="26.0" prefWidth="196.0" promptText="Books ID" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="Txt_tiitle" layoutX="347.0" layoutY="127.0" prefHeight="26.0" prefWidth="196.0" promptText="Titttle" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_Author" layoutX="226.0" layoutY="228.0" prefHeight="26.0" prefWidth="202.0" promptText="Author" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_Isbn" layoutX="105.0" layoutY="174.0" prefHeight="26.0" prefWidth="196.0" promptText="ISBN" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_lanvage" layoutX="347.0" layoutY="174.0" prefHeight="26.0" prefWidth="196.0" promptText="Lanvage" style="-fx-border-color: #133e87;" />
+      <TableView fx:id="tabel_Books" layoutY="327.0" prefHeight="162.0" prefWidth="641.0">
         <columns>
-          <TableColumn fx:id="colum_booksid" prefWidth="140.79999387264252" text="Books ID" />
-          <TableColumn fx:id="colum_tiittle" prefWidth="154.4000244140625" text="Tittle" />
-            <TableColumn fx:id="colum_Author" prefWidth="130.39996337890625" text="Author" />
-            <TableColumn fx:id="Colum_isbn" prefWidth="131.19998168945312" text="ISBN" />
-            <TableColumn fx:id="Colum_Lanvage" prefWidth="126.39996337890625" text="Lanvage" />
+          <TableColumn fx:id="colum_booksid" prefWidth="119.19997882843018" text="Books ID" />
+          <TableColumn fx:id="colum_tiittle" prefWidth="130.4000244140625" text="Tittle" />
+            <TableColumn fx:id="colum_Author" prefWidth="138.40003967285156" text="Author" />
+            <TableColumn fx:id="Colum_isbn" prefWidth="132.0" text="ISBN" />
+            <TableColumn fx:id="Colum_Lanvage" prefWidth="116.00006103515625" text="Lanvage" />
         </columns>
       </TableView>
-      <Button layoutX="333.0" layoutY="326.0" mnemonicParsing="false" onAction="#btn_Add_Action" prefHeight="26.0" prefWidth="82.0" style="-fx-background-color: ECBA82;" text="Add" />
-      <Button layoutX="333.0" layoutY="270.0" mnemonicParsing="false" onAction="#btn_Search_Action" prefHeight="26.0" prefWidth="82.0" style="-fx-background-color: FCC6FF;" text="Search" />
-      <Button layoutX="333.0" layoutY="207.0" mnemonicParsing="false" onAction="#btn_View_Action" prefHeight="26.0" prefWidth="82.0" style="-fx-background-color: FFA09B;" text="View" />
-      <Button layoutX="327.0" layoutY="153.0" mnemonicParsing="false" onAction="#btn_update_Action" prefHeight="26.0" prefWidth="94.0" style="-fx-background-color: F0A04B;" text="Update" />
-      <Button layoutX="333.0" layoutY="97.0" mnemonicParsing="false" onAction="#btn_Delete_Action" prefHeight="26.0" prefWidth="82.0" style="-fx-background-color: BE3144;" text="Delete" />
-      <ImageView fitHeight="242.0" fitWidth="250.0" layoutX="432.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/20944530.jpg" />
-         </image>
-      </ImageView>
+      <Button layoutX="17.0" layoutY="291.0" mnemonicParsing="false" onAction="#btn_Add_Action" prefHeight="26.0" prefWidth="82.0" style="-fx-background-color: #133E87;" text="Add" textFill="WHITE" />
+      <Button layoutX="136.0" layoutY="291.0" mnemonicParsing="false" onAction="#btn_Search_Action" prefHeight="26.0" prefWidth="82.0" style="-fx-background-color: #133E87;" text="Search" textFill="WHITE" />
+      <Button layoutX="251.0" layoutY="291.0" mnemonicParsing="false" onAction="#btn_View_Action" prefHeight="26.0" prefWidth="82.0" style="-fx-background-color: #133E87;" text="View" textFill="#fff3f3" />
+      <Button layoutX="374.0" layoutY="291.0" mnemonicParsing="false" onAction="#btn_update_Action" prefHeight="26.0" prefWidth="94.0" style="-fx-background-color: #133E87;" text="Update" textFill="WHITE" />
+      <Button layoutX="517.0" layoutY="291.0" mnemonicParsing="false" onAction="#btn_Delete_Action" prefHeight="26.0" prefWidth="82.0" style="-fx-background-color: #133E87;" text="Delete" textFill="#fffcfc" />
+      <Button layoutX="574.0" layoutY="102.0" mnemonicParsing="false" onAction="#btn_Bck_Action" prefHeight="26.0" prefWidth="53.0" style="-fx-background-color: #133E87;" text="Back" textFill="WHITE" />
    </children>
 </AnchorPane>

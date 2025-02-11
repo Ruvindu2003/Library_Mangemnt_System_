@@ -5,24 +5,26 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Forms.DashBoard_Form">
    <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="GHOSTWHITE" height="400.0" layoutX="-1.0" layoutY="-1.0" stroke="GHOSTWHITE" strokeType="INSIDE" width="200.0" />
       <ImageView fitHeight="400.0" fitWidth="455.0" layoutX="200.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/32883.jpg" />
          </image>
       </ImageView>
-      <Label layoutX="-1.0" layoutY="3.0" prefHeight="58.0" prefWidth="200.0" text="Dash Board">
+      <Label layoutX="22.0" layoutY="9.0" prefHeight="58.0" prefWidth="201.0" text="Dashboard" textFill="#133e87">
          <font>
-            <Font name="System Bold Italic" size="36.0" />
+            <Font name="System Bold Italic" size="30.0" />
          </font>
       </Label>
-      <Button layoutX="21.0" layoutY="112.0" mnemonicParsing="false" onAction="#btn_member_Action" prefHeight="26.0" prefWidth="155.0" style="-fx-background-color: yellow;" text="Member" />
-      <Button layoutX="21.0" layoutY="73.0" mnemonicParsing="false" onAction="#btn_Addbooks_Action" prefHeight="26.0" prefWidth="155.0" style="-fx-background-color: #FEC84D;" text="Add Books" />
-      <Button layoutX="21.0" layoutY="154.0" mnemonicParsing="false" onAction="#btn_Staff_Action" prefHeight="26.0" prefWidth="155.0" style="-fx-background-color: Red;" text="Staff " />
-      <Button layoutX="21.0" layoutY="200.0" mnemonicParsing="false" onAction="#Borrowed_Bokkss_Action" prefHeight="26.0" prefWidth="155.0" style="-fx-background-color: E5D0AC;" text="Borrowed Books" />
-      <Button layoutX="21.0" layoutY="244.0" mnemonicParsing="false" onAction="#btn_Return_book_Action" prefHeight="26.0" prefWidth="155.0" style="-fx-background-color: FFE6C9;" text="Return Books" />
+      <Button layoutX="21.0" layoutY="130.0" mnemonicParsing="false" onAction="#btn_member_Action" prefHeight="26.0" prefWidth="155.0" style="-fx-background-color: #133E87;" text="Member" textFill="#fffcfc" />
+      <Button layoutX="21.0" layoutY="86.0" mnemonicParsing="false" onAction="#btn_Addbooks_Action" prefHeight="26.0" prefWidth="155.0" style="-fx-background-color: #133E87;" text="Add Books" textFill="WHITE" />
+      <Button layoutX="21.0" layoutY="174.0" mnemonicParsing="false" onAction="#btn_Staff_Action" prefHeight="26.0" prefWidth="155.0" style="-fx-background-color: #133E87;" text="Staff " textFill="WHITE" />
+      <Button layoutX="21.0" layoutY="217.0" mnemonicParsing="false" onAction="#Borrowed_Bokkss_Action" prefHeight="26.0" prefWidth="155.0" style="-fx-background-color: #133E87;" text="Borrowed Books" textFill="WHITE" />
+      <Button layoutX="21.0" layoutY="260.0" mnemonicParsing="false" onAction="#btn_Return_book_Action" prefHeight="26.0" prefWidth="155.0" style="-fx-background-color: #133E87;" text="Return Books" textFill="WHITE" />
    </children>
 </AnchorPane>

@@ -1,6 +1,7 @@
 package Forms;
 
 import Controller.Login_Controller;
+import javafx.scene.layout.AnchorPane;
 import model.Login;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -15,6 +16,7 @@ import java.sql.SQLException;
 public class Login_Form {
     public TextField txt_username;
     public TextField txt_password;
+    public AnchorPane ancor_Login;
 
 
     public void Rejister_on_Action(ActionEvent actionEvent) throws IOException {
@@ -36,9 +38,13 @@ public class Login_Form {
         }else {
             new Alert(Alert.AlertType.INFORMATION,"Loging Fail").show();
         }
-        Stage stage = new Stage();
+
+        Stage stage=(Stage)ancor_Login.getScene().getWindow();
+        stage.close();
+         stage = new Stage();
 
         try {
+
             stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/View/DashBoard.fxml"))));
             stage.setTitle("DashBoard");
             stage.show();

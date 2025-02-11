@@ -3,6 +3,10 @@ package Forms;
 
 
 import Controller.StaffController;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import model.Members;
 import model.Staff;
 import db.DBConnection;
@@ -20,12 +24,14 @@ import servicess.ServiceFactory;
 import servicess.custom.Staff_Service;
 import utill.ServiceType;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
 
 public class Staff_Form {
+    public AnchorPane Ancor_Staff;
     StaffController staffController=new StaffController();
 
     Staff_Service getInstance= ServiceFactory.getInstance().getServiceType(ServiceType.AddStaff);
@@ -135,6 +141,13 @@ public class Staff_Form {
 
         ));
 
+    }
+
+    public void btn_Back_Action(ActionEvent actionEvent) throws IOException {
+        Stage stage = (Stage) Ancor_Staff.getScene().getWindow();
+        stage.close();
+        stage =new Stage();
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/View/DashBoard.fxml"))));
     }
 }
 
