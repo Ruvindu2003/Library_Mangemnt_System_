@@ -31,12 +31,13 @@ public class Login_Form {
     public void btn_Login_Action(ActionEvent actionEvent) throws SQLException {
         Login User= Login_Controller.getInstance().getUser(txt_username.getText(),txt_password.getText());
         System.out.println(User);
-        new Alert(Alert.AlertType.INFORMATION,"Sucsses Fully").show();
+        new Alert(Alert.AlertType.INFORMATION,"Success Fully").show();
         if (User==null){
+            new  Alert(Alert.AlertType.INFORMATION,"Login Fail").show();
 
             return;
         }else {
-            new Alert(Alert.AlertType.INFORMATION,"Loging Fail").show();
+
         }
 
         Stage stage=(Stage)ancor_Login.getScene().getWindow();

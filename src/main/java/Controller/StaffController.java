@@ -82,7 +82,7 @@ public class StaffController implements Staff_Service {
     @Override
     public boolean UpdateBooks(Staff staff) {
         try {
-            PreparedStatement preparedStatement=connection.prepareStatement(" UPDATE staff SET email = ?, name = ?, phone_number = ?  WHERE staff_id= ?");
+            PreparedStatement preparedStatement=connection.prepareStatement("UPDATE staff SET email=?,name =?,phone_number=?WHERE staff_id=?");
 
             preparedStatement.setString(1, staff.getStaffid());
             preparedStatement.setString(2, staff.getEmail());

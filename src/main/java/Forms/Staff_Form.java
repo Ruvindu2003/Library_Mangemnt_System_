@@ -133,8 +133,8 @@ public class Staff_Form {
         }
 
     public void btn_update_Actiom(ActionEvent actionEvent) {
-        boolean b= getInstance.UpdateBooks(new Staff(
-            txt_Staffid.getText(),
+        boolean b= staffController.UpdateBooks(new Staff(
+                txt_Staffid.getText(),
                 txt_email.getText(),
                 txt_name.getText(),
                 txt_phoneNumber.getText()
