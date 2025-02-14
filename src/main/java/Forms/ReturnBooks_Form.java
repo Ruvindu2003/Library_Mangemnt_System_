@@ -15,6 +15,10 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import model.Brrowedbooks;
 import model.Return_Book;
+import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.pdmodel.PDPage;
+import org.apache.pdfbox.pdmodel.PDPageContentStream;
+import org.apache.pdfbox.pdmodel.font.PDType1Font;
 
 import javax.swing.text.Document;
 import java.io.File;
@@ -172,8 +176,11 @@ public class ReturnBooks_Form implements Initializable {
 
     public void btn_details_Action(ActionEvent actionEvent) {
 
-
     }
+
+
+
+
 
     public void btn_back_Action(ActionEvent actionEvent) throws IOException {
         Stage stage=(Stage) Ancor_Return_Book.getScene().getWindow();

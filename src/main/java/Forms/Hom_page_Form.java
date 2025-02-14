@@ -24,8 +24,5 @@ public class Hom_page_Form {
 
     }
 
-    public void btn_Logout_Action(ActionEvent actionEvent) throws IOException {
 
-
-    }
 }

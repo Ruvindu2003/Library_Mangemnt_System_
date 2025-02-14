@@ -8,7 +8,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Forms.DashBoard_Form">
+<AnchorPane fx:id="Ancopain_dashbord" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Forms.DashBoard_Form">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="GHOSTWHITE" height="400.0" layoutX="-1.0" layoutY="-1.0" stroke="GHOSTWHITE" strokeType="INSIDE" width="200.0" />
       <ImageView fitHeight="400.0" fitWidth="455.0" layoutX="200.0" pickOnBounds="true" preserveRatio="true">
@@ -26,5 +26,7 @@
       <Button layoutX="21.0" layoutY="174.0" mnemonicParsing="false" onAction="#btn_Staff_Action" prefHeight="26.0" prefWidth="155.0" style="-fx-background-color: #133E87;" text="Staff " textFill="WHITE" />
       <Button layoutX="21.0" layoutY="217.0" mnemonicParsing="false" onAction="#Borrowed_Bokkss_Action" prefHeight="26.0" prefWidth="155.0" style="-fx-background-color: #133E87;" text="Borrowed Books" textFill="WHITE" />
       <Button layoutX="21.0" layoutY="260.0" mnemonicParsing="false" onAction="#btn_Return_book_Action" prefHeight="26.0" prefWidth="155.0" style="-fx-background-color: #133E87;" text="Return Books" textFill="WHITE" />
+      <Button layoutX="526.0" layoutY="355.0" mnemonicParsing="false" onAction="#btn_Action_Logout" prefHeight="26.0" prefWidth="59.0" style="-fx-background-color: #133E87; -fx-border-color: #ffffff; -fx-border-width: 2px; -fx-border-radius: 4px;" text="Logout" textFill="#fffdfd" />
+      <Button layoutX="22.0" layoutY="303.0" mnemonicParsing="false" onAction="#btn_Report_Action" prefHeight="19.0" prefWidth="155.0" style="-fx-background-color: #133E87; stage.close(): ; stage=new Stage(): ; stage.setScene(new Scene(FXMLLoader.load(getClass().getResource(&quot;/View/Login.fxml&quot;)))): ; stage.show(): ; stage.setTitle(&quot;Login Form&quot;): ;" text="Report" textFill="WHITE" />
    </children>
 </AnchorPane>

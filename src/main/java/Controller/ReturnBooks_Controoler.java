@@ -30,7 +30,7 @@ public class ReturnBooks_Controoler implements Return_Books_Service {
             PreparedStatement preparedStatement= connection.prepareStatement("INSERT INTO returnsbooks VALUES(?,?,?,?,?,?)");
 
             preparedStatement.setString(1,returnBook.getReturnid());
-            preparedStatement.setString(2,returnBook.getBookid());
+            preparedStatement.setString(2,returnBook.getBorrow_id());
             preparedStatement.setString(3,returnBook.getBookid());
             preparedStatement.setString(4,returnBook.getReturn_date());
             preparedStatement.setString (5, String.valueOf(Double.parseDouble(String.valueOf(returnBook.getFindAmount()))));
