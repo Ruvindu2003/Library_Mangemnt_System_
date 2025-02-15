@@ -12,21 +12,21 @@
 
 <AnchorPane fx:id="Ancor_Browwdebooks" prefHeight="554.0" prefWidth="851.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Forms.Take_Bokks_Form">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="GHOSTWHITE" height="299.0" layoutY="80.0" stroke="GHOSTWHITE" strokeType="INSIDE" width="856.0" />
-      <ComboBox fx:id="combo_Bookid" layoutX="14.0" layoutY="95.0" onAction="#Combo_Book_Action" prefWidth="150.0" promptText="Book ID" />
-      <TextField fx:id="txt_Title" layoutX="179.0" layoutY="94.0" prefHeight="26.0" prefWidth="141.0" promptText="Tittle" style="-fx-border-color: #133e87;" />
-      <TextField fx:id="txt_Author" layoutX="337.0" layoutY="94.0" prefHeight="26.0" prefWidth="134.0" promptText="Author" style="-fx-border-color: #133e87;" />
-      <TextField fx:id="txt_ISBN" layoutX="492.0" layoutY="94.0" prefHeight="26.0" prefWidth="142.0" promptText="ISBN" style="-fx-border-color: #133e87;" />
-      <TextField fx:id="txt_lanvage" layoutX="648.0" layoutY="94.0" promptText="Lnagvage" style="-fx-border-color: #133e87;" />
-      <ComboBox fx:id="combo_Memberid" layoutX="14.0" layoutY="150.0" onAction="#combo_Memeberid_Action" prefHeight="26.0" prefWidth="150.0" promptText="Member ID" />
-      <TextField fx:id="txt_full_name" layoutX="175.0" layoutY="150.0" promptText="full Name" style="-fx-border-color: #133e87;" />
-      <TextField fx:id="txt_PhoneNumber" layoutX="333.0" layoutY="149.0" prefHeight="26.0" prefWidth="142.0" promptText="Phone Number" style="-fx-border-color: #133e87;" />
-      <TextField fx:id="txt_Address" layoutX="492.0" layoutY="149.0" prefHeight="26.0" prefWidth="142.0" promptText="Adress" style="-fx-border-color: #133e87;" />
-      <TextField fx:id="txt_Membership" layoutX="656.0" layoutY="149.0" prefHeight="26.0" prefWidth="134.0" promptText="membership_date" style="-fx-border-color: #133e87;" />
-      <ComboBox fx:id="combo_Staffid" layoutX="14.0" layoutY="214.0" onAction="#combo_staffid_Action" prefWidth="150.0" promptText="Staff ID" />
-      <TextField fx:id="txt_email" layoutX="175.0" layoutY="214.0" promptText="Email" style="-fx-border-color: #133e87;" />
-      <TextField fx:id="txt_name" layoutX="332.0" layoutY="214.0" promptText="Name" style="-fx-border-color: #133e87;" />
-      <TextField fx:id="txt_pohneNumber" layoutX="499.0" layoutY="214.0" promptText="Phone  Number" style="-fx-border-color: #133e87;" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="GHOSTWHITE" height="316.0" layoutY="78.0" stroke="GHOSTWHITE" strokeType="INSIDE" width="856.0" />
+      <ComboBox fx:id="combo_Bookid" layoutX="14.0" layoutY="109.0" onAction="#Combo_Book_Action" prefWidth="150.0" promptText="Book ID" />
+      <TextField fx:id="txt_Title" layoutX="179.0" layoutY="108.0" prefHeight="26.0" prefWidth="141.0" promptText="Tittle" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_Author" layoutX="337.0" layoutY="108.0" prefHeight="26.0" prefWidth="134.0" promptText="Author" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_ISBN" layoutX="492.0" layoutY="108.0" prefHeight="26.0" prefWidth="142.0" promptText="ISBN" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_lanvage" layoutX="648.0" layoutY="108.0" promptText="Lnagvage" style="-fx-border-color: #133e87;" />
+      <ComboBox fx:id="combo_Memberid" layoutX="14.0" layoutY="166.0" onAction="#combo_Memeberid_Action" prefHeight="26.0" prefWidth="150.0" promptText="Member ID" />
+      <TextField fx:id="txt_full_name" layoutX="175.0" layoutY="165.0" promptText="full Name" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_PhoneNumber" layoutX="333.0" layoutY="164.0" prefHeight="26.0" prefWidth="142.0" promptText="Phone Number" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_Address" layoutX="492.0" layoutY="164.0" prefHeight="26.0" prefWidth="142.0" promptText="Adress" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_Membership" layoutX="656.0" layoutY="164.0" prefHeight="26.0" prefWidth="134.0" promptText="membership_date" style="-fx-border-color: #133e87;" />
+      <ComboBox fx:id="combo_Staffid" layoutX="14.0" layoutY="219.0" onAction="#combo_staffid_Action" prefWidth="150.0" promptText="Staff ID" />
+      <TextField fx:id="txt_email" layoutX="175.0" layoutY="219.0" promptText="Email" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_name" layoutX="332.0" layoutY="219.0" promptText="Name" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_pohneNumber" layoutX="499.0" layoutY="219.0" promptText="Phone  Number" style="-fx-border-color: #133e87;" />
       <TableView fx:id="brrowed_table" layoutX="-1.0" layoutY="380.0" prefHeight="172.0" prefWidth="856.0">
         <columns>
           <TableColumn fx:id="colum_borrowedid" prefWidth="125.60002136230469" text="Borrowed id" />
@@ -56,6 +56,86 @@
             <Font name="System Bold Italic" size="42.0" />
          </font>
       </Label>
-      <Button layoutX="790.0" layoutY="188.0" mnemonicParsing="false" onAction="#btn_Back_Action" prefHeight="26.0" prefWidth="52.0" style="-fx-background-color: #133E87;" text="Back" textFill="WHITE" />
+      <Button layoutX="790.0" layoutY="231.0" mnemonicParsing="false" onAction="#btn_Back_Action" prefHeight="26.0" prefWidth="52.0" style="-fx-background-color: #133E87;" text="Back" textFill="WHITE" />
+      <Label layoutX="14.0" layoutY="87.0" prefHeight="18.0" prefWidth="66.0" text="Book ID">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="177.0" layoutY="87.0" prefHeight="18.0" prefWidth="66.0" text="Tittle">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="337.0" layoutY="87.0" prefHeight="18.0" prefWidth="58.0" text="Author">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="492.0" layoutY="86.0" prefHeight="18.0" prefWidth="93.0" text="ISBN">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="650.0" layoutY="87.0" prefHeight="18.0" prefWidth="66.0" text="Langvage">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="145.0" prefHeight="18.0" prefWidth="66.0" text="Member ID">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="177.0" layoutY="146.0" prefHeight="18.0" prefWidth="66.0" text="Full Name">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="337.0" layoutY="146.0" prefHeight="18.0" prefWidth="94.0" text="Phone Number">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="492.0" layoutY="146.0" prefHeight="18.0" prefWidth="74.0" text="Address">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="656.0" layoutY="145.0" prefHeight="18.0" prefWidth="108.0" text="Membership Dtae">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="202.0" prefHeight="18.0" prefWidth="66.0" text="Staff ID">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="179.0" layoutY="202.0" prefHeight="18.0" prefWidth="74.0" text="Email">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="337.0" layoutY="203.0" prefHeight="18.0" prefWidth="66.0" text="Name">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="501.0" layoutY="203.0" prefHeight="18.0" prefWidth="94.0" text="Phone Number">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="191.0" layoutY="257.0" prefHeight="18.0" prefWidth="74.0" text="Brrowed id">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="398.0" layoutY="257.0" prefHeight="18.0" prefWidth="66.0" text="yes or No">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

@@ -2,13 +2,18 @@ package Forms;
 
 import Controller.ReportController;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import javafx.util.StringConverter;
 
+import java.io.IOException;
 import java.net.URL;
 import java.text.BreakIterator;
 import java.text.SimpleDateFormat;
@@ -28,6 +33,7 @@ public class Report_Form implements Initializable {
     public DatePicker dt_returned_books;
     public TextField txt_rb_nowdate;
     public TextField txt_member_count;
+    public AnchorPane Ancorpain_Reports;
 
     ReportController reportController=new ReportController();
 
@@ -96,5 +102,10 @@ public class Report_Form implements Initializable {
     }
 
 
-
+    public void btn_Back_Action(ActionEvent actionEvent) throws IOException {
+        Stage stage=(Stage)Ancorpain_Reports.getScene().getWindow();
+        stage.close();
+        stage=new Stage();
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/View/DashBoard.fxml"))));
+    }
 }

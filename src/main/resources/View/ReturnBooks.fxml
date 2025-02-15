@@ -18,12 +18,12 @@
             <Font name="System Bold Italic" size="35.0" />
          </font>
       </Label>
-      <ComboBox fx:id="combo_browid" layoutX="21.0" layoutY="101.0" onAction="#combo_Browedid_Action" prefWidth="150.0" promptText="Brrowd id" style="-fx-border-color: #133e87;" />
-      <TextField fx:id="txt_bookid" layoutX="215.0" layoutY="101.0" promptText="Bookid" style="-fx-border-color: #133e87;" />
-      <TextField fx:id="txt_Member_id" layoutX="388.0" layoutY="101.0" promptText="Memberid" style="-fx-border-color: #133e87;" />
-      <TextField fx:id="txt_Staff_id" layoutX="562.0" layoutY="144.0" promptText="Staff id" style="-fx-border-color: #133e87;" />
-      <TextField fx:id="txt_Broowed_date" layoutX="215.0" layoutY="144.0" promptText="broowed  Date" style="-fx-border-color: #133e87;" />
-      <TextField fx:id="is_Browwed" layoutX="388.0" layoutY="144.0" promptText="is Broowed" style="-fx-border-color: #133e87;" />
+      <ComboBox fx:id="combo_browid" layoutX="21.0" layoutY="107.0" onAction="#combo_Browedid_Action" prefWidth="150.0" promptText="Brrowd id" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_bookid" layoutX="215.0" layoutY="107.0" promptText="Bookid" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_Member_id" layoutX="388.0" layoutY="107.0" promptText="Memberid" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_Staff_id" layoutX="562.0" layoutY="162.0" promptText="Staff id" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_Broowed_date" layoutX="215.0" layoutY="162.0" promptText="broowed  Date" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="is_Browwed" layoutX="388.0" layoutY="162.0" promptText="is Broowed" style="-fx-border-color: #133e87;" />
       <Label layoutY="236.0" prefHeight="26.0" prefWidth="108.0" text="Return Date:">
          <font>
             <Font name="System Bold Italic" size="16.0" />
@@ -57,5 +57,50 @@
          </font>
       </Label>
       <Button layoutX="651.0" layoutY="88.0" mnemonicParsing="false" onAction="#btn_back_Action" prefHeight="26.0" prefWidth="54.0" style="-fx-background-color: #133E87;" text="Back" textFill="WHITE" />
+      <Label layoutX="26.0" layoutY="88.0" prefHeight="18.0" prefWidth="70.0" text="Brrowd id">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="215.0" layoutY="89.0" prefHeight="18.0" prefWidth="60.0" text="Book ID">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="384.0" layoutY="89.0" prefHeight="18.0" prefWidth="70.0" text="Member ID">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="214.0" layoutY="145.0" prefHeight="18.0" prefWidth="88.0" text="Broowed Date">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="392.0" layoutY="146.0" prefHeight="18.0" prefWidth="70.0" text="is Browwed">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="562.0" layoutY="146.0" prefHeight="18.0" prefWidth="70.0" text="Staff id">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="204.0" layoutY="215.0" prefHeight="18.0" prefWidth="82.0" text="Return date">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="370.0" layoutY="216.0" prefHeight="18.0" prefWidth="97.0" text="Return on Time">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="547.0" layoutY="215.0" prefHeight="18.0" prefWidth="60.0" text="Amount">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

@@ -32,5 +32,15 @@
             <Font name="System Bold Italic" size="52.0" />
          </font>
       </Label>
+      <Label layoutX="300.0" layoutY="133.0" prefHeight="18.0" prefWidth="78.0" text="User Name">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="295.0" layoutY="196.0" prefHeight="18.0" prefWidth="68.0" text="Password">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

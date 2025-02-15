@@ -126,7 +126,7 @@ public class ReturnBooks_Form implements Initializable {
 
                 return_on_time.setText("Overdue: " + daysOverdue + " days");
                 txt_Amount.setText(String.format("%.2f", fine));
-                return_on_time.setText("Late Return");
+                return_on_time.setText("Late ");
             } else {
                 return_on_time.setText("On Time");
                 txt_Amount.setText("0.00");
