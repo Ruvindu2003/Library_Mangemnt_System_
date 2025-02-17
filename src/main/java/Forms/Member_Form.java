@@ -72,6 +72,7 @@ public class Member_Form implements Initializable {
         txt_Adrees.setText(String.valueOf(members.getAdrees()));
         lbl_Date.setText(String.valueOf(members.getMembershipdates()));
     }
+  
 
     public void btn_Add_Action(ActionEvent actionEvent) {
 

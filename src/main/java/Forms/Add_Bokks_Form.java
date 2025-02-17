@@ -128,12 +128,12 @@ public class Add_Bokks_Form {
 
     @FXML
     void btn_update_Action(ActionEvent event) {
-       boolean b=bookInstance.UpdateBooks(new Book(
-               txt_Bookid.getText(),
-               Txt_tiitle.getText(),
-               txt_Author.getText(),
-               txt_Isbn.getText(),
-               txt_lanvage.getText()
+             boolean b=bookInstance.UpdateBooks(new Book(
+                     txt_Bookid.getText(),
+                     Txt_tiitle.getText(),
+                     txt_Author.getText(),
+                     txt_Isbn.getText(),
+                   txt_lanvage.getText()
        ));
 
 
@@ -165,7 +165,7 @@ public class Add_Bokks_Form {
         Stage stage=(Stage)Ancor_Bookmangement.getScene().getWindow();
         stage.close();
         stage=new Stage();
-        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/View/DashBoard.fxml"))));
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/View/DashBoard.fxml   "))));
 
     }
 }

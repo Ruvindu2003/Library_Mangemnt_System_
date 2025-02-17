@@ -30,7 +30,7 @@ public class ReportController {
             JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, null, DBConnection.getInstance().getConnection());
             JasperExportManager.exportReportToPdfFile(jasperPrint, Filename);
             JasperViewer.viewReport(jasperPrint, false);
-
+                new  Alert(Alert.AlertType.INFORMATION,"Success Fully !").show();
         } catch (Exception e) {
             new Alert(Alert.AlertType.INFORMATION, "Report Generation Failed!.").show();
             throw new RuntimeException(e);

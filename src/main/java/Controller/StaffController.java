@@ -89,7 +89,7 @@ public class StaffController implements Staff_Service {
             preparedStatement.setString(3, staff.getName());
             preparedStatement.setString(4, staff.getPhoneNumber());
 
-            new Alert(Alert.AlertType.INFORMATION,"Success FAlly").show();
+            new Alert(Alert.AlertType.INFORMATION,"Success Fully").show();
             return preparedStatement.executeUpdate()>0;
 
         } catch (SQLException e) {
@@ -118,8 +118,9 @@ public class StaffController implements Staff_Service {
 
             if (preparedStatement.executeUpdate()>0) new Alert(Alert.AlertType.INFORMATION,"Success Full").show();
 
-
-
+            else {
+                new Alert(Alert.AlertType.INFORMATION,"Delete Not Success Full").show();
+            }
 
         } catch (SQLException e) {
             throw new RuntimeException(e);

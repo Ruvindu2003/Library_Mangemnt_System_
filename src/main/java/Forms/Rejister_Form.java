@@ -43,9 +43,10 @@ public class Rejister_Form {
                     psTm.setString(2,txt_Email.getText());
                     psTm.setString(3,txt_Password.getText());
                     psTm.executeUpdate();
-                    new Alert(Alert.AlertType.INFORMATION,"Success Full Register").show();
+
 
                 }else{
+                    new Alert(Alert.AlertType.INFORMATION,"Success Full Register").show();
 
                     System.out.println(true);
                 }
@@ -54,7 +55,8 @@ public class Rejister_Form {
             }
 
         }else {
-            new  Alert(Alert.AlertType.INFORMATION," not Success Full Register").show();
+            new Alert(Alert.AlertType.INFORMATION," Not Success Register").show();
+
             System.out.println(false);
         }
 

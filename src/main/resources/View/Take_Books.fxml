@@ -14,19 +14,19 @@
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="GHOSTWHITE" height="316.0" layoutY="78.0" stroke="GHOSTWHITE" strokeType="INSIDE" width="856.0" />
       <ComboBox fx:id="combo_Bookid" layoutX="14.0" layoutY="109.0" onAction="#Combo_Book_Action" prefWidth="150.0" promptText="Book ID" />
-      <TextField fx:id="txt_Title" layoutX="179.0" layoutY="108.0" prefHeight="26.0" prefWidth="141.0" promptText="Tittle" style="-fx-border-color: #133e87;" />
-      <TextField fx:id="txt_Author" layoutX="337.0" layoutY="108.0" prefHeight="26.0" prefWidth="134.0" promptText="Author" style="-fx-border-color: #133e87;" />
-      <TextField fx:id="txt_ISBN" layoutX="492.0" layoutY="108.0" prefHeight="26.0" prefWidth="142.0" promptText="ISBN" style="-fx-border-color: #133e87;" />
-      <TextField fx:id="txt_lanvage" layoutX="648.0" layoutY="108.0" promptText="Lnagvage" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_Title" editable="false" layoutX="179.0" layoutY="108.0" prefHeight="26.0" prefWidth="141.0" promptText="Tittle" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_Author" editable="false" layoutX="337.0" layoutY="108.0" prefHeight="26.0" prefWidth="134.0" promptText="Author" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_ISBN" editable="false" layoutX="492.0" layoutY="108.0" prefHeight="26.0" prefWidth="142.0" promptText="ISBN" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_lanvage" editable="false" layoutX="648.0" layoutY="108.0" promptText="Lnagvage" style="-fx-border-color: #133e87;" />
       <ComboBox fx:id="combo_Memberid" layoutX="14.0" layoutY="166.0" onAction="#combo_Memeberid_Action" prefHeight="26.0" prefWidth="150.0" promptText="Member ID" />
-      <TextField fx:id="txt_full_name" layoutX="175.0" layoutY="165.0" promptText="full Name" style="-fx-border-color: #133e87;" />
-      <TextField fx:id="txt_PhoneNumber" layoutX="333.0" layoutY="164.0" prefHeight="26.0" prefWidth="142.0" promptText="Phone Number" style="-fx-border-color: #133e87;" />
-      <TextField fx:id="txt_Address" layoutX="492.0" layoutY="164.0" prefHeight="26.0" prefWidth="142.0" promptText="Adress" style="-fx-border-color: #133e87;" />
-      <TextField fx:id="txt_Membership" layoutX="656.0" layoutY="164.0" prefHeight="26.0" prefWidth="134.0" promptText="membership_date" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_full_name" editable="false" layoutX="175.0" layoutY="165.0" promptText="full Name" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_PhoneNumber" editable="false" layoutX="333.0" layoutY="164.0" prefHeight="26.0" prefWidth="142.0" promptText="Phone Number" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_Address" editable="false" layoutX="492.0" layoutY="164.0" prefHeight="26.0" prefWidth="142.0" promptText="Adress" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_Membership" editable="false" layoutX="656.0" layoutY="164.0" prefHeight="26.0" prefWidth="134.0" promptText="membership_date" style="-fx-border-color: #133e87;" />
       <ComboBox fx:id="combo_Staffid" layoutX="14.0" layoutY="219.0" onAction="#combo_staffid_Action" prefWidth="150.0" promptText="Staff ID" />
-      <TextField fx:id="txt_email" layoutX="175.0" layoutY="219.0" promptText="Email" style="-fx-border-color: #133e87;" />
-      <TextField fx:id="txt_name" layoutX="332.0" layoutY="219.0" promptText="Name" style="-fx-border-color: #133e87;" />
-      <TextField fx:id="txt_pohneNumber" layoutX="499.0" layoutY="219.0" promptText="Phone  Number" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_email" editable="false" layoutX="175.0" layoutY="219.0" promptText="Email" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_name" editable="false" layoutX="332.0" layoutY="219.0" promptText="Name" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_pohneNumber" editable="false" layoutX="499.0" layoutY="219.0" promptText="Phone  Number" style="-fx-border-color: #133e87;" />
       <TableView fx:id="brrowed_table" layoutX="-1.0" layoutY="380.0" prefHeight="172.0" prefWidth="856.0">
         <columns>
           <TableColumn fx:id="colum_borrowedid" prefWidth="125.60002136230469" text="Borrowed id" />

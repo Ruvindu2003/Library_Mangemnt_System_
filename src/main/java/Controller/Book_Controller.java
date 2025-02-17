@@ -113,7 +113,7 @@ public class Book_Controller implements Book_Service {
             preparedStatement.setString(5,book.getLanvage());
 
             if (preparedStatement.executeUpdate()>0)
-                new Alert(Alert.AlertType.INFORMATION,"Sucsess Full").show();
+                new Alert(Alert.AlertType.INFORMATION,"Success Full").show();
 
 
 

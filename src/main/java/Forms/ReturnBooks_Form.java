@@ -127,10 +127,12 @@ public class ReturnBooks_Form implements Initializable {
                 return_on_time.setText("Overdue: " + daysOverdue + " days");
                 txt_Amount.setText(String.format("%.2f", fine));
                 return_on_time.setText("Late ");
+                new Alert(Alert.AlertType.INFORMATION,"Return on Late").show();
             } else {
                 return_on_time.setText("On Time");
                 txt_Amount.setText("0.00");
                 return_on_time.setText("Returned ");
+                new  Alert(Alert.AlertType.INFORMATION,"Return on time").show();
             }
         } catch (Exception e) {
             return_on_time.setText("Error: " + e.getMessage());

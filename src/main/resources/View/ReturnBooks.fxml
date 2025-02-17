@@ -19,11 +19,11 @@
          </font>
       </Label>
       <ComboBox fx:id="combo_browid" layoutX="21.0" layoutY="107.0" onAction="#combo_Browedid_Action" prefWidth="150.0" promptText="Brrowd id" style="-fx-border-color: #133e87;" />
-      <TextField fx:id="txt_bookid" layoutX="215.0" layoutY="107.0" promptText="Bookid" style="-fx-border-color: #133e87;" />
-      <TextField fx:id="txt_Member_id" layoutX="388.0" layoutY="107.0" promptText="Memberid" style="-fx-border-color: #133e87;" />
-      <TextField fx:id="txt_Staff_id" layoutX="562.0" layoutY="162.0" promptText="Staff id" style="-fx-border-color: #133e87;" />
-      <TextField fx:id="txt_Broowed_date" layoutX="215.0" layoutY="162.0" promptText="broowed  Date" style="-fx-border-color: #133e87;" />
-      <TextField fx:id="is_Browwed" layoutX="388.0" layoutY="162.0" promptText="is Broowed" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_bookid" editable="false" layoutX="215.0" layoutY="107.0" promptText="Bookid" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_Member_id" editable="false" layoutX="388.0" layoutY="107.0" promptText="Memberid" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_Staff_id" editable="false" layoutX="562.0" layoutY="162.0" promptText="Staff id" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_Broowed_date" editable="false" layoutX="215.0" layoutY="162.0" promptText="broowed  Date" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="is_Browwed" editable="false" layoutX="388.0" layoutY="162.0" promptText="is Broowed" style="-fx-border-color: #133e87;" />
       <Label layoutY="236.0" prefHeight="26.0" prefWidth="108.0" text="Return Date:">
          <font>
             <Font name="System Bold Italic" size="16.0" />

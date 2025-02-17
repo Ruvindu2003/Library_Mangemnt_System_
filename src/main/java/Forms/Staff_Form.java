@@ -63,19 +63,26 @@ public class Staff_Form {
         @FXML
         private TextField txt_phoneNumber;
 
-        @FXML
+    int staffCount = 1;
+    @FXML
         void btn_Add_Action(ActionEvent event) {
+
+
+
+
             getInstance.addstaff(new Staff(
-                   txt_Staffid.getText(),
+                    txt_Staffid.getText(),
                     txt_email.getText(),
                     txt_name.getText(),
                     txt_phoneNumber.getText()
-
-
-
             ));
 
         }
+
+
+
+
+
 
         @FXML
         void btn_Search_Action(ActionEvent event) throws SQLException {
@@ -149,6 +156,9 @@ public class Staff_Form {
         stage =new Stage();
         stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/View/DashBoard.fxml"))));
     }
+
+
+
 }
 
 
