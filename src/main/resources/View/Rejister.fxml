@@ -16,12 +16,12 @@
             <Image url="@../images/6607.jpg" />
          </image>
       </ImageView>
-      <TextField fx:id="txt_id" layoutX="44.0" layoutY="131.0" prefHeight="26.0" prefWidth="169.0" promptText="ID" style="-fx-border-color: #133e87;" />
-      <TextField fx:id="txt_username" layoutX="265.0" layoutY="132.0" prefHeight="26.0" prefWidth="183.0" promptText="User Name" style="-fx-border-color: #133e87;" />
-      <TextField fx:id="txt_Email" layoutX="43.0" layoutY="208.0" prefHeight="26.0" prefWidth="170.0" promptText="Email" style="-fx-border-color: #133e87;" />
-      <TextField fx:id="txt_Password" layoutX="266.0" layoutY="209.0" prefHeight="26.0" prefWidth="192.0" promptText="Password" style="-fx-border-color: #133e87;" />
-      <Button layoutX="175.0" layoutY="333.0" mnemonicParsing="false" onAction="#btn_Action_Action" prefHeight="26.0" prefWidth="142.0" style="-fx-background-color: #133E87;" text="Register" textFill="WHITE" />
-      <TextField fx:id="txt_conform_Password" layoutX="150.0" layoutY="275.0" prefHeight="26.0" prefWidth="192.0" promptText="Conform Password" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_id" layoutX="44.0" layoutY="131.0" prefHeight="26.0" prefWidth="169.0" promptText="ID" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
+      <TextField fx:id="txt_username" layoutX="265.0" layoutY="132.0" prefHeight="26.0" prefWidth="183.0" promptText="User Name" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
+      <TextField fx:id="txt_Email" layoutX="43.0" layoutY="208.0" prefHeight="26.0" prefWidth="170.0" promptText="Email" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
+      <TextField fx:id="txt_Password" layoutX="266.0" layoutY="209.0" prefHeight="26.0" prefWidth="192.0" promptText="Password" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
+      <Button layoutX="175.0" layoutY="333.0" mnemonicParsing="false" onAction="#btn_Action_Action" prefHeight="26.0" prefWidth="142.0" style="-fx-background-color: #133E87;" stylesheets="@../css/Login.css" text="Register" textFill="WHITE" />
+      <TextField fx:id="txt_conform_Password" layoutX="150.0" layoutY="275.0" prefHeight="26.0" prefWidth="192.0" promptText="Conform Password" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#133e87" height="103.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" width="522.0" />
       <Label layoutX="185.0" layoutY="29.0" prefHeight="54.0" prefWidth="142.0" text="Register" textFill="WHITE">
          <font>

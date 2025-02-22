@@ -7,15 +7,15 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="frame_home" prefHeight="400.0" prefWidth="599.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Forms.Hom_page_Form">
+<AnchorPane fx:id="frame_home" prefHeight="320.0" prefWidth="477.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Forms.Hom_page_Form">
    <children>
-      <ImageView fitHeight="400.0" fitWidth="599.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="314.0" fitWidth="433.0" layoutX="24.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/WhatsApp%20Image%202025-02-11%20at%2015.19.32.jpeg" />
          </image>
       </ImageView>
-      <Button layoutX="487.0" layoutY="366.0" mnemonicParsing="false" onAction="#Lets_Go_Action" prefHeight="26.0" prefWidth="104.0" style="-fx-background-color: #133E87;" text="Lets Go" textFill="#fffbfb" />
-      <Label layoutX="162.0" layoutY="-2.0" prefHeight="42.0" prefWidth="309.0" text="Library Mangement System">
+      <Button layoutX="354.0" layoutY="279.0" mnemonicParsing="false" onAction="#Lets_Go_Action" prefHeight="26.0" prefWidth="104.0" style="-fx-background-color: #133E87;" stylesheets="@../css/Login.css" text="Lets Go" textFill="#fffbfb" />
+      <Label layoutX="86.0" layoutY="14.0" prefHeight="42.0" prefWidth="309.0" text="Library Mangement System">
          <font>
             <Font name="System Bold Italic" size="23.0" />
          </font>

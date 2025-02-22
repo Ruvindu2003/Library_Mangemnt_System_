@@ -22,10 +22,10 @@
             <Font name="System Bold Italic" size="67.0" />
          </font>
       </Label>
-      <TextField fx:id="txt_username" layoutX="295.0" layoutY="161.0" prefHeight="26.0" prefWidth="256.0" promptText="User Name" style="-fx-border-color: #133e87;" />
-      <TextField fx:id="txt_password" layoutX="294.0" layoutY="218.0" prefHeight="26.0" prefWidth="256.0" promptText="Password" style="-fx-border-color: #133e87;" />
-      <Button layoutX="362.0" layoutY="269.0" mnemonicParsing="false" onAction="#btn_Login_Action" prefHeight="26.0" prefWidth="106.0" style="-fx-background-color: #133E87;" text="Login" textFill="#fff7f7" />
-      <Button layoutX="468.0" layoutY="359.0" mnemonicParsing="false" onAction="#Rejister_on_Action" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: #133E87;" text="Register" textFill="WHITE" />
+      <TextField fx:id="txt_username" layoutX="295.0" layoutY="161.0" prefHeight="26.0" prefWidth="256.0" promptText="User Name" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
+      <TextField fx:id="txt_password" layoutX="294.0" layoutY="218.0" prefHeight="26.0" prefWidth="256.0" promptText="Password" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
+      <Button layoutX="362.0" layoutY="269.0" mnemonicParsing="false" onAction="#btn_Login_Action" prefHeight="26.0" prefWidth="106.0" style="-fx-background-color: #133E87;" stylesheets="@../css/Login.css" text="Login" textFill="#fff7f7" />
+      <Button layoutX="468.0" layoutY="359.0" mnemonicParsing="false" onAction="#Rejister_on_Action" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: #133E87;" stylesheets="@../css/Login.css" text="Register" textFill="WHITE" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#133e87" height="90.0" layoutX="269.0" layoutY="-1.0" stroke="#133e87" strokeType="INSIDE" width="306.0" />
       <Label layoutX="357.0" layoutY="5.0" prefHeight="75.0" prefWidth="146.0" text="Login" textFill="WHITE">
          <font>

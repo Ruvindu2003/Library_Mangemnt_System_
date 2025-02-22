@@ -1,0 +1,55 @@
+/* dashboard_styles.css */
+
+/* TableView styling */
+.table-view {
+    -fx-background-color: #f0f0f0; /* Light gray background */
+    -fx-border-color: #133E87; /* Border color */
+    -fx-border-width: 2px; /* Border width */
+    -fx-border-radius: 5px; /* Rounded corners */
+    -fx-padding: 5px; /* Padding inside the table */
+}
+
+/* TableColumn header styling */
+.table-view .column-header {
+    -fx-background-color: #133E87; /* Dark blue background */
+    -fx-text-fill: white; /* White text */
+    -fx-font-size: 14px; /* Font size */
+    -fx-font-weight: bold; /* Bold text */
+    -fx-alignment: CENTER; /* Center-align text */
+}
+
+/* TableColumn header hover effect */
+.table-view .column-header:hover {
+    -fx-background-color: #1a4da6; /* Lighter blue on hover */
+}
+
+/* TableRow styling */
+.table-row-cell {
+    -fx-background-color: #ffffff; /* White background for rows */
+    -fx-border-color: #e0e0e0; /* Light gray border between rows */
+    -fx-border-width: 0.5px;
+}
+
+/* Alternate row coloring */
+.table-row-cell:odd {
+    -fx-background-color: #f9f9f9; /* Light gray for odd rows */
+}
+
+/* Selected row styling */
+.table-row-cell:selected {
+    -fx-background-color: #133E87; /* Dark blue for selected row */
+    -fx-text-fill: white; /* White text for selected row */
+}
+
+/* TableCell styling */
+.table-cell {
+    -fx-padding: 5px; /* Padding inside cells */
+    -fx-alignment: CENTER; /* Center-align text */
+    -fx-border-color: #e0e0e0; /* Light gray border between cells */
+    -fx-border-width: 0.5px;
+}
+
+/* Hover effect for cells */
+.table-cell:hover {
+    -fx-background-color: #e0e0e0; /* Light gray on hover */
+}

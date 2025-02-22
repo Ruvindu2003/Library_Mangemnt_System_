@@ -21,12 +21,12 @@
             <Font name="System Bold Italic" size="30.0" />
          </font>
       </Label>
-      <Button layoutX="21.0" layoutY="130.0" mnemonicParsing="false" onAction="#btn_member_Action" prefHeight="26.0" prefWidth="155.0" style="-fx-background-color: #133E87;" text="Member" textFill="#fffcfc" />
-      <Button layoutX="21.0" layoutY="86.0" mnemonicParsing="false" onAction="#btn_Addbooks_Action" prefHeight="26.0" prefWidth="155.0" style="-fx-background-color: #133E87;" text="Add Books" textFill="WHITE" />
-      <Button layoutX="21.0" layoutY="174.0" mnemonicParsing="false" onAction="#btn_Staff_Action" prefHeight="26.0" prefWidth="155.0" style="-fx-background-color: #133E87;" text="Staff " textFill="WHITE" />
-      <Button layoutX="21.0" layoutY="217.0" mnemonicParsing="false" onAction="#Borrowed_Bokkss_Action" prefHeight="26.0" prefWidth="155.0" style="-fx-background-color: #133E87;" text="Borrowed Books" textFill="WHITE" />
-      <Button layoutX="21.0" layoutY="260.0" mnemonicParsing="false" onAction="#btn_Return_book_Action" prefHeight="26.0" prefWidth="155.0" style="-fx-background-color: #133E87;" text="Return Books" textFill="WHITE" />
-      <Button layoutX="526.0" layoutY="355.0" mnemonicParsing="false" onAction="#btn_Action_Logout" prefHeight="26.0" prefWidth="59.0" style="-fx-background-color: #133E87; -fx-border-color: #ffffff; -fx-border-width: 2px; -fx-border-radius: 4px;" text="Logout" textFill="#fffdfd" />
-      <Button layoutX="22.0" layoutY="303.0" mnemonicParsing="false" onAction="#btn_Report_Action" prefHeight="19.0" prefWidth="155.0" style="-fx-background-color: #133E87; stage.close(): ; stage=new Stage(): ; stage.setScene(new Scene(FXMLLoader.load(getClass().getResource(&quot;/View/Login.fxml&quot;)))): ; stage.show(): ; stage.setTitle(&quot;Login Form&quot;): ;" text="Report" textFill="WHITE" />
+      <Button layoutX="21.0" layoutY="130.0" mnemonicParsing="false" onAction="#btn_member_Action" prefHeight="26.0" prefWidth="155.0" style="-fx-background-color: #133E87;" stylesheets="@../css/Login.css" text="Member" textFill="#fffcfc" />
+      <Button layoutX="21.0" layoutY="86.0" mnemonicParsing="false" onAction="#btn_Addbooks_Action" prefHeight="26.0" prefWidth="155.0" style="-fx-background-color: #133E87;" stylesheets="@../css/Login.css" text="Add Books" textFill="WHITE" />
+      <Button layoutX="21.0" layoutY="174.0" mnemonicParsing="false" onAction="#btn_Staff_Action" prefHeight="26.0" prefWidth="155.0" style="-fx-background-color: #133E87;" stylesheets="@../css/Login.css" text="Staff " textFill="WHITE" />
+      <Button layoutX="21.0" layoutY="217.0" mnemonicParsing="false" onAction="#Borrowed_Bokkss_Action" prefHeight="26.0" prefWidth="155.0" style="-fx-background-color: #133E87;" stylesheets="@../css/Login.css" text="Borrowed Books" textFill="WHITE" />
+      <Button layoutX="21.0" layoutY="260.0" mnemonicParsing="false" onAction="#btn_Return_book_Action" prefHeight="26.0" prefWidth="155.0" style="-fx-background-color: #133E87;" stylesheets="@../css/Login.css" text="Return Books" textFill="WHITE" />
+      <Button layoutX="526.0" layoutY="355.0" mnemonicParsing="false" onAction="#btn_Action_Logout" prefHeight="32.0" prefWidth="66.0" style="-fx-background-color: #133E87; -fx-border-color: #ffffff; -fx-border-width: 2px; -fx-border-radius: 4px;" stylesheets="@../css/Login.css" text="Logout" textFill="#fffdfd" />
+      <Button layoutX="22.0" layoutY="303.0" mnemonicParsing="false" onAction="#btn_Report_Action" prefHeight="19.0" prefWidth="155.0" style="-fx-background-color: #133E87; stage.close(): ; stage=new Stage(): ; stage.setScene(new Scene(FXMLLoader.load(getClass().getResource(&quot;/View/Login.fxml&quot;)))): ; stage.show(): ; stage.setTitle(&quot;Login Form&quot;): ;" stylesheets="@../css/Login.css" text="Report" textFill="WHITE" />
    </children>
 </AnchorPane>

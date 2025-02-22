@@ -1,0 +1,43 @@
+/* styles.css */
+
+/* Define the fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Apply the animation to the AnchorPane */
+#ancor_Login {
+    -fx-background-color: transparent;
+    -fx-opacity: 0;
+    -fx-animation: fadeIn 2s ease-in forwards;
+}
+
+/* Apply styles to the TextFields */
+.text-field {
+    -fx-background-color: #f0f0f0;
+    -fx-border-color: #133e87;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+}
+
+/* Apply styles to the Buttons */
+.button {
+    -fx-background-color: #133E87;
+    -fx-text-fill: white;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 5px 10px;
+}
+
+.button:hover {
+    -fx-background-color: #1a4da6;
+}
+
+.button:pressed {
+    -fx-background-color: #0d2a5e;
+}

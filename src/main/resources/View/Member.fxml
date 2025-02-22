@@ -13,12 +13,12 @@
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="GHOSTWHITE" height="234.0" layoutX="-1.0" layoutY="74.0" stroke="GHOSTWHITE" strokeType="INSIDE" width="562.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#133e87" height="74.0" stroke="#133e87" strokeType="INSIDE" width="562.0" />
-      <TextField fx:id="txt_memberid" layoutX="51.0" layoutY="137.0" prefHeight="26.0" prefWidth="198.0" promptText="Member ID" style="-fx-border-color: #133e87;" />
-      <TextField fx:id="txt_membername" layoutX="301.0" layoutY="137.0" prefHeight="26.0" prefWidth="198.0" promptText="Full_Name" style="-fx-border-color: #133e87;" />
-      <TextField fx:id="txt_phoneNumber" layoutX="51.0" layoutY="192.0" prefHeight="26.0" prefWidth="198.0" promptText="Phone_Number" style="-fx-border-color: #133e87;" />
-      <TextField fx:id="txt_Adrees" layoutX="306.0" layoutY="192.0" prefHeight="27.0" prefWidth="198.0" promptText="Adrees" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_memberid" layoutX="51.0" layoutY="137.0" prefHeight="26.0" prefWidth="198.0" promptText="Member ID" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
+      <TextField fx:id="txt_membername" layoutX="301.0" layoutY="137.0" prefHeight="26.0" prefWidth="198.0" promptText="Full_Name" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
+      <TextField fx:id="txt_phoneNumber" layoutX="51.0" layoutY="192.0" prefHeight="26.0" prefWidth="198.0" promptText="Phone_Number" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
+      <TextField fx:id="txt_Adrees" layoutX="306.0" layoutY="192.0" prefHeight="27.0" prefWidth="198.0" promptText="Adrees" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
       <Label fx:id="lbl_Date" layoutX="155.0" layoutY="92.0" prefHeight="18.0" prefWidth="172.0" text="yy/MM/DD" textFill="#94992c" />
-      <TableView fx:id="table_Memeber" layoutY="305.0" prefHeight="152.0" prefWidth="562.0">
+      <TableView fx:id="table_Memeber" layoutY="305.0" prefHeight="152.0" prefWidth="562.0" stylesheets="@../css/DashBord.css">
         <columns>
           <TableColumn fx:id="colum_memberid" prefWidth="122.40002286434174" text="Member_id" />
           <TableColumn fx:id="colum_full_name" prefWidth="84.00000762939453" text="Full_Name" />
@@ -27,17 +27,17 @@
             <TableColumn fx:id="colum_Headmastership" prefWidth="156.00003051757812" text="Memebership Date" />
         </columns>
       </TableView>
-      <Button layoutX="28.0" layoutY="254.0" mnemonicParsing="false" onAction="#btn_Search_Action" prefHeight="26.0" prefWidth="83.0" style="-fx-background-color: #133E87;" text="Search" textFill="WHITE" />
-      <Button layoutX="141.0" layoutY="255.0" mnemonicParsing="false" onAction="#btn_Add_Action" prefHeight="26.0" prefWidth="83.0" style="-fx-background-color: #133E87;" text="Add" textFill="WHITE" />
-      <Button layoutX="258.0" layoutY="255.0" mnemonicParsing="false" onAction="#btn_View_Action" prefHeight="26.0" prefWidth="83.0" style="-fx-background-color: #133E87;" text="View" textFill="WHITE" />
-      <Button layoutX="362.0" layoutY="255.0" mnemonicParsing="false" onAction="#btn_update_Action" prefHeight="26.0" prefWidth="76.0" style="-fx-background-color: #133E87;" text="Update" textFill="#fffcfc" />
-      <Button layoutX="473.0" layoutY="254.0" mnemonicParsing="false" onAction="#btn_Delete_Action" prefHeight="26.0" prefWidth="76.0" style="-fx-background-color: #133E87;" text="Delete" textFill="WHITE" />
+      <Button layoutX="28.0" layoutY="254.0" mnemonicParsing="false" onAction="#btn_Search_Action" prefHeight="26.0" prefWidth="83.0" style="-fx-background-color: #133E87;" stylesheets="@../css/Login.css" text="Search" textFill="WHITE" />
+      <Button layoutX="141.0" layoutY="255.0" mnemonicParsing="false" onAction="#btn_Add_Action" prefHeight="26.0" prefWidth="83.0" style="-fx-background-color: #133E87;" stylesheets="@../css/Login.css" text="Add" textFill="WHITE" />
+      <Button layoutX="258.0" layoutY="255.0" mnemonicParsing="false" onAction="#btn_View_Action" prefHeight="26.0" prefWidth="83.0" style="-fx-background-color: #133E87;" stylesheets="@../css/Login.css" text="View" textFill="WHITE" />
+      <Button layoutX="362.0" layoutY="255.0" mnemonicParsing="false" onAction="#btn_update_Action" prefHeight="26.0" prefWidth="76.0" style="-fx-background-color: #133E87;" stylesheets="@../css/Login.css" text="Update" textFill="#fffcfc" />
+      <Button layoutX="473.0" layoutY="254.0" mnemonicParsing="false" onAction="#btn_Delete_Action" prefHeight="26.0" prefWidth="76.0" style="-fx-background-color: #133E87;" stylesheets="@../css/Login.css" text="Delete" textFill="WHITE" />
       <Label layoutX="80.0" layoutY="92.0" prefHeight="18.0" prefWidth="62.0" text=" Date :">
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font>
       </Label>
-      <Button layoutX="492.0" layoutY="79.0" mnemonicParsing="false" onAction="#btn_Back_Action" prefHeight="26.0" prefWidth="50.0" style="-fx-background-color: #133E87;" text="Back" textFill="WHITE" />
+      <Button layoutX="492.0" layoutY="79.0" mnemonicParsing="false" onAction="#btn_Back_Action" prefHeight="26.0" prefWidth="50.0" style="-fx-background-color: #133E87;" stylesheets="@../css/Login.css" text="Back" textFill="WHITE" />
       <Label layoutX="150.0" layoutY="5.0" prefHeight="63.0" prefWidth="333.0" text="Add Members" textFill="WHITE">
          <font>
             <Font name="System Bold Italic" size="42.0" />

@@ -13,21 +13,21 @@
 <AnchorPane fx:id="Ancor_Browwdebooks" prefHeight="554.0" prefWidth="851.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Forms.Take_Bokks_Form">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="GHOSTWHITE" height="316.0" layoutY="78.0" stroke="GHOSTWHITE" strokeType="INSIDE" width="856.0" />
-      <ComboBox fx:id="combo_Bookid" layoutX="14.0" layoutY="109.0" onAction="#Combo_Book_Action" prefWidth="150.0" promptText="Book ID" />
-      <TextField fx:id="txt_Title" editable="false" layoutX="179.0" layoutY="108.0" prefHeight="26.0" prefWidth="141.0" promptText="Tittle" style="-fx-border-color: #133e87;" />
-      <TextField fx:id="txt_Author" editable="false" layoutX="337.0" layoutY="108.0" prefHeight="26.0" prefWidth="134.0" promptText="Author" style="-fx-border-color: #133e87;" />
-      <TextField fx:id="txt_ISBN" editable="false" layoutX="492.0" layoutY="108.0" prefHeight="26.0" prefWidth="142.0" promptText="ISBN" style="-fx-border-color: #133e87;" />
-      <TextField fx:id="txt_lanvage" editable="false" layoutX="648.0" layoutY="108.0" promptText="Lnagvage" style="-fx-border-color: #133e87;" />
-      <ComboBox fx:id="combo_Memberid" layoutX="14.0" layoutY="166.0" onAction="#combo_Memeberid_Action" prefHeight="26.0" prefWidth="150.0" promptText="Member ID" />
-      <TextField fx:id="txt_full_name" editable="false" layoutX="175.0" layoutY="165.0" promptText="full Name" style="-fx-border-color: #133e87;" />
-      <TextField fx:id="txt_PhoneNumber" editable="false" layoutX="333.0" layoutY="164.0" prefHeight="26.0" prefWidth="142.0" promptText="Phone Number" style="-fx-border-color: #133e87;" />
-      <TextField fx:id="txt_Address" editable="false" layoutX="492.0" layoutY="164.0" prefHeight="26.0" prefWidth="142.0" promptText="Adress" style="-fx-border-color: #133e87;" />
-      <TextField fx:id="txt_Membership" editable="false" layoutX="656.0" layoutY="164.0" prefHeight="26.0" prefWidth="134.0" promptText="membership_date" style="-fx-border-color: #133e87;" />
+      <ComboBox fx:id="combo_Bookid" layoutX="14.0" layoutY="109.0" onAction="#Combo_Book_Action" prefWidth="150.0" promptText="Book ID" stylesheets="@../css/Login.css" />
+      <TextField fx:id="txt_Title" editable="false" layoutX="179.0" layoutY="108.0" prefHeight="26.0" prefWidth="141.0" promptText="Tittle" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
+      <TextField fx:id="txt_Author" editable="false" layoutX="337.0" layoutY="108.0" prefHeight="26.0" prefWidth="134.0" promptText="Author" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
+      <TextField fx:id="txt_ISBN" editable="false" layoutX="492.0" layoutY="108.0" prefHeight="26.0" prefWidth="142.0" promptText="ISBN" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
+      <TextField fx:id="txt_lanvage" editable="false" layoutX="648.0" layoutY="108.0" promptText="Lnagvage" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
+      <ComboBox fx:id="combo_Memberid" layoutX="14.0" layoutY="166.0" onAction="#combo_Memeberid_Action" prefHeight="26.0" prefWidth="150.0" promptText="Member ID" stylesheets="@../css/Login.css" />
+      <TextField fx:id="txt_full_name" editable="false" layoutX="175.0" layoutY="165.0" promptText="full Name" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
+      <TextField fx:id="txt_PhoneNumber" editable="false" layoutX="333.0" layoutY="164.0" prefHeight="26.0" prefWidth="142.0" promptText="Phone Number" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
+      <TextField fx:id="txt_Address" editable="false" layoutX="492.0" layoutY="164.0" prefHeight="26.0" prefWidth="142.0" promptText="Adress" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
+      <TextField fx:id="txt_Membership" editable="false" layoutX="656.0" layoutY="164.0" prefHeight="26.0" prefWidth="134.0" promptText="membership_date" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
       <ComboBox fx:id="combo_Staffid" layoutX="14.0" layoutY="219.0" onAction="#combo_staffid_Action" prefWidth="150.0" promptText="Staff ID" />
-      <TextField fx:id="txt_email" editable="false" layoutX="175.0" layoutY="219.0" promptText="Email" style="-fx-border-color: #133e87;" />
-      <TextField fx:id="txt_name" editable="false" layoutX="332.0" layoutY="219.0" promptText="Name" style="-fx-border-color: #133e87;" />
-      <TextField fx:id="txt_pohneNumber" editable="false" layoutX="499.0" layoutY="219.0" promptText="Phone  Number" style="-fx-border-color: #133e87;" />
-      <TableView fx:id="brrowed_table" layoutX="-1.0" layoutY="380.0" prefHeight="172.0" prefWidth="856.0">
+      <TextField fx:id="txt_email" editable="false" layoutX="175.0" layoutY="219.0" promptText="Email" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
+      <TextField fx:id="txt_name" editable="false" layoutX="332.0" layoutY="219.0" promptText="Name" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
+      <TextField fx:id="txt_pohneNumber" editable="false" layoutX="499.0" layoutY="219.0" promptText="Phone  Number" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
+      <TableView fx:id="brrowed_table" layoutX="-1.0" layoutY="380.0" prefHeight="172.0" prefWidth="856.0" stylesheets="@../css/DashBord.css">
         <columns>
           <TableColumn fx:id="colum_borrowedid" prefWidth="125.60002136230469" text="Borrowed id" />
             <TableColumn fx:id="colum_bookid" prefWidth="128.79998779296875" text="Bookid" />
@@ -47,16 +47,16 @@
             <Font name="System Bold Italic" size="16.0" />
          </font>
       </Label>
-      <Button layoutX="616.0" layoutY="322.0" mnemonicParsing="false" onAction="#take_Books_Action" prefHeight="26.0" prefWidth="118.0" style="-fx-background-color: #133E87;" text="Take Books" textFill="WHITE" />
-      <TextField fx:id="txt_brrrowedid" layoutX="191.0" layoutY="282.0" prefHeight="26.0" prefWidth="160.0" promptText="broowde_id" style="-fx-border-color: #133e87;" />
-      <TextField fx:id="txt_yes_or_No" layoutX="400.0" layoutY="282.0" promptText="yes or No" style="-fx-border-color: #133e87;" />
+      <Button layoutX="616.0" layoutY="322.0" mnemonicParsing="false" onAction="#take_Books_Action" prefHeight="26.0" prefWidth="118.0" style="-fx-background-color: #133E87;" stylesheets="@../css/Login.css" text="Take Books" textFill="WHITE" />
+      <TextField fx:id="txt_brrrowedid" layoutX="191.0" layoutY="282.0" prefHeight="26.0" prefWidth="160.0" promptText="broowde_id" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
+      <TextField fx:id="txt_yes_or_No" layoutX="400.0" layoutY="282.0" promptText="yes or No" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#133e87" height="80.0" layoutX="-2.0" stroke="#133e87" strokeType="INSIDE" width="857.0" />
       <Label layoutX="282.0" layoutY="9.0" prefHeight="62.0" prefWidth="333.0" text="Broowed Books" textFill="WHITE">
          <font>
             <Font name="System Bold Italic" size="42.0" />
          </font>
       </Label>
-      <Button layoutX="790.0" layoutY="231.0" mnemonicParsing="false" onAction="#btn_Back_Action" prefHeight="26.0" prefWidth="52.0" style="-fx-background-color: #133E87;" text="Back" textFill="WHITE" />
+      <Button layoutX="790.0" layoutY="231.0" mnemonicParsing="false" onAction="#btn_Back_Action" prefHeight="26.0" prefWidth="52.0" style="-fx-background-color: #133E87;" stylesheets="@../css/Login.css" text="Back" textFill="WHITE" />
       <Label layoutX="14.0" layoutY="87.0" prefHeight="18.0" prefWidth="66.0" text="Book ID">
          <font>
             <Font name="System Bold Italic" size="12.0" />

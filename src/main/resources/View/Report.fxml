@@ -18,22 +18,22 @@
             <Font name="System Bold Italic" size="37.0" />
          </font>
       </Label>
-      <CheckBox fx:id="chbox_books" layoutX="119.0" layoutY="108.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="150.0" text="Books">
+      <CheckBox fx:id="chbox_books" layoutX="119.0" layoutY="108.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="150.0" stylesheets="@../css/Login.css" text="Books">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </CheckBox>
-      <CheckBox fx:id="chombox_member" layoutX="119.0" layoutY="301.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="150.0" text="Member">
+      <CheckBox fx:id="chombox_member" layoutX="119.0" layoutY="301.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="150.0" stylesheets="@../css/Login.css" text="Member">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </CheckBox>
-      <CheckBox fx:id="chobox_returnbooks" layoutX="119.0" layoutY="227.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="150.0" text="Return Books">
+      <CheckBox fx:id="chobox_returnbooks" layoutX="119.0" layoutY="227.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="150.0" stylesheets="@../css/Login.css" text="Return Books">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </CheckBox>
-      <CheckBox fx:id="chobox_borrowedbooks" layoutX="119.0" layoutY="156.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="150.0" text="Borrowed Books">
+      <CheckBox fx:id="chobox_borrowedbooks" layoutX="119.0" layoutY="156.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="150.0" stylesheets="@../css/Login.css" text="Borrowed Books">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -46,7 +46,7 @@
       <Line endX="-98.5" endY="-201.5" layoutX="208.0" layoutY="310.0" startX="-96.70709228515625" startY="42.29290771484375" />
       <Line endX="-100.0" endY="263.0" layoutX="376.0" layoutY="89.0" startX="-100.0" startY="18.600006103515625" />
       <Line endX="242.20001220703125" endY="-238.49998474121094" layoutX="219.0" layoutY="346.0" startX="242.20001220703125" startY="3.5" />
-      <Button layoutX="480.0" layoutY="352.0" mnemonicParsing="false" onAction="#btn_gemerateReporton_Action" prefHeight="26.0" prefWidth="110.0" style="-fx-background-color: #133e87;" text="Generate Reports" textFill="WHITE" />
+      <Button layoutX="480.0" layoutY="352.0" mnemonicParsing="false" onAction="#btn_gemerateReporton_Action" prefHeight="27.0" prefWidth="119.0" style="-fx-background-color: #133e87;" stylesheets="@../css/Login.css" text="Generate Reports" textFill="WHITE" />
       <Label layoutX="112.0" layoutY="85.0" prefHeight="18.0" prefWidth="92.0" text="Report Type">
          <font>
             <Font name="System Bold Italic" size="12.0" />
@@ -57,32 +57,32 @@
             <Font name="System Bold Italic" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="287.0" layoutY="122.0" prefHeight="18.0" prefWidth="75.0" text="Book count :">
+      <Label layoutX="287.0" layoutY="122.0" prefHeight="18.0" prefWidth="75.0" stylesheets="@../css/Login.css" text="Book count :">
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font>
       </Label>
-      <TextField fx:id="txt_book_count" layoutX="362.0" layoutY="119.0" prefHeight="26.0" prefWidth="82.0" style="-fx-border-color: #133e87;" />
-      <DatePicker fx:id="dt_browwedboks" layoutX="286.0" layoutY="166.0" prefHeight="26.0" prefWidth="143.0" style="-fx-border-color: #133e87;" />
-      <TextField fx:id="txt_bb_nowdate" layoutX="287.0" layoutY="198.0" prefHeight="26.0" prefWidth="143.0" style="-fx-border-color: #133e87;" />
+      <TextField fx:id="txt_book_count" layoutX="362.0" layoutY="119.0" prefHeight="26.0" prefWidth="82.0" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
+      <DatePicker fx:id="dt_browwedboks" layoutX="286.0" layoutY="166.0" prefHeight="26.0" prefWidth="143.0" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
+      <TextField fx:id="txt_bb_nowdate" layoutX="287.0" layoutY="198.0" prefHeight="26.0" prefWidth="143.0" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
       <Label layoutX="436.0" layoutY="171.0" text="to">
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font>
       </Label>
-      <DatePicker fx:id="dt_returned_books" layoutX="287.0" layoutY="236.0" prefHeight="26.0" prefWidth="143.0" style="-fx-border-color: #133e87;" />
-      <TextField fx:id="txt_rb_nowdate" layoutX="288.0" layoutY="268.0" prefHeight="26.0" prefWidth="143.0" style="-fx-border-color: #133e87;" />
+      <DatePicker fx:id="dt_returned_books" layoutX="287.0" layoutY="236.0" prefHeight="26.0" prefWidth="143.0" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
+      <TextField fx:id="txt_rb_nowdate" layoutX="288.0" layoutY="268.0" prefHeight="26.0" prefWidth="143.0" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
       <Label layoutX="437.0" layoutY="241.0" text="to">
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="289.0" layoutY="314.0" prefHeight="18.0" prefWidth="92.0" text="Member count :">
+      <Label layoutX="289.0" layoutY="314.0" prefHeight="18.0" prefWidth="92.0" stylesheets="@../css/Login.css" text="Member count :">
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font>
       </Label>
-      <TextField fx:id="txt_member_count" layoutX="386.0" layoutY="311.0" prefHeight="26.0" prefWidth="66.0" style="-fx-border-color: #133e87;" />
-      <Button layoutX="521.0" layoutY="91.0" mnemonicParsing="false" onAction="#btn_Back_Action" prefHeight="26.0" prefWidth="66.0" style="-fx-background-color: #133e87;" text="Back" textFill="WHITE" />
+      <TextField fx:id="txt_member_count" layoutX="386.0" layoutY="311.0" prefHeight="26.0" prefWidth="66.0" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
+      <Button layoutX="521.0" layoutY="91.0" mnemonicParsing="false" onAction="#btn_Back_Action" prefHeight="26.0" prefWidth="66.0" style="-fx-background-color: #133e87;" stylesheets="@../css/Login.css" text="Back" textFill="WHITE" />
    </children>
 </AnchorPane>
