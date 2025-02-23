@@ -11,21 +11,21 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="Ancor_Bookmangement" prefHeight="489.0" prefWidth="630.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Forms.Add_Bokks_Form">
+<AnchorPane fx:id="Ancor_Bookmangement" prefHeight="525.0" prefWidth="642.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Forms.Add_Bokks_Form">
    <children>
-      <Region layoutX="-4.0" layoutY="95.0" prefHeight="230.0" prefWidth="642.0" style="-fx-background-color: #f8f8ff;" />
+      <Region layoutX="-7.0" layoutY="95.0" prefHeight="230.0" prefWidth="642.0" style="-fx-background-color: #f8f8ff;" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#133e87" height="103.0" layoutX="-1.0" layoutY="-9.0" stroke="BLACK" strokeType="INSIDE" width="642.0" />
       <Label layoutX="102.0" layoutY="14.0" prefHeight="47.0" prefWidth="425.0" text="Books Mangement" textFill="#fff9f9">
          <font>
             <Font name="System Bold Italic" size="46.0" />
          </font>
       </Label>
-      <TextField fx:id="txt_Bookid" layoutX="105.0" layoutY="127.0" prefHeight="26.0" prefWidth="196.0" promptText="Books ID" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
-      <TextField fx:id="Txt_tiitle" layoutX="347.0" layoutY="127.0" prefHeight="26.0" prefWidth="196.0" promptText="Titttle" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
-      <TextField fx:id="txt_Author" layoutX="226.0" layoutY="242.0" prefHeight="26.0" prefWidth="202.0" promptText="Author" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
-      <TextField fx:id="txt_Isbn" layoutX="105.0" layoutY="186.0" prefHeight="26.0" prefWidth="196.0" promptText="ISBN" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
-      <TextField fx:id="txt_lanvage" layoutX="347.0" layoutY="185.0" prefHeight="26.0" prefWidth="196.0" promptText="Lanvage" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
-      <TableView fx:id="tabel_Books" layoutY="327.0" prefHeight="162.0" prefWidth="641.0">
+      <TextField fx:id="txt_Bookid" layoutX="102.0" layoutY="127.0" prefHeight="26.0" prefWidth="196.0" promptText="Books ID" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
+      <TextField fx:id="Txt_tiitle" layoutX="344.0" layoutY="127.0" prefHeight="26.0" prefWidth="196.0" promptText="Titttle" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
+      <TextField fx:id="txt_Author" layoutX="223.0" layoutY="242.0" prefHeight="26.0" prefWidth="202.0" promptText="Author" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
+      <TextField fx:id="txt_Isbn" layoutX="102.0" layoutY="186.0" prefHeight="26.0" prefWidth="196.0" promptText="ISBN" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
+      <TextField fx:id="txt_lanvage" layoutX="344.0" layoutY="185.0" prefHeight="26.0" prefWidth="196.0" promptText="Lanvage" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
+      <TableView fx:id="tabel_Books" layoutY="327.0" prefHeight="198.0" prefWidth="642.0">
         <columns>
           <TableColumn fx:id="colum_booksid" prefWidth="119.19997882843018" text="Books ID" />
           <TableColumn fx:id="colum_tiittle" prefWidth="130.4000244140625" text="Tittle" />

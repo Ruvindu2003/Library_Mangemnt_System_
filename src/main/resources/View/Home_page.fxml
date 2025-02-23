@@ -9,7 +9,7 @@
 
 <AnchorPane fx:id="frame_home" prefHeight="320.0" prefWidth="477.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Forms.Hom_page_Form">
    <children>
-      <ImageView fitHeight="314.0" fitWidth="433.0" layoutX="24.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="288.0" fitWidth="446.0" layoutX="22.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/WhatsApp%20Image%202025-02-11%20at%2015.19.32.jpeg" />
          </image>

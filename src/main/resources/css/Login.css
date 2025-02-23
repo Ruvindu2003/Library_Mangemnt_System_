@@ -1,43 +1,207 @@
 /* styles.css */
 
-/* Define the fade-in animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+/* Base Styles */
+.root {
+    -fx-font-family: "Arial";
+    -fx-background-color: #f0f0f0;
 }
 
-/* Apply the animation to the AnchorPane */
-#ancor_Login {
-    -fx-background-color: transparent;
-    -fx-opacity: 0;
-    -fx-animation: fadeIn 2s ease-in forwards;
-}
-
-/* Apply styles to the TextFields */
+/* TextField Styles */
 .text-field {
     -fx-background-color: #f0f0f0;
     -fx-border-color: #133e87;
     -fx-border-radius: 5px;
-    -fx-padding: 5px;
+    -fx-padding: 8px;
+    -fx-font-size: 14px;
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.1), 2, 0, 0, 1);
+    -fx-transition: all 0.3s ease; /* Smooth transition for focus and hover states */
 }
 
-/* Apply styles to the Buttons */
+/* Hover Effect for TextField */
+.text-field:hover {
+    -fx-border-color: #1a4da6;
+    -fx-effect: dropshadow(gaussian, rgba(19, 62, 135, 0.3), 5, 0, 0, 2);
+}
+
+/* Focused TextField */
+.text-field:focused {
+    -fx-border-color: #1a4da6;
+    -fx-border-width: 2px;
+    -fx-effect: dropshadow(gaussian, rgba(19, 62, 135, 0.5), 10, 0, 0, 3);
+    -fx-background-color: #ffffff;
+}
+
+/* Placeholder Text */
+.text-field .prompt-text {
+    -fx-fill: #808080;
+    -fx-font-style: italic;
+}
+
+/* Disabled TextField */
+.text-field:disabled {
+    -fx-background-color: #e0e0e0;
+    -fx-border-color: #a0a0a0;
+    -fx-text-fill: #808080;
+    -fx-opacity: 0.7;
+}
+
+/* Error State (Optional) */
+.text-field:error {
+    -fx-border-color: #ff0000;
+    -fx-effect: dropshadow(gaussian, rgba(255, 0, 0, 0.3), 5, 0, 0, 2);
+}
+
+/* Success State (Optional) */
+.text-field:success {
+    -fx-border-color: #00cc00;
+    -fx-effect: dropshadow(gaussian, rgba(0, 204, 0, 0.3), 5, 0, 0, 2);
+}
+
+/* Button Styles */
 .button {
-    -fx-background-color: #133E87;
-    -fx-text-fill: white;
-    -fx-border-radius: 5px;
-    -fx-background-radius: 5px;
-    -fx-padding: 5px 10px;
+    -fx-background-color: #133E87; /* Background color */
+    -fx-text-fill: WHITE; /* Text color */
+    -fx-font-size: 14px; /* Font size */
+    -fx-font-weight: bold; /* Font weight */
+    -fx-border-radius: 5px; /* Rounded corners */
+    -fx-background-radius: 5px; /* Rounded background */
+    -fx-padding: 5px 10px; /* Padding */
+    -fx-cursor: hand; /* Change cursor to hand on hover */
+    -fx-transition: all 0.3s ease; /* Smooth transition for hover and pressed states */
 }
 
+/* Hover Effect for Buttons */
 .button:hover {
-    -fx-background-color: #1a4da6;
+    -fx-background-color: #1A4FA3; /* Darker background on hover */
+    -fx-effect: dropshadow(gaussian, rgba(19, 62, 135, 0.5), 10, 0, 0, 3);
 }
 
+/* Pressed Effect for Buttons */
 .button:pressed {
-    -fx-background-color: #0d2a5e;
+    -fx-background-color: #0E2C5C; /* Even darker background when pressed */
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0, 0, 2);
+}
+
+/* Fade-In Animation */
+.fade-in {
+    -fx-opacity: 0;
+    -fx-transition: opacity 0.5s ease;
+}
+
+.fade-in:hover {
+    -fx-opacity: 1;
+}
+
+/* Slide-In Animation */
+.slide-in {
+    -fx-translate-x: -100%;
+    -fx-transition: translate-x 0.5s ease;
+}
+
+.slide-in:hover {
+    -fx-translate-x: 0;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0% {
+        -fx-scale-x: 1;
+        -fx-scale-y: 1;
+    }
+    50% {
+        -fx-scale-x: 1.1;
+        -fx-scale-y: 1.1;
+    }
+    100% {
+        -fx-scale-x: 1;
+        -fx-scale-y: 1;
+    }
+}
+
+.pulse {
+    -fx-animation: pulse 1.5s infinite;
+}
+
+/* Rotate Animation */
+@keyframes rotate {
+    0% {
+        -fx-rotate: 0;
+    }
+    100% {
+        -fx-rotate: 360;
+    }
+}
+
+.rotate {
+    -fx-animation: rotate 2s linear infinite;
+}
+
+/* Glow Effect */
+.glow {
+    -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.8), 10, 0.5, 0, 0);
+    -fx-transition: effect 0.3s ease;
+}
+
+.glow:hover {
+    -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 1), 20, 0.8, 0, 0);
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 100% {
+        -fx-translate-y: 0;
+    }
+    50% {
+        -fx-translate-y: -10px;
+    }
+}
+
+.bounce {
+    -fx-animation: bounce 0.5s infinite;
+}
+
+/* Color Change Animation */
+.color-change {
+    -fx-background-color: #133E87;
+    -fx-transition: background-color 0.5s ease;
+}
+
+.color-change:hover {
+    -fx-background-color: #1A4FA3;
+}
+
+/* Shadow Animation */
+.shadow-animation {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0, 0, 1);
+    -fx-transition: effect 0.3s ease;
+}
+
+.shadow-animation:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 3);
+}
+
+/* Border Animation */
+.border-animation {
+    -fx-border-color: #133E87;
+    -fx-border-width: 2px;
+    -fx-transition: border-color 0.3s ease, border-width 0.3s ease;
+}
+
+.border-animation:hover {
+    -fx-border-color: #1A4FA3;
+    -fx-border-width: 4px;
+}
+
+/* Combined Animations */
+.combined-animation {
+    -fx-background-color: #133E87;
+    -fx-border-color: #1A4FA3;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0, 0, 1);
+    -fx-transition: background-color 0.3s ease, border-color 0.3s ease, effect 0.3s ease;
+}
+
+.combined-animation:hover {
+    -fx-background-color: #1A4FA3;
+    -fx-border-color: #133E87;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 3);
 }

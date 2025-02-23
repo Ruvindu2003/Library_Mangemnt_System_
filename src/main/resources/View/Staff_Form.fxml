@@ -18,22 +18,22 @@
             <Font name="System Bold Italic" size="61.0" />
          </font>
       </Label>
-      <TextField fx:id="txt_Staffid" layoutX="59.0" layoutY="120.0" prefHeight="26.0" prefWidth="181.0" promptText="Staff_id" style="-fx-border-color: #133e87;">
+      <TextField fx:id="txt_Staffid" layoutX="81.0" layoutY="120.0" prefHeight="26.0" prefWidth="181.0" promptText="Staff_id" style="-fx-border-color: #133e87;">
          <stylesheets>
             <URL value="@../css/DashBord.css" />
             <URL value="@../css/Login.css" />
          </stylesheets></TextField>
-      <TextField fx:id="txt_email" layoutX="306.0" layoutY="120.0" prefHeight="26.0" prefWidth="163.0" promptText="email" style="-fx-border-color: #133e87;">
+      <TextField fx:id="txt_email" layoutX="328.0" layoutY="120.0" prefHeight="26.0" prefWidth="163.0" promptText="email" style="-fx-border-color: #133e87;">
          <stylesheets>
             <URL value="@../css/DashBord.css" />
             <URL value="@../css/Login.css" />
          </stylesheets></TextField>
-      <TextField fx:id="txt_name" layoutX="58.0" layoutY="178.0" prefHeight="26.0" prefWidth="182.0" promptText="name" style="-fx-border-color: #133e87;">
+      <TextField fx:id="txt_name" layoutX="80.0" layoutY="178.0" prefHeight="26.0" prefWidth="182.0" promptText="name" style="-fx-border-color: #133e87;">
          <stylesheets>
             <URL value="@../css/DashBord.css" />
             <URL value="@../css/Login.css" />
          </stylesheets></TextField>
-      <TextField fx:id="txt_phoneNumber" layoutX="309.0" layoutY="178.0" prefHeight="26.0" prefWidth="163.0" promptText="phone Number" style="-fx-border-color: #133e87;">
+      <TextField fx:id="txt_phoneNumber" layoutX="331.0" layoutY="178.0" prefHeight="26.0" prefWidth="163.0" promptText="phone Number" style="-fx-border-color: #133e87;">
          <stylesheets>
             <URL value="@../css/DashBord.css" />
             <URL value="@../css/Login.css" />
@@ -72,7 +72,7 @@
             <URL value="@../css/Login.css" />
          </stylesheets></Button>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#133e87" height="100.0" layoutY="-5.0" stroke="#133e87" strokeType="INSIDE" width="587.0" />
-      <Label layoutX="193.0" layoutY="14.0" prefHeight="70.0" prefWidth="206.0" text="Add Staff" textFill="#fffcfc">
+      <Label layoutX="194.0" layoutY="14.0" prefHeight="70.0" prefWidth="206.0" text="Add Staff" textFill="#fffcfc">
          <font>
             <Font name="System Bold Italic" size="38.0" />
          </font>
@@ -82,22 +82,22 @@
             <URL value="@../css/DashBord.css" />
             <URL value="@../css/Login.css" />
          </stylesheets></Button>
-      <Label layoutX="64.0" layoutY="102.0" prefHeight="18.0" prefWidth="67.0" text="Staff id">
+      <Label layoutX="88.0" layoutY="102.0" prefHeight="18.0" prefWidth="67.0" text="Staff id">
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="306.0" layoutY="102.0" prefHeight="18.0" prefWidth="67.0" text="email">
+      <Label layoutX="328.0" layoutY="102.0" prefHeight="18.0" prefWidth="67.0" text="email">
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="64.0" layoutY="161.0" prefHeight="18.0" prefWidth="60.0" text="Name">
+      <Label layoutX="86.0" layoutY="161.0" prefHeight="18.0" prefWidth="60.0" text="Name">
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="306.0" layoutY="162.0" prefHeight="18.0" prefWidth="92.0" text="Phone Number">
+      <Label layoutX="328.0" layoutY="162.0" prefHeight="18.0" prefWidth="92.0" text="Phone Number">
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font>

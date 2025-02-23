@@ -12,33 +12,33 @@
 
 <AnchorPane fx:id="Ancor_Return_Book" prefHeight="549.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Forms.ReturnBooks_Form">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="GHOSTWHITE" height="264.0" layoutY="83.0" stroke="GHOSTWHITE" strokeType="INSIDE" width="728.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="GHOSTWHITE" height="264.0" layoutY="83.0" stroke="GHOSTWHITE" strokeType="INSIDE" width="748.0" />
       <Label layoutX="202.0" layoutY="10.0" prefHeight="51.0" prefWidth="236.0" text="Return Books">
          <font>
             <Font name="System Bold Italic" size="35.0" />
          </font>
       </Label>
       <ComboBox fx:id="combo_browid" layoutX="21.0" layoutY="107.0" onAction="#combo_Browedid_Action" prefWidth="150.0" promptText="Brrowd id" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
-      <TextField fx:id="txt_bookid" editable="false" layoutX="215.0" layoutY="107.0" promptText="Bookid" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
+      <TextField fx:id="txt_bookid" editable="false" layoutX="203.0" layoutY="107.0" promptText="Bookid" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
       <TextField fx:id="txt_Member_id" editable="false" layoutX="388.0" layoutY="107.0" promptText="Memberid" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
-      <TextField fx:id="txt_Staff_id" editable="false" layoutX="562.0" layoutY="162.0" promptText="Staff id" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
-      <TextField fx:id="txt_Broowed_date" editable="false" layoutX="215.0" layoutY="162.0" promptText="broowed  Date" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
+      <TextField fx:id="txt_Staff_id" editable="false" layoutX="566.0" layoutY="162.0" promptText="Staff id" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
+      <TextField fx:id="txt_Broowed_date" editable="false" layoutX="206.0" layoutY="162.0" promptText="broowed  Date" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
       <TextField fx:id="is_Browwed" editable="false" layoutX="388.0" layoutY="162.0" promptText="is Broowed" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
-      <Label layoutY="236.0" prefHeight="26.0" prefWidth="108.0" text="Return Date:">
+      <Label layoutX="3.0" layoutY="236.0" prefHeight="26.0" prefWidth="108.0" text="Return Date:">
          <font>
             <Font name="System Bold Italic" size="16.0" />
          </font>
       </Label>
-      <Label fx:id="lable_Date" layoutX="96.0" layoutY="236.0" prefHeight="26.0" prefWidth="114.0" text="YY/MM/DD">
+      <Label fx:id="lable_Date" layoutX="99.0" layoutY="236.0" prefHeight="26.0" prefWidth="114.0" text="YY/MM/DD">
          <font>
             <Font name="System Bold Italic" size="15.0" />
          </font>
       </Label>
-      <TextField fx:id="return_on_time" layoutX="372.0" layoutY="233.0" prefHeight="14.0" prefWidth="160.0" promptText="Return_on_time" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
+      <TextField fx:id="return_on_time" layoutX="375.0" layoutY="233.0" prefHeight="14.0" prefWidth="160.0" promptText="Return_on_time" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
       <TextField fx:id="txt_Amount" layoutX="547.0" layoutY="233.0" promptText="Amount" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
-      <TextField fx:id="txt_returnid" layoutX="205.0" layoutY="233.0" promptText="Return  id" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
+      <TextField fx:id="txt_returnid" layoutX="195.0" layoutY="233.0" promptText="Return  id" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
       <Button layoutX="290.0" layoutY="299.0" mnemonicParsing="false" onAction="#btn_Action_Find" prefHeight="26.0" prefWidth="60.0" style="-fx-background-color: #133E87;" stylesheets="@../css/Login.css" text="Fine" textFill="#f4eeee" />
-      <TableView fx:id="tabel_return" layoutY="349.0" prefHeight="200.0" prefWidth="726.0" stylesheets="@../css/DashBord.css">
+      <TableView fx:id="tabel_return" layoutY="349.0" prefHeight="200.0" prefWidth="748.0" stylesheets="@../css/DashBord.css">
         <columns>
           <TableColumn fx:id="colum_returnid" prefWidth="132.79998779296875" text="Returnid" />
             <TableColumn fx:id="colum_browwedid" prefWidth="104.7999267578125" text="broowed id" />
@@ -49,14 +49,14 @@
         </columns>
       </TableView>
       <Button layoutX="388.0" layoutY="299.0" mnemonicParsing="false" onAction="#btn_View_Action" prefHeight="26.0" prefWidth="60.0" style="-fx-background-color: #133E87;" stylesheets="@../css/Login.css" text="View" textFill="WHITE" />
-      <Button layoutX="480.0" layoutY="300.0" mnemonicParsing="false" onAction="#btn_details_Action" prefHeight="26.0" prefWidth="60.0" style="-fx-background-color: #133E87;" stylesheets="@../css/Login.css" text="Details" textFill="WHITE" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#133e87" height="84.0" layoutY="-1.0" stroke="#133e87" strokeType="INSIDE" width="728.0" />
+      <Button layoutX="480.0" layoutY="300.0" mnemonicParsing="false" onAction="#btn_details_Action" prefHeight="30.0" prefWidth="98.0" style="-fx-background-color: #133E87;" stylesheets="@../css/Login.css" text="Details" textFill="WHITE" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#133e87" height="84.0" layoutY="-1.0" stroke="#133e87" strokeType="INSIDE" width="748.0" />
       <Label layoutX="228.0" layoutY="8.0" prefHeight="65.0" prefWidth="340.0" text="Return  Books" textFill="#ece8e8">
          <font>
             <Font name="System Bold Italic" size="42.0" />
          </font>
       </Label>
-      <Button layoutX="651.0" layoutY="88.0" mnemonicParsing="false" onAction="#btn_back_Action" prefHeight="26.0" prefWidth="54.0" style="-fx-background-color: #133E87;" stylesheets="@../css/Login.css" text="Back" textFill="WHITE" />
+      <Button layoutX="667.0" layoutY="94.0" mnemonicParsing="false" onAction="#btn_back_Action" prefHeight="26.0" prefWidth="54.0" style="-fx-background-color: #133E87;" stylesheets="@../css/Login.css" text="Back" textFill="WHITE" />
       <Label layoutX="26.0" layoutY="88.0" prefHeight="18.0" prefWidth="70.0" text="Brrowd id">
          <font>
             <Font name="System Bold Italic" size="12.0" />
@@ -67,7 +67,7 @@
             <Font name="System Bold Italic" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="384.0" layoutY="89.0" prefHeight="18.0" prefWidth="70.0" text="Member ID">
+      <Label layoutX="388.0" layoutY="89.0" prefHeight="18.0" prefWidth="70.0" text="Member ID">
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font>
