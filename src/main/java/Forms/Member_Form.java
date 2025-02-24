@@ -1,5 +1,6 @@
 package Forms;
 
+import Controller.IDgenrateController;
 import Controller.MemberController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -13,6 +14,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import org.apache.xmlbeans.impl.xb.xsdschema.Public;
 import servicess.ServiceFactory;
 import servicess.custom.Memeber_Service;
 import utill.ServiceType;
@@ -42,6 +44,7 @@ public class Member_Form implements Initializable {
     public AnchorPane ancor_member;
 
     MemberController memberController=new MemberController();
+    IDgenrateController iDgenrateController=IDgenrateController.getInstance();
 
     Memeber_Service getInstance= ServiceFactory.getInstance().getServiceType(ServiceType.AddMemeber);
 
@@ -56,7 +59,14 @@ public class Member_Form implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        colum_memberid.setCellValueFactory(new PropertyValueFactory<>("memberid"));
+        colum_full_name.setCellValueFactory(new PropertyValueFactory<>("name"));
+        colum_PhoneNumber.setCellValueFactory(new PropertyValueFactory<>("phoneNumber"));
+        colum_Adreess.setCellValueFactory(new PropertyValueFactory<>("adrees"));
+        colum_Headmastership.setCellValueFactory(new PropertyValueFactory<>("Membershipdates"));
+        LodTable();
         LodDate();
+        LodeID();
 
 
     }
@@ -89,12 +99,7 @@ public class Member_Form implements Initializable {
 
     public void btn_View_Action(ActionEvent actionEvent) {
 
-        colum_memberid.setCellValueFactory(new PropertyValueFactory<>("memberid"));
-        colum_full_name.setCellValueFactory(new PropertyValueFactory<>("name"));
-        colum_PhoneNumber.setCellValueFactory(new PropertyValueFactory<>("phoneNumber"));
-        colum_Adreess.setCellValueFactory(new PropertyValueFactory<>("adrees"));
-        colum_Headmastership.setCellValueFactory(new PropertyValueFactory<>("Membershipdates"));
-        LodTable();
+
 
     }
 
@@ -149,5 +154,12 @@ public class Member_Form implements Initializable {
 
 
 
+    }
+    public  void LodeID(){
+        try {
+            txt_memberid.setText(iDgenrateController.generateID("M","members","member_id"));
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

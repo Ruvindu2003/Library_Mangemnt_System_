@@ -1,6 +1,7 @@
 package Forms;
 
 import Controller.BrrowedController;
+import Controller.IDgenrateController;
 import Controller.ReturnBooks_Controoler;
 
 import javafx.collections.FXCollections;
@@ -25,6 +26,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.text.BreakIterator;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -54,10 +56,17 @@ public class ReturnBooks_Form implements Initializable {
     public AnchorPane Ancor_Return_Book;
     BrrowedController brrowedController = new BrrowedController();
     ReturnBooks_Controoler returnBooksControoler = new ReturnBooks_Controoler();
-
+IDgenrateController iDgenrateController=IDgenrateController.getInstance();
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        colum_returnid.setCellValueFactory(new PropertyValueFactory<>("returnid"));
+        colum_browwedid.setCellValueFactory(new PropertyValueFactory<>("borrow_id"));
+        colum_bookid.setCellValueFactory(new PropertyValueFactory<>("bookid"));
+        colum_returndate.setCellValueFactory(new PropertyValueFactory<>("return_date"));
+        colum_fineAmount.setCellValueFactory(new PropertyValueFactory<>("findAmount"));
+        colum_Return_Status.setCellValueFactory(new PropertyValueFactory<>("return_status"));
+        Lodtabel();
+        LodID();
         get_comboigd();
         LodDate();
 
@@ -153,13 +162,7 @@ public class ReturnBooks_Form implements Initializable {
     }
 
     public void btn_View_Action(ActionEvent actionEvent) {
-        colum_returnid.setCellValueFactory(new PropertyValueFactory<>("returnid"));
-        colum_browwedid.setCellValueFactory(new PropertyValueFactory<>("borrow_id"));
-        colum_bookid.setCellValueFactory(new PropertyValueFactory<>("bookid"));
-        colum_returndate.setCellValueFactory(new PropertyValueFactory<>("return_date"));
-        colum_fineAmount.setCellValueFactory(new PropertyValueFactory<>("findAmount"));
-        colum_Return_Status.setCellValueFactory(new PropertyValueFactory<>("return_status"));
-        Lodtabel();
+
 
 
     }
@@ -172,6 +175,13 @@ public class ReturnBooks_Form implements Initializable {
         tabel_return.setItems(observableList);
 
 
+    }
+    public void LodID(){
+        try {
+            txt_returnid.setText(iDgenrateController.generateID("R","returnsbooks","return_id"));
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
   
 

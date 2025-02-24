@@ -2,8 +2,10 @@ package Forms;
 
 
 
+import Controller.IDgenrateController;
 import Controller.StaffController;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -25,14 +27,17 @@ import servicess.custom.Staff_Service;
 import utill.ServiceType;
 
 import java.io.IOException;
+import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.ResourceBundle;
 
-public class Staff_Form {
+public class Staff_Form implements Initializable {
     public AnchorPane Ancor_Staff;
     StaffController staffController=new StaffController();
+    IDgenrateController iDgenrateController=IDgenrateController.getInstance();
 
     Staff_Service getInstance= ServiceFactory.getInstance().getServiceType(ServiceType.AddStaff);
 
@@ -101,12 +106,7 @@ public class Staff_Form {
 
         @FXML
         void btn_View_Action(ActionEvent event) {
-            colum_Staffid.setCellValueFactory(new PropertyValueFactory<>("staffid"));
-            colum_email.setCellValueFactory(new PropertyValueFactory<>("email"));
-            colum_name.setCellValueFactory(new PropertyValueFactory<>("name"));
-            colum_PhoneNumber.setCellValueFactory(new PropertyValueFactory<>("PhoneNumber"));
 
-            loadtable();
 
         }
 
@@ -156,9 +156,25 @@ public class Staff_Form {
         stage =new Stage();
         stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/View/DashBoard.fxml"))));
     }
+    public void LodeID(){
+        try {
+            txt_Staffid.setText(iDgenrateController.generateID("S","staff","staff_id"));
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        colum_Staffid.setCellValueFactory(new PropertyValueFactory<>("staffid"));
+        colum_email.setCellValueFactory(new PropertyValueFactory<>("email"));
+        colum_name.setCellValueFactory(new PropertyValueFactory<>("name"));
+        colum_PhoneNumber.setCellValueFactory(new PropertyValueFactory<>("PhoneNumber"));
 
+        loadtable();
+        LodeID();
+    }
 }
 
 

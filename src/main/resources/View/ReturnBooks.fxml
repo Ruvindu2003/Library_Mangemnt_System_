@@ -37,7 +37,7 @@
       <TextField fx:id="return_on_time" layoutX="375.0" layoutY="233.0" prefHeight="14.0" prefWidth="160.0" promptText="Return_on_time" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
       <TextField fx:id="txt_Amount" layoutX="547.0" layoutY="233.0" promptText="Amount" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
       <TextField fx:id="txt_returnid" layoutX="195.0" layoutY="233.0" promptText="Return  id" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
-      <Button layoutX="290.0" layoutY="299.0" mnemonicParsing="false" onAction="#btn_Action_Find" prefHeight="26.0" prefWidth="60.0" style="-fx-background-color: #133E87;" stylesheets="@../css/Login.css" text="Fine" textFill="#f4eeee" />
+      <Button layoutX="362.0" layoutY="299.0" mnemonicParsing="false" onAction="#btn_Action_Find" prefHeight="26.0" prefWidth="60.0" style="-fx-background-color: #133E87;" stylesheets="@../css/Login.css" text="Fine" textFill="#f4eeee" />
       <TableView fx:id="tabel_return" layoutY="349.0" prefHeight="200.0" prefWidth="748.0" stylesheets="@../css/DashBord.css">
         <columns>
           <TableColumn fx:id="colum_returnid" prefWidth="132.79998779296875" text="Returnid" />
@@ -48,8 +48,6 @@
             <TableColumn fx:id="colum_Return_Status" prefWidth="135.19989013671875" text="Return Status" />
         </columns>
       </TableView>
-      <Button layoutX="388.0" layoutY="299.0" mnemonicParsing="false" onAction="#btn_View_Action" prefHeight="26.0" prefWidth="60.0" style="-fx-background-color: #133E87;" stylesheets="@../css/Login.css" text="View" textFill="WHITE" />
-      <Button layoutX="480.0" layoutY="300.0" mnemonicParsing="false" onAction="#btn_details_Action" prefHeight="30.0" prefWidth="98.0" style="-fx-background-color: #133E87;" stylesheets="@../css/Login.css" text="Details" textFill="WHITE" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#133e87" height="84.0" layoutY="-1.0" stroke="#133e87" strokeType="INSIDE" width="748.0" />
       <Label layoutX="228.0" layoutY="8.0" prefHeight="65.0" prefWidth="340.0" text="Return  Books" textFill="#ece8e8">
          <font>

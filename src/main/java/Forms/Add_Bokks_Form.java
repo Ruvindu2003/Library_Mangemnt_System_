@@ -3,7 +3,9 @@ package Forms;
 
 
 import Controller.Book_Controller;
+import Controller.IDgenrateController;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -23,12 +25,14 @@ import servicess.custom.Book_service;
 import utill.ServiceType;
 
 import java.io.IOException;
+import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.ResourceBundle;
 
-public class Add_Bokks_Form {
+public class Add_Bokks_Form implements Initializable {
     public AnchorPane Ancor_Bookmangement;
     Book_Controller bookController=new Book_Controller();
 
@@ -66,6 +70,8 @@ public class Add_Bokks_Form {
     private TextField txt_lanvage;
 
     Book_service bookInstance = ServiceFactory.getInstance().getServiceType(ServiceType.AddBooks);
+    IDgenrateController iDgenrateController = IDgenrateController.getInstance();
+
     @FXML
     void btn_Add_Action(ActionEvent event) {
         bookInstance.Addbook(new Book(
@@ -117,12 +123,7 @@ public class Add_Bokks_Form {
 
     @FXML
     void btn_View_Action(ActionEvent event) {
-        colum_booksid.setCellValueFactory(new PropertyValueFactory<>("bookid"));
-        colum_tiittle.setCellValueFactory(new PropertyValueFactory<>("tiitle"));
-        colum_Author.setCellValueFactory(new PropertyValueFactory<>("Author"));
-        Colum_isbn.setCellValueFactory(new PropertyValueFactory<>("Isbn"));
-        Colum_Lanvage.setCellValueFactory(new PropertyValueFactory<>("lanvage"));
-        Lodtable();
+
 
     }
 
@@ -167,5 +168,24 @@ public class Add_Bokks_Form {
         stage=new Stage();
         stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/View/DashBoard.fxml   "))));
 
+    }
+
+    public void LoadId() {
+        try {
+            txt_Bookid.setText(iDgenrateController.generateID("B","books","BookID"));
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        colum_booksid.setCellValueFactory(new PropertyValueFactory<>("bookid"));
+        colum_tiittle.setCellValueFactory(new PropertyValueFactory<>("tiitle"));
+        colum_Author.setCellValueFactory(new PropertyValueFactory<>("Author"));
+        Colum_isbn.setCellValueFactory(new PropertyValueFactory<>("Isbn"));
+        Colum_Lanvage.setCellValueFactory(new PropertyValueFactory<>("lanvage"));
+        Lodtable();
+        LoadId();
     }
 }

@@ -28,10 +28,9 @@
         </columns>
       </TableView>
       <Button layoutX="28.0" layoutY="254.0" mnemonicParsing="false" onAction="#btn_Search_Action" prefHeight="26.0" prefWidth="83.0" style="-fx-background-color: #133E87;" stylesheets="@../css/Login.css" text="Search" textFill="WHITE" />
-      <Button layoutX="141.0" layoutY="255.0" mnemonicParsing="false" onAction="#btn_Add_Action" prefHeight="26.0" prefWidth="83.0" style="-fx-background-color: #133E87;" stylesheets="@../css/Login.css" text="Add" textFill="WHITE" />
-      <Button layoutX="258.0" layoutY="255.0" mnemonicParsing="false" onAction="#btn_View_Action" prefHeight="26.0" prefWidth="83.0" style="-fx-background-color: #133E87;" stylesheets="@../css/Login.css" text="View" textFill="WHITE" />
-      <Button layoutX="362.0" layoutY="255.0" mnemonicParsing="false" onAction="#btn_update_Action" prefHeight="26.0" prefWidth="76.0" style="-fx-background-color: #133E87;" stylesheets="@../css/Login.css" text="Update" textFill="#fffcfc" />
-      <Button layoutX="473.0" layoutY="254.0" mnemonicParsing="false" onAction="#btn_Delete_Action" prefHeight="26.0" prefWidth="76.0" style="-fx-background-color: #133E87;" stylesheets="@../css/Login.css" text="Delete" textFill="WHITE" />
+      <Button layoutX="158.0" layoutY="255.0" mnemonicParsing="false" onAction="#btn_Add_Action" prefHeight="26.0" prefWidth="83.0" style="-fx-background-color: #133E87;" stylesheets="@../css/Login.css" text="Add" textFill="WHITE" />
+      <Button layoutX="318.0" layoutY="255.0" mnemonicParsing="false" onAction="#btn_update_Action" prefHeight="26.0" prefWidth="76.0" style="-fx-background-color: #133E87;" stylesheets="@../css/Login.css" text="Update" textFill="#fffcfc" />
+      <Button layoutX="464.0" layoutY="254.0" mnemonicParsing="false" onAction="#btn_Delete_Action" prefHeight="26.0" prefWidth="76.0" style="-fx-background-color: #133E87;" stylesheets="@../css/Login.css" text="Delete" textFill="WHITE" />
       <Label layoutX="80.0" layoutY="92.0" prefHeight="18.0" prefWidth="62.0" text=" Date :">
          <font>
             <Font name="System Bold Italic" size="12.0" />

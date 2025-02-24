@@ -1,9 +1,6 @@
 package Forms;
 
-import Controller.Book_Controller;
-import Controller.BrrowedController;
-import Controller.MemberController;
-import Controller.StaffController;
+import Controller.*;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
@@ -70,16 +67,24 @@ public class Take_Bokks_Form implements Initializable {
     StaffController staffController = new StaffController();
 
     BrrowedController brrowedController=new BrrowedController();
+    IDgenrateController iDgenrateController=IDgenrateController.getInstance();
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        colum_borrowedid.setCellValueFactory(new PropertyValueFactory<>("brrowedbokksid"));
+        colum_bookid.setCellValueFactory(new PropertyValueFactory<>("bookID"));
+        colum_memeberid.setCellValueFactory(new PropertyValueFactory<>("memberid"));
+        colum_staffid.setCellValueFactory(new PropertyValueFactory<>("staffid"));
+        colum_brrow_date.setCellValueFactory(new PropertyValueFactory<>("brooedate"));
+        colum_is_broowed.setCellValueFactory(new PropertyValueFactory<>("isBrowwed"));
+        LodTable();
 
 
         setCombo_Bookid();
         setCombo_Memberid();
         setCombo_Staffid();
-
+        LodeID();
         LodDate();
 
 
@@ -179,13 +184,7 @@ public class Take_Bokks_Form implements Initializable {
 
         brrowed_table.setItems(brrowedbooksObservableList);
 
-        colum_borrowedid.setCellValueFactory(new PropertyValueFactory<>("brrowedbokksid"));
-        colum_bookid.setCellValueFactory(new PropertyValueFactory<>("bookID"));
-        colum_memeberid.setCellValueFactory(new PropertyValueFactory<>("memberid"));
-        colum_staffid.setCellValueFactory(new PropertyValueFactory<>("staffid"));
-        colum_brrow_date.setCellValueFactory(new PropertyValueFactory<>("brooedate"));
-        colum_is_broowed.setCellValueFactory(new PropertyValueFactory<>("isBrowwed"));
-        LodTable();
+
 
 
 
@@ -206,6 +205,14 @@ public class Take_Bokks_Form implements Initializable {
         Stage stage=(Stage) Ancor_Browwdebooks.getScene().getWindow();
         stage.close();
         stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/View/DashBoard.fxml"))));
+
+    }
+    public  void  LodeID(){
+        try {
+            txt_brrrowedid.setText(iDgenrateController.generateID("BR","borrowedbooks","borrow_id"));
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 }

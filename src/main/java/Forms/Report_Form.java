@@ -56,7 +56,7 @@ public class Report_Form implements Initializable {
         }
 
         if(chombox_member.isSelected()){
-            reportController.Generate_Reportby_Count("src/main/resources/Reports/AddmemberReport.jrxml","memberreport.pdf","SELECT * FROM members LIMIT " + Integer.valueOf(txt_member_count.getText()));
+            reportController.Generate_Reportby_Count("src/main/resources/Reports/Members5.jrxml","memberreport.pdf","SELECT * FROM members LIMIT " + Integer.valueOf(txt_member_count.getText()));
         }
     }
 
