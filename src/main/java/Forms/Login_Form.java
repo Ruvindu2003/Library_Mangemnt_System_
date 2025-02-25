@@ -20,7 +20,9 @@ public class Login_Form {
 
 
     public void Rejister_on_Action(ActionEvent actionEvent) throws IOException {
-        Stage stage=new Stage();
+        Stage stage=(Stage)ancor_Login.getScene().getWindow();
+        stage.close();
+         stage=new Stage();
         stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/View/Rejister.fxml"))));
         stage.setTitle("Rejister");
         stage.show();

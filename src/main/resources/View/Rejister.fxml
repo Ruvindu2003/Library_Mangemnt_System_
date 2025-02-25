@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="374.0" prefWidth="522.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Forms.Rejister_Form">
+<AnchorPane fx:id="ancorpain_Back_Action" prefHeight="374.0" prefWidth="522.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Forms.Rejister_Form">
    <children>
       <ImageView fitHeight="262.0" fitWidth="541.0" layoutX="1.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -28,5 +28,6 @@
             <Font name="System Bold Italic" size="36.0" />
          </font>
       </Label>
+      <Button layoutX="463.0" layoutY="104.0" mnemonicParsing="false" onAction="#btn_Back_Action" style="-fx-background-color: #133E87;" stylesheets="@../css/Login.css" text="Back" textFill="WHITE" />
    </children>
 </AnchorPane>

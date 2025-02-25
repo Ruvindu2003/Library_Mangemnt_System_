@@ -5,10 +5,16 @@ import jakarta.mail.*;
 import jakarta.mail.internet.InternetAddress;
 import jakarta.mail.internet.MimeMessage;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -21,6 +27,8 @@ import java.util.logging.Logger;
 public class ForgotPassword {
     public TextField txt_Email;
     public Button btn_send;
+    public AnchorPane Ancorpain_fogtpassword;
+    public TextArea text_Area;
     Connection connection = DBConnection.getInstance().getConnection();
 
     public void btn_send_Action(ActionEvent actionEvent) {
@@ -107,5 +115,14 @@ public class ForgotPassword {
             preparedStatement.setString(2, email);
             preparedStatement.executeUpdate();
         }
+    }
+
+    public void btn_Action_Back(ActionEvent actionEvent) throws IOException {
+        Stage stage=(Stage)Ancorpain_fogtpassword.getScene().getWindow();
+        stage.close();
+        stage=new Stage();
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/View/Login.fxml "))));
+        stage.setTitle("Login");
+        stage.show();
     }
 }
