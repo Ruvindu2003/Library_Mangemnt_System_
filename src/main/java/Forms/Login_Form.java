@@ -55,4 +55,18 @@ public class Login_Form {
 
 
     }
+
+    public void btn_Forgot_Password(ActionEvent actionEvent) {
+        Stage stage=(Stage) ancor_Login.getScene().getWindow();
+        stage.close();
+        stage=new Stage();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/View/Forgotpassword.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage.show();
+        stage.setTitle("Password");
+
+    }
 }
