@@ -215,6 +215,16 @@ public class Take_Bokks_Form implements Initializable {
         }
 
     }
+
+    public void btn_View_Action(ActionEvent actionEvent) {
+        colum_borrowedid.setCellValueFactory(new PropertyValueFactory<>("brrowedbokksid"));
+        colum_bookid.setCellValueFactory(new PropertyValueFactory<>("bookID"));
+        colum_memeberid.setCellValueFactory(new PropertyValueFactory<>("memberid"));
+        colum_staffid.setCellValueFactory(new PropertyValueFactory<>("staffid"));
+        colum_brrow_date.setCellValueFactory(new PropertyValueFactory<>("brooedate"));
+        colum_is_broowed.setCellValueFactory(new PropertyValueFactory<>("isBrowwed"));
+        LodTable();
+    }
 }
 
 

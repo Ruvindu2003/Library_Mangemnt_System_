@@ -47,7 +47,7 @@
             <Font name="System Bold Italic" size="16.0" />
          </font>
       </Label>
-      <Button layoutX="616.0" layoutY="322.0" mnemonicParsing="false" onAction="#take_Books_Action" prefHeight="26.0" prefWidth="118.0" style="-fx-background-color: #133E87;" stylesheets="@../css/Login.css" text="Take Books" textFill="WHITE" />
+      <Button layoutX="659.0" layoutY="322.0" mnemonicParsing="false" onAction="#take_Books_Action" prefHeight="26.0" prefWidth="118.0" style="-fx-background-color: #133E87;" stylesheets="@../css/Login.css" text="Take Books" textFill="WHITE" />
       <TextField fx:id="txt_brrrowedid" layoutX="191.0" layoutY="282.0" prefHeight="26.0" prefWidth="160.0" promptText="broowde_id" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
       <TextField fx:id="txt_yes_or_No" layoutX="395.0" layoutY="279.0" promptText="yes or No" style="-fx-border-color: #133e87;" stylesheets="@../css/Login.css" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#133e87" height="80.0" layoutX="-2.0" stroke="#133e87" strokeType="INSIDE" width="857.0" />
@@ -137,5 +137,6 @@
             <Font name="System Bold Italic" size="12.0" />
          </font>
       </Label>
+      <Button layoutX="508.0" layoutY="324.0" mnemonicParsing="false" onAction="#btn_View_Action" prefHeight="26.0" prefWidth="102.0" style="-fx-background-color: #133E87;" stylesheets="@../css/Login.css" text="View" textFill="WHITE" />
    </children>
 </AnchorPane>

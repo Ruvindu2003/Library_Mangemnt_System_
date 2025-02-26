@@ -200,4 +200,8 @@ IDgenrateController iDgenrateController=IDgenrateController.getInstance();
         stage=new Stage();
         stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/View/DashBoard.fxml"))));
     }
+
+    public void btn_refesh_Action(ActionEvent actionEvent) {
+        Lodtabel();
+    }
 }

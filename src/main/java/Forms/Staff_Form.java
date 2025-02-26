@@ -175,6 +175,11 @@ public class Staff_Form implements Initializable {
         loadtable();
         LodeID();
     }
+
+    public void btn_refesh_Action(ActionEvent actionEvent) {
+        loadtable();
+
+    }
 }
 
 

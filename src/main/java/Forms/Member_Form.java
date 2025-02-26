@@ -162,4 +162,8 @@ public class Member_Form implements Initializable {
             throw new RuntimeException(e);
         }
     }
+
+    public void btn_refesh_Action(ActionEvent actionEvent) {
+        LodTable();
+    }
 }

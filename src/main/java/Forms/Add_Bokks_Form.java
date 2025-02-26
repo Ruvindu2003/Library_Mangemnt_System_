@@ -188,4 +188,8 @@ public class Add_Bokks_Form implements Initializable {
         Lodtable();
         LoadId();
     }
+
+    public void buton_Refesh_Action(ActionEvent actionEvent) {
+        Lodtable();
+    }
 }
