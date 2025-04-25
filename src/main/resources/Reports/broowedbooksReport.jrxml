@@ -59,7 +59,7 @@
 			<property name="com.jaspersoft.studio.field.label" value="book_id"/>
 			<property name="com.jaspersoft.studio.field.tree.path" value="borrowedbooks"/>
 		</field>
-		<field name="member_id" class="java.lang.Integer">
+		<field name="member_id" class="java.lang.String">
 			<property name="com.jaspersoft.studio.field.name" value="member_id"/>
 			<property name="com.jaspersoft.studio.field.label" value="member_id"/>
 			<property name="com.jaspersoft.studio.field.tree.path" value="borrowedbooks"/>

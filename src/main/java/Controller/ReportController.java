@@ -39,23 +39,4 @@ public class ReportController {
 
     }
 
-    public void Generate_Reportby_member(String ReportPath, String Filename, String query) {
-        try {
-            JasperDesign report = JRXmlLoader.load(ReportPath);
-            JRDesignQuery newQuery = new JRDesignQuery();
-            newQuery.setText(query);
-            report.setQuery(newQuery);
-            JasperReport jasperReport = JasperCompileManager.compileReport(report);
-            JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, null, DBConnection.getInstance().getConnection());
-            JasperExportManager.exportReportToPdfFile(jasperPrint, Filename);
-            JasperViewer.viewReport(jasperPrint, false);
-
-        } catch (Exception e) {
-            new Alert(Alert.AlertType.INFORMATION, "Report Generation Failed!.").show();
-            throw new RuntimeException(e);
-        }
-
-
-    }
-
 }

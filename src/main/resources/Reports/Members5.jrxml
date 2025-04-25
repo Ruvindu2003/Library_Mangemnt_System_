@@ -78,14 +78,8 @@
 	</dataset>
 	<query language="sql"><![CDATA[]]></query>
 	<title height="70" splitType="Stretch">
-		<element kind="image" uuid="be36d21e-4694-443f-8b57-fef49e669398" x="-20" y="0" width="595" height="64">
-			<expression><![CDATA["wood.jpg"]]></expression>
-		</element>
 		<element kind="staticText" uuid="e59185d1-6a86-45db-a9af-7de38f04e8d9" x="0" y="5" width="263" height="33" vTextAlign="Middle" style="Title">
 			<text><![CDATA[ADD Members]]></text>
-		</element>
-		<element kind="staticText" uuid="dc12c430-5c64-4787-9dca-1a76029505e8" x="63" y="39" width="200" height="22" forecolor="#FFFFFF" hTextAlign="Right" style="SubTitle">
-			<text><![CDATA[Wood SubTitle]]></text>
 		</element>
 	</title>
 	<pageFooter height="20" splitType="Stretch">
